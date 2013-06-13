@@ -38,6 +38,11 @@
 	<icon src="img/iconos/icon-72@2x.png"         gap:platform="ios"        width="144" height="144" />
 	<icon src="img/iconos/iTunesArtwork.png"         gap:platform="ios"        width="512" height="512" />
     <icon src="img/iconos/iTunesArtwork@2x.png"         gap:platform="ios"        width="1024" height="1024" />
+	
+	<gap:splash src="img/splashscreen/Default-Portrait@2x~ipad.png"     gap:platform="ios"     width="1536" height="2008" />
+<gap:splash src="img/splashscreen/Default-Landscape@2x~ipad.png"     gap:platform="ios"     width="2048" height="1496" />
+<gap:splash src="img/splashscreen/mdpi.png"      gap:platform="ios"     width="1024" height="768" />
+	<gap:splash src="img/splashscreen/mdpi_v.png"      gap:platform="ios"     width="768" height="1024" />
 
 	
 	
