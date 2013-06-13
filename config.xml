@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.rostros.App"
+        id        = "com.Sintesis.App"
         version   = "1.0">
     <name>ROSTROS SINT</name>
 
@@ -47,8 +47,12 @@
 	
 	
 	
-   <plugin name="NetworkStatus" value="CDVConnection" />
+  
+	<plugin name="NetworkStatus" value="CDVConnection" />
 	<plugin name="SplashScreen" value="CDVSplashScreen" />
+	<plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+	<plugin name="Echo" value="Echo" onload="true" />
+	<plugin name="service_name" value="PluginClassName" />
 
 
 	
