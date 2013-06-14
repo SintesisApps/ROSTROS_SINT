@@ -34,34 +34,42 @@
 <!--  pagina 1-->
 <div data-role="page" id="page">
 	<div data-theme="a" data-role="header" data-position="fixed" style="height:44px;">
-     	<div style="display:inline-block; padding-top:0px; width:10%; height:44px; background:#F03; float:left"> <a href="javascript:;" onClick="$('#panelSecciones').css('left','0');"> Ediciones</a></div>
+    
+        <div style="width:10%; height:44px; position:absolute; z-index:10; margin:0; padding:0;	">
+        <div data-role="collapsible" data-icon="gear" data-content-theme="a" data-corners="false" style="margin:0px; padding:0px; float:left; width:100%; height:44px;" >
+    <h4>Ediciones</h4>
+    <ul data-role="listview"  data-corners="false">
+        <li  data-icon="false"><a href="#page">HOME</a></li>
+        <li  data-icon="false"><a href="#page2">Puebla</a></li>
+        <li  data-icon="false"><a href="#">Hidalgo</a></li>
+        <li  data-icon="false"><a href="#">Tlaxcala</a></li>
+        <li  data-icon="false"><a href="#">Jalisco</a></li>
+        <li  data-icon="false"><a href="#">Oaxaca</a></li>
+        <li  data-icon="false"><a href="#">Chiapas</a></li>
+        <li  data-icon="false"><a href="#">Veracruz</a></li>
+    </ul>
+</div>
+        </div>
+ <!--  <div data-role="collapsible"  data-content-theme="a" data-corners="false" style="margin:0px; padding:0px; float:left; width:120px;" data-icon="false">
+    <h4>Ediciones</h4>
+    <ul data-role="listview"  data-corners="false">
+        <li  data-icon="false"><a href="#page">HOME</a></li>
+        <li  data-icon="false"><a href="#page2">Puebla</a></li>
+        <li  data-icon="false"><a href="#">Hidalgo</a></li>
+        <li  data-icon="false"><a href="#">Tlaxcala</a></li>
+        <li  data-icon="false"><a href="#">Jalisco</a></li>
+        <li  data-icon="false"><a href="#">Oaxaca</a></li>
+        <li  data-icon="false"><a href="#">Chiapas</a></li>
+        <li  data-icon="false"><a href="#">Veracruz</a></li>
+    </ul>
+</div>-->
         <h3>
             Los Rostros
         </h3>
     </div>
 	<div data-role="content">	
     <!--menu-->
-    
-        
-        <div id="panelSecciones"  class="panelSeccion"> 
-           <ul>
-             <li id="rubrica"><a href="#page">HOME</a></li>
-            <li id="separador"></li>
-            <li   id="rubrica"><a href="#page2">Puebla</a></li>
-            <li id="separador"></li>
-            <li   id="rubrica"><a href="#">Hidalgo</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#">Tlaxcala</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#">Jalisco</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#">Oaxaca</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#">Chiapas</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#">Veracruz</a></li>
-            </ul>
-        </div>
+      
 <!--   fin menu -->	
   
                 
