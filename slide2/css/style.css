@@ -1,35 +1,11 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- *
- * Detailed information about this CSS: h5bp.com/css
- *
- * ==|== normalize ==========================================================
- */
-
-
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
-
-article, aside, details, figcaption, figure, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-
-
-/* =============================================================================
-   Base
-   ========================================================================== */
-
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+#cont_slide
+{
+	width:1024px;
+	height:768px;
+/*	background:#09F;*/
+}	
+}
 
 
 
@@ -86,6 +62,7 @@ margin: 0 auto;
 	height: 100%;
 	position: relative;
 	margin-left:0%;
+	overflow:hidden;
 }
 .sm-shadow {
 	position: absolute;
