@@ -2,11 +2,49 @@
 @media screen and (min-width: 0px) and (max-width: 768px) {
 #menu_inicial
 {
+	/*background:#666;*/
 }	
 #menu_inicial img
+{margin-left:-128px;}
+/*links*/
+#link_menu
 {
-	margin-left:-128px;
+	z-index:3;
+	position:absolute;
+	top:82%;
+	left:50%;
+	width:626px;
+	margin-left:-313px;
+	height:350px;
+	margin-top:-13px;
 }
+#events
+{
+	width:25%;
+	height:100%;
+	background:#666;
+	float:left;
+	z-index:3;
+}
+#d_magazine
+{
+	width:46%;
+	height:64%;
+	margin-top:20.1%;
+	background:#93C;
+	z-index:3;
+	float:left;
+}
+#reality
+{
+	width:29%;
+	height:40%;
+	margin-top:33.5%;
+	background:#036;
+	z-index:3;
+	float:left;
+}
+
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 #menu_inicial
