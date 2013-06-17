@@ -16,7 +16,7 @@
 	width:626px;
 	margin-left:-313px;
 	height:350px;
-	margin-top:-450px;
+	margin-top:-390px;
 }
 #events
 {
@@ -56,6 +56,9 @@
 }
 }
 
+a{
+	text-decoration:none;
+}
 
 .contenido
 {
