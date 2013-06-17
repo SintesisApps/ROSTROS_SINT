@@ -51,7 +51,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 }
 .home-device {/*borde negro*/
 width:100%;
-height:400px;
+height:100%;
 background:#000;
 position:relative;
 margin: 0 auto;
@@ -64,28 +64,28 @@ margin: 0 auto;
 	
 }
 .home-device .arrow-left {
-	background:url(../img/arrows.png) no-repeat left top;
+	/*background:url(../img/arrows.png) no-repeat left top;
 	position:absolute;
 	left:10px;
 	top:50%;
 	margin-top:-15px;
 	width:17px;
-	height:30px;
+	height:30px;*/
 }
 .home-device .arrow-right {
-	background:url(../img/arrows.png) no-repeat left bottom;
+	/*background:url(../img/arrows.png) no-repeat left bottom;
 	position:absolute;
 	right:10px;
 	top:50%;
 	margin-top:-15px;
 	width:17px;
-	height:30px;
+	height:30px;*/
 }
 .swiper-main {
-	width: 96%;
-	height: 300px;
+	width: 100%;
+	height: 100%;
 	position: relative;
-	margin-left:2%;
+	margin-left:0%;
 }
 .sm-shadow {
 	position: absolute;
@@ -97,8 +97,8 @@ margin: 0 auto;
 }
 
 .swiper1, .swiper1 .swiper-slide{
-	width: 640px;
-	height: 300px;
+	width: 100%;
+	height: 100%;
 }
 .pagination1 {
 	text-align: center;
