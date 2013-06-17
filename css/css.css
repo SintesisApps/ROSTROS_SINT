@@ -19,11 +19,11 @@
 	margin-top:-390px;
 	/*background:#FFF;*/
 }
-#events
+/*#events
 {
 	width:25%;
 	height:89%;
-	/*background:#666;*/
+	background:#666;
 	float:left;
 	z-index:3;
 }
@@ -32,7 +32,7 @@
 	width:46%;
 	height:64%;
 	margin-top:20.1%;
-	/*background:#93C;*/
+	background:#93C;
 	z-index:3;
 	float:left;
 }
@@ -41,20 +41,35 @@
 	width:29%;
 	height:40%;
 	margin-top:33.5%;
-	/*background:#036;*/
+	background:#036;
 	z-index:3;
 	float:left;
-}
+}*/
 
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 #menu_inicial
 {
+	background:#666;
 }	
 #menu_inicial img
 {
 	margin-top:-128px;
 }
+
+/*links*/
+#link_menu
+{
+	z-index:3;
+	position:absolute;
+	top:82%;
+	left:50%;
+	width:620px;
+	margin-left:-310px;
+	height:350px;
+	margin-top:-140px;
+}
+
 }
 
 a{
@@ -68,6 +83,35 @@ a{
 	position:fixed;
 	background:#000;
 }
+#events
+{
+	width:25%;
+	height:89%;
+	background:#666;
+	float:left;
+	z-index:3;
+}
+#d_magazine
+{
+	width:46%;
+	height:64%;
+	margin-top:20.1%;
+	background:#93C;
+	z-index:3;
+	float:left;
+}
+#reality
+{
+	width:29%;
+	height:40%;
+	margin-top:33.5%;
+	background:#036;
+	z-index:3;
+	float:left;
+}
+
+
+
 #panelSecciones{
 	width:10%;
 	height:auto;
