@@ -100,6 +100,11 @@ margin: 0 auto;
 	width: 100%;
 	height: 100%;
 }
+.swiper-slide img
+{
+	width:100%;
+	height:100%;
+}
 .pagination1 {
 	text-align: center;
 	margin-top: 5px;
