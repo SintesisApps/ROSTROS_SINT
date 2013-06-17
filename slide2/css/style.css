@@ -29,7 +29,7 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 width:100%;
 height:100%;
 background:#000;
-position:relative;
+position:absolute;
 margin: 0 auto;
 	/*width:100%;
 	height:100%;
@@ -86,7 +86,7 @@ margin: 0 auto;
 /*.pagination1 {
 	text-align: center;
 	margin-top: 5px;
-}
+}*/
 .content-slide {
 	background: #fff;
 	padding: 20px;
@@ -106,7 +106,7 @@ margin: 0 auto;
 .cs-2 {
 	background: #ad2e4c;
 	color: #fff;
-}*/
+}
 /* Pagination */
 /*.pagination1 .swiper-pagination-switch {
 	display: inline-block;
