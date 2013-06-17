@@ -16,7 +16,7 @@
 	width:626px;
 	margin-left:-313px;
 	height:350px;
-	margin-top:-370px;
+	margin-top:-375px;
 	/*background:#FFF;*/
 }
 /*#events
@@ -87,7 +87,6 @@ a{
 {
 	width:25%;
 	height:89%;
-	background:#666;
 	float:left;
 	z-index:3;
 }
@@ -96,7 +95,6 @@ a{
 	width:46%;
 	height:64%;
 	margin-top:20.1%;
-	background:#93C;
 	z-index:3;
 	float:left;
 }
@@ -105,7 +103,6 @@ a{
 	width:29%;
 	height:40%;
 	margin-top:33.5%;
-	background:#036;
 	z-index:3;
 	float:left;
 }
