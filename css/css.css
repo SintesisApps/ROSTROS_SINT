@@ -108,10 +108,8 @@ a{
 #cab_menu
 {
 	
-	width:10%; 
-	height:44px; 
-	background:#F03;
-	border-radius:0px 15px 0px 0px;	
+	width:8.9%; 
+	height:44px;	
 	display:inline-block;
 	padding-top:0px;
 	text-align:center;
@@ -120,7 +118,7 @@ a{
 }
 #logo
 {
-	width:90%;
+	width:91.1%;
 	height:44px;
 	display:inline-block;
 	margin-left:10%;
@@ -131,7 +129,7 @@ a{
 }
 
 #panelSecciones{
-	width:10%;
+	width:8.9%;
 	height:auto;
 	text-align:center;
 	margin:0;
