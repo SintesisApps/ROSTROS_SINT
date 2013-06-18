@@ -1,11 +1,11 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-	.home-device {/*borde negro*/
+	.home-device {
 	width:100%;
 	height:93.4%;
 	}
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
-	.home-device {/*borde negro*/
+	.home-device {
 	width:100%;
 	height:95%;
 	}
@@ -29,14 +29,14 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }*/
-/*.home-device {
+.home-device {
 width:100%;
-height:93.3%;
+height:93.1%;
 background:#000;
 position:absolute;
 margin: 0 auto;	
 	
-}*/
+}
 .home-device .arrow-left {
 	/*background:url(../img/arrows.png) no-repeat left top;
 	position:absolute;
