@@ -1,13 +1,13 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 	.home-device {/*borde negro*/
 	width:100%;
-	height:93.2%;
+	height:93.4%;
 	}
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
 	.home-device {/*borde negro*/
 	width:100%;
-	height:93%;
+	height:95%;
 	}
 }
 
