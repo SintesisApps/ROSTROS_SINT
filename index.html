@@ -59,16 +59,17 @@
 <!--  pagina 1-->
 <div data-role="page" id="page1">
 	<div data-theme="a" data-role="header" data-position="fixed" style="height:44px;">
-     	<div style="display:inline-block; padding-top:0px; width:10%; height:44px; background:#F03; float:left; position:absolute"> <a href="javascript:;" onClick="$('#panelSecciones').css('margin-top','0');"> Ediciones</a></div>
-        <h3>
-            <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px')";>Los Rostros</a>
-        </h3>
+     	<div id="cab_menu"> <a href="javascript:;" onClick="$('#panelSecciones').css('margin-top','0');"> Ediciones</a></div>
+        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px')";>
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
     </div>
 	<div data-role="content">	
     <!--menu-->
     
         
-        <div id="panelSecciones"  class="panelSeccion"> 
+       <!-- <div id="panelSecciones"  class="panelSeccion"> 
            <ul>
              <li id="rubrica"><a href="#page2" onClick="$('#panelSecciones').css('margin-top','-300px');" data-transition="slideup">HOME</a></li>
             <li id="separador"></li>
@@ -87,7 +88,7 @@
             <li  id="rubrica"><a href="#page2" onClick="$('#panelSecciones').css('margin-top','-300px');">Veracruz</a></li>
             <li></li>
             </ul>
-        </div>
+        </div>-->
 <!--   fin menu -->	
   
                 
