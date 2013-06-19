@@ -25,32 +25,30 @@ body{
 	margin-top:-375px;
 	/*background:#FFF;*/
 }
-/*#events
+#cab_menu
 {
-	width:25%;
-	height:89%;
-	background:#666;
-	float:left;
-	z-index:3;
+	
+	width:120px; 
+	height:44px;	
+	display:inline-block;
+	padding-top:0px;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;			
 }
-#d_magazine
+
+#logo
 {
-	width:46%;
-	height:64%;
-	margin-top:20.1%;
-	background:#93C;
-	z-index:3;
-	float:left;
+	width:648px;
+	height:44px;
+	display:inline-block;
+	margin-left:10%;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;
+	padding-top:1xp;
 }
-#reality
-{
-	width:29%;
-	height:40%;
-	margin-top:33.5%;
-	background:#036;
-	z-index:3;
-	float:left;
-}*/
+
 
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -73,7 +71,29 @@ body{
 	height:350px;
 	margin-top:-290px;
 }
+#cab_menu
+{
+	
+	width:120px; 
+	height:44px;	
+	display:inline-block;
+	padding-top:0px;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;			
+}
 
+#logo
+{
+	width:904px;
+	height:44px;
+	display:inline-block;
+	margin-left:10%;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;
+	padding-top:1xp;
+}
 }
 
 a{
@@ -117,28 +137,7 @@ a{
 	float:left;
 }
 
-#cab_menu
-{
-	
-	width:8.9%; 
-	height:44px;	
-	display:inline-block;
-	padding-top:0px;
-	text-align:center;
-	vertical-align:central;
-	position:absolute;			
-}
-#logo
-{
-	width:91.1%;
-	height:44px;
-	display:inline-block;
-	margin-left:10%;
-	text-align:center;
-	vertical-align:central;
-	position:absolute;
-	padding-top:1xp;
-}
+
 
 #panelSecciones{
 	width:8.9%;
