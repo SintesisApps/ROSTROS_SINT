@@ -78,17 +78,23 @@
 
 <script>
 $(document).ready(function(){
-alert("init");
+//alert("init");
 })
 </script>
 
-<script>
-function mensaje(){
-alert("hola");	
-};
 
+  <script src="slide/js/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
 
-</script>
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+  </script>
 
 </head> 
 <body> 
@@ -220,17 +226,6 @@ alert("hola");
 	</div>
 </div>
 <!-- fin paginaa 4 -->
-  <script src="slide/js/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528
-      });
-    });
-  </script>
 </body>
 </html>
