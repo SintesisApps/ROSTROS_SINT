@@ -81,13 +81,17 @@ $(document).ready(function(){
 
 
   <script src="js/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
-
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
   <script>
   //alert("medidas");
-   
-  if(screen.width >= 1024)
+  
+    $(function() {
+      $('#slides').slidesjs({
+       width: 1024,
+        height: 720
+      });
+    });
+	/*
+	if(screen.width >= 1024)
   {//alert('El ancho de la resolucion de pantalla es de '+screen.width+'pixeles');
    $(function() {
       $('#slides').slidesjs({
@@ -98,8 +102,7 @@ $(document).ready(function(){
   }
   else
   {alert('El alto de la resolucion de pantalla es de '+screen.height+'pixeles');}
-  
-   
+	*/
   </script>
 
 </head> 
