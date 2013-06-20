@@ -65,10 +65,24 @@
       }
 	  
 	  /* DIV que muestra la imagen*/
-	#slides { position:relative;display:none;width:100%;overflow:hidden;height:724px;text-align:center; }
-	#slides div { width:1024px;height:724px;display:block; }
-	/*#slides_container a { display:block;width:500px;height:375px; }
+	#slides { position:relative;display:none;width:1024;overflow:hidden;height:724px;text-align:center;}
+	#img_evt { width:1024px;height:724px;display:block; }
+	/*#slides div img {
+		width:100%;
+		height:724px;}
+	#slides_container a { display:block;width:500px;height:375px; }
 	#slides_container a img { display:block; }*/
+	
+	#des_img
+	{
+		width:100%;
+		height:161px;
+		background:#999;
+		position:absolute;
+		margin-top:-200px;
+		z-index:1000;
+		
+	}
     }
   </style>
 <!--Codigo js  -->
@@ -166,7 +180,10 @@ $(document).ready(function() {
 
  <div class="container">
     <div id="slides">
-         <div><img src="img/fotos/1.jpg"></div>
+         <div>
+         	<div id="img_evt"><img src="img/fotos/1.jpg"></div>
+         	<div id="des_img">descripcion</div>
+         </div>
         
        <div> <img src="img/fotos/2.jpg"></div>
         	
