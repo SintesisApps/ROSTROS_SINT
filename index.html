@@ -86,13 +86,20 @@ $(document).ready(function(){
   <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
   <script>
   //alert("medidas");
-  
-    $(function() {
+   
+  if(screen.height >= 1024)
+  {//alert('El ancho de la resolucion de pantalla es de '+screen.width+'pixeles');
+   $(function() {
       $('#slides').slidesjs({
        width: 1024,
-        height: 680
+        height: 720
       });
     });
+  }
+  else
+  {alert('El alto de la resolucion de pantalla es de '+screen.height+'pixeles');}
+  
+   
   </script>
 
 </head> 
