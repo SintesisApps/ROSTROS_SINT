@@ -19,6 +19,46 @@
   <!-- End SlidesJS Required -->
 
   <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+
+
+
+<!-- fin  slide-->
+
+
+
+
+<script>
+$(document).ready(function(){
+//alert("init");
+})
+</script>
+
+
+  <script src="js/jquery.slides.min.js"></script>
+  <script>
+  //alert("medidas");
+  
+    $(function() {
+      $('#slides').slidesjs({
+       width: 1024,
+        height: 724
+      });
+    });
+	
+	/*if(screen.width >= 1024)
+  {//alert('El ancho de la resolucion de pantalla es de '+screen.width+'pixeles');
+  $(function() {
+	 
+      $('#slides').slidesjs({
+       width: 1024,
+        height: 724
+      });
+    });
+  }
+  else
+  {alert('El alto de la resolucion de pantalla es de '+screen.height+'pixeles');}
+	*/
+  </script>
   <style>
     /* Prevent the slideshow from flashing on load */
     #slides {
@@ -59,53 +99,13 @@
     }
 
     /* For larger displays */
-    @media (min-width: 1200px) {
+    @media (min-width: 1024px) {
       .container {
         width: 100%;
 		height:200px;
       }
     }
   </style>
-
-
-<!-- fin  slide-->
-
-
-
-
-<script>
-$(document).ready(function(){
-//alert("init");
-})
-</script>
-
-
-  <script src="js/jquery.slides.min.js"></script>
-  <script>
-  //alert("medidas");
-  
-    $(function() {
-      $('#slides').slidesjs({
-       width: 1024,
-        height: 724
-      });
-    });
-	
-	/*if(screen.width >= 1024)
-  {//alert('El ancho de la resolucion de pantalla es de '+screen.width+'pixeles');
-  $(function() {
-	 
-      $('#slides').slidesjs({
-       width: 1024,
-        height: 724
-      });
-    });
-  }
-  else
-  {alert('El alto de la resolucion de pantalla es de '+screen.height+'pixeles');}
-	*/
-  </script>
-
 </head> 
 <body> 
 
