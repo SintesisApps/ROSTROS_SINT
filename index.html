@@ -35,14 +35,25 @@
      
       .container {
         width:768px;
-		margin-top:112px;
-		height:1024px;
+		/*margin-top:112px;*/
+		height:980px;
+		background:#06F;
       }
-	#slides { position:relative;display:none;width:768px;overflow:hidden;height:1024px;text-align:center; }
-	#cont_contenido{
+	 #slides{ 
+		 width:768px;
+		 height:980px;
+		 background:#999;
+		 position:relative;
+		 /*display:none;
+		 overflow:hidden;
+		 text-align:center;*/
+		}
+	 #cont_contenido{
 		width:768px;
-		height:1024px;}
-	#img_evt { width:768px;height:544px;display:block; }
+		height:980px;
+		background:#F9C;
+		}
+	/*#img_evt { width:768px;height:544px;display:block; }
 	#des_img
 	{
 		width:100%;
@@ -52,7 +63,7 @@
 		margin-top:-10px;
 		z-index:1000;
 		
-	}
+	}*/
     }
 
     /* For smartphones */
@@ -118,7 +129,19 @@ $(document).ready(function() {
 });
 </script>
 
-
+<!-- fin paginaa 4 -->
+<script src="js/jquery.slides.min.js"></script><!-- slide -->
+<script>
+alert('El ancho de la resolucion de pantalla es de '+screen.width+'pixeles'); alert('El alto de la resolucion de pantalla es de '+screen.height+'pixeles'); 
+/*
+    $(function() {
+      $('#slides').slidesjs({
+       width: 768,
+        height: 980
+      });
+    });
+	*/
+</script>
 
 </head> 
 <body> 
@@ -197,12 +220,12 @@ $(document).ready(function() {
 
  <div class="container">
     <div id="slides">
-         <div id="cont_contenido">
-         	<div id="img_evt"><img src="img/fotos/1.jpg"></div>
-         	<div id="des_img">descripcion 1</div>
+        <div id="cont_contenido">
+         	<!--<div id="img_evt"><img src="img/fotos/1.jpg"></div>
+         	<div id="des_img">descripcion 1</div>-->
          </div>
         
-       <div>
+   <!--    <div>
        		<div id="img_evt"><img src="img/fotos/2.jpg"></div>
          	<div id="des_img">descripcion 2</div>
        </div>
@@ -220,7 +243,7 @@ $(document).ready(function() {
         <div>
         	<div id="img_evt"><img src="img/fotos/5.jpg"></div>
          	<div id="des_img">descripcion 5</div>
-        </div>
+        </div>-->
     </div>
   </div>
 
@@ -278,17 +301,7 @@ $(document).ready(function() {
 		<h4>Pie de página</h4>
 	</div>
 </div>
-<!-- fin paginaa 4 -->
-<script src="js/jquery.slides.min.js"></script><!-- slide -->
-<script>
-    $(function() {
-      $('#slides').slidesjs({
-       width: 1024,
-        height: 724
-      });
-    });
-	
-</script>
+
 
 </body>
 </html>
