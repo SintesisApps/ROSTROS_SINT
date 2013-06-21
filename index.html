@@ -119,12 +119,16 @@
 <script>
 $(document).ready(function() {
 
-	 $(window).bind("orientationchange", function(event){            
-                if (event.orientation)          
-                        $("#contenido").html("Me han reorientado a " + event.orientation);
-        });
-        $(window).trigger("orientationchange");
-
+window.onorientationchange = function() {
+ var orientation = window.orientation;
+ if (orientation == 0 || orientation == 180) {
+ // $('div#portrait').css({display:'block'});
+ alert("1");
+ } else {
+ // $('div#portrait').css({display:'none'});
+ alert("2");
+ }
+}
 	/*boton ediciones*/
 	$('#btn_edicion').click(function() {
 		//alert("holafsdfsfs");
