@@ -141,22 +141,28 @@ $(document).ready(function() {
 $( window ).on( "orientationchange", function( event ) {
 	if(event.orientation=="portrait")
 	{
-		alert("portrait");	
+		$(function() {
+		  $('#slides').slidesjs({
+		   width: 768,
+			height: 980
+		  });
+		});	
 	}
 	else
 	{
-		alert("landscape");
+		 $(function() {
+		  $('#slides').slidesjs({
+		   width: 1024,
+			height: 724
+		  });
+		});
+	
 	}
 
 });
 $( window ).orientationchange();
 
-    $(function() {
-      $('#slides').slidesjs({
-       width: 1024,
-        height: 724
-      });
-    });
+   
 	
 </script>
 
