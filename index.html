@@ -41,11 +41,12 @@ $(document).ready(function() {
         $("#"+$(this).attr("id")).slideToggle(500);        
     });*/
 	
-	/*	$('#foto_evento_1').click(function() {
+		/*$('#foto_evento1').click(function() {
 		//alert("holafsdfsfs");
-		$('#slide_sec_1').slideToggle(800);
-	});
-	*/
+		$('#slide_sec1').slideToggle(800);
+		$('#descripcion_img1').slideToggle(800);
+	});*/
+	
 	//$.fn.mensaje = function() { alert("mensaje");}
 
 });
@@ -68,12 +69,24 @@ $( window ).orientationchange();
 
    */
 	function mostrar_ocultar(slide_sec, des_img)
-	{//slide_sec_1 descripcion_img_1 'slide_sec_1', 'descripcion_img_1'
+	{
+		/*var num_eventos=document.getElementById("num_eventos").value;
 		
+		for (i=1;i<=num_eventos.length;i++)
+		{
+			var evento="descripcion_img"+i;
+			if(document.getElementById(evento)!=des_img)
+			{
+				document.getElementById(evento).style.display="none";
+			}
+				
+		}*/
+		//alert("taille:"+capas.length);
 		if(document.getElementById(des_img).style.display=='')//visible
 		{
 			document.getElementById(des_img).style.display='none';
 			document.getElementById(slide_sec).style.display='';
+			document.getElementById("descripcion_img1").style.background=''
 			alert("ocultas");
 		}
 		else //oculta
@@ -81,6 +94,7 @@ $( window ).orientationchange();
 			alert("muestras");
 			document.getElementById(des_img).style.display='';
 			document.getElementById(slide_sec).style.display='none';
+			document.getElementById("descripcion_img1").style.background='rgba(0,0, 0, 0.5)'
 		}
 	}
 
@@ -92,7 +106,7 @@ $( window ).orientationchange();
 	height:161px; 
 	color:#FFF; 
 	margin-top:-200px; 
-	background:#333; 
+	/*background-color: rgba(0,0, 0, 0.5)*/ 
 	position:absolute;
 	z-index:1;
 }
@@ -242,7 +256,7 @@ $( window ).orientationchange();
     
  
 <!-- slide -->
-<div id="content_slide"><!-- conetnedor principal-->
+<div id="content_slide"><!-- conetnedor principal--><input type="hidden" id="num_eventos" value="4">
   <div id="container" class="cf">
 	<div id="main" role="main">
       <section class="slider">
@@ -252,7 +266,7 @@ $( window ).orientationchange();
             	<div id="evento">
                 	<div id="slide_sec1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
   	    	  		<div id="img_evento"><img src="img/fotos/1.jpg" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" /></div>
-                	<div id="descripcion_img1" class="descripcion" >descripcion 1</div>
+                	<div id="descripcion_img1" class="descripcion" style="background-color: rgba(0,0, 0, 0.5);" >descripcion 1</div>
                 
                 </div>
 	           
@@ -281,6 +295,14 @@ $( window ).orientationchange();
                 	<div id="slide_sec4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4 </div>
   	    	  		<div id="img_evento"><img src="img/fotos/4.jpg" onClick="mostrar_ocultar('slide_sec4','descripcion_img4')" /></div>
                 	<div id="descripcion_img4" class="descripcion" >descripcion 4</div>
+                
+                </div>
+  	    	</li>
+            <li id="foto_evento5">
+	           <div id="evento">
+                	<div id="slide_sec5" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 5 </div>
+  	    	  		<div id="img_evento"><img src="img/fotos/5.jpg" onClick="mostrar_ocultar('slide_sec5','descripcion_img5')" /></div>
+                	<div id="descripcion_img5" class="descripcion" >descripcion 5</div>
                 
                 </div>
   	    	</li>

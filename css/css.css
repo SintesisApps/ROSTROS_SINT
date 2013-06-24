@@ -154,6 +154,9 @@ a{
 	position:absolute;
 	z-index:20;
 	display:none;
+	background-color: rgba(0,0, 0, 0.5);
+	/*background-image: url(../img/patrontrans.png);
+	background-color:transparent;*/
 	/*margin-top:-300px;
 	background-color:transparent;
 	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
@@ -165,7 +168,7 @@ a{
 
  ul
 {list-style:none;
-background:#333;
+/*background:#333;*/
 margin:0;
 top:0;
 padding:0;

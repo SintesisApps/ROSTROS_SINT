@@ -139,6 +139,7 @@
           slider.animatingTo = Math.floor(slider.currentSlide/slider.move);
           slider.currentItem = slider.currentSlide;
           slider.slides.removeClass(namespace + "active-slide").eq(slider.currentItem).addClass(namespace + "active-slide");
+
           slider.slides.click(function(e){
             e.preventDefault();
             var $slide = $(this),
@@ -468,7 +469,9 @@
         // !CAROUSEL:
         // CANDIDATE: slide active class (for add/remove slide)
         if (!carousel) slider.slides.removeClass(namespace + 'active-slide').eq(target).addClass(namespace + 'active-slide');
-
+		
+		/*CUANDO CAMBIAMOS DE SLIDE*/
+			
         // INFINITE LOOP:
         // CANDIDATE: atEnd
         slider.atEnd = target === 0 || target === slider.last;
