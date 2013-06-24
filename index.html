@@ -96,6 +96,12 @@ $( window ).orientationchange();
 		/*overflow:hidden;*/
 		background:#06F;
 	}
+	#img_evento
+	{
+		width:768px;
+		height:544px;
+		overflow:hidden;
+	}
 }
 
 @media (min-width: 1024px) 
@@ -106,6 +112,12 @@ $( window ).orientationchange();
 		width:1024px;
 		height:724px;
 		/*overflow:hidden;*/
+	}
+	#img_evento 
+	{
+		width:1024px;
+		height:724px;
+		overflow:hidden;
 	}
 }
 	
@@ -190,28 +202,28 @@ $( window ).orientationchange();
 	<div id="main" role="main">
       <section class="slider">
         <div class="flexslider">
-          <ul class="slides">
+          <ul class="slides" id="slides">
             <li id="foto_evento1"  >
 	           <div id="slide_sec1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
-  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" />
+  	    	   <div id="img_evento"><img src="img/fotos/1.jpg" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" /></div>
                 <div id="descripcion_img1" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 1</div>
   	    	</li>
             
   	    	 <li id="foto_evento1">
 	           <div id="slide_sec2" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1 ;display:none;">slide secundario 2</div>
-  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" id="f_evento2" />
+  	    	   <div id="img_evento"><img src="img/fotos/2.jpg" id="f_evento2" /></div>
                 <div id="descripcion_img2" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 2</div>
   	    	</li>
             
   	    	 <li id="foto_evento2">
 	           <div id="slide_sec3" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
-  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+  	    	  <div id="img_evento"> <img src="img/fotos/3.jpg" /></div>
                 <div id="descripcion_img3" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 3</div>
   	    	</li>
             
   	    	 <li id="foto_evento4">
 	           <div id="slide_sec4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4</div>
-  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+  	    	   <div id="img_evento"><img src="img/fotos/4.jpg" /></div>
                 <div id="descripcion_img4" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 4</div>
   	    	</li>
           </ul>
