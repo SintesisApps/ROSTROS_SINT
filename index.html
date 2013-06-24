@@ -34,6 +34,14 @@ $(document).ready(function() {
 		//alert("holafsdfsfs");
 		$('#panelSecciones').slideToggle(800);
 	});
+	/*mostrar slide sec*/
+	/*$('#foto_evento').tap(function(){
+			$('#slide_sec').slideToggle(800);
+		});*/
+		$('#foto_evento').click(function() {
+		//alert("holafsdfsfs");
+		$('#slide_sec').slideToggle(800);
+	});
 
 });
 </script>
@@ -162,22 +170,29 @@ $( window ).orientationchange();
       <section class="slider">
         <div class="flexslider">
           <ul class="slides">
-            <li>
+            <li id="foto_evento">
+	           <div id="slide_sec" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
   	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF;">descripcion 1</div>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="img/images/kitchen_adventurer_lemon.jpg" />
-                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF;">descripcion 2</div>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="img/images/kitchen_adventurer_donut.jpg" />
-                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF;">descripcion 3</div>
-  	    		</li>
-  	    		<li>
-  	    	    <img src="img/images/kitchen_adventurer_caramel.jpg" />
-                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF;">descripcion 4</div>
-  	    		</li>
+                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 1</div>
+  	    	</li>
+            
+  	    	 <li id="foto_evento">
+	           <div id="slide_sec" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1 ;display:none;">slide secundario 2</div>
+  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 2</div>
+  	    	</li>
+            
+  	    	 <li id="foto_evento">
+	           <div id="slide_sec" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
+  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 3</div>
+  	    	</li>
+            
+  	    	 <li id="foto_evento">
+	           <div id="slide_sec" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4</div>
+  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                <div id="descripcion_img" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 4</div>
+  	    	</li>
           </ul>
         </div>
       </section>

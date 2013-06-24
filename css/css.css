@@ -49,10 +49,19 @@ body{
 	position:absolute;
 	padding-top:1xp;
 }
+#cebecera_prin
+{
 
+background:#decada;
+}
 
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+	#cebecera_prin
+{
+
+background:#FC3;
+}
 #menu_inicial
 {
 	background:#666;
@@ -106,7 +115,7 @@ a{
 #cebecera_prin
 {
 	height:44px;
-	background:#000;
+	/*background:#000;*/
 }
 
 .contenido
