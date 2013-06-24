@@ -86,6 +86,17 @@ $( window ).orientationchange();
 
 </script>
 <style>
+.descripcion
+{
+	width:100%;
+	height:161px; 
+	color:#FFF; 
+	margin-top:-200px; 
+	background:#333; 
+	position:absolute;
+	z-index:1;
+}
+
 @media (max-width: 768px) 
 {
 	#content_slide
@@ -96,12 +107,18 @@ $( window ).orientationchange();
 		/*overflow:hidden;*/
 		background:#06F;
 	}
-	#img_evento
+	#evento, #img_evento
+	{
+	width:768px;
+		height:544px;
+		overflow:hidden;
+	}
+	/*#img_evento
 	{
 		width:768px;
 		height:544px;
 		overflow:hidden;
-	}
+	}*/
 }
 
 @media (min-width: 1024px) 
@@ -113,12 +130,40 @@ $( window ).orientationchange();
 		height:724px;
 		/*overflow:hidden;*/
 	}
-	#img_evento 
+	#evento, #img_evento 
 	{
 		width:1024px;
 		height:724px;
 		overflow:hidden;
 	}
+	/*#img_evento 
+	{
+		width:1024px;
+		height:724px;
+		overflow:hidden;
+	}*/
+}
+@media (min-width: 320px) 
+{
+	#content_slide
+	{
+		margin: 0 auto;
+		width:320px;
+		height:480px;
+		/*overflow:hidden;*/
+	}
+	#evento, #img_evento 
+	{
+		width:320px;
+		height:480px;
+		overflow:hidden;
+	}
+	/*#img_evento 
+	{
+		width:1024px;
+		height:724px;
+		overflow:hidden;
+	}*/
 }
 	
 
@@ -204,27 +249,40 @@ $( window ).orientationchange();
         <div class="flexslider">
           <ul class="slides" id="slides">
             <li id="foto_evento1"  >
-	           <div id="slide_sec1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
-  	    	   <div id="img_evento"><img src="img/fotos/1.jpg" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" /></div>
-                <div id="descripcion_img1" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 1</div>
+            	<div id="evento">
+                	<div id="slide_sec1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
+  	    	  		<div id="img_evento"><img src="img/fotos/1.jpg" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" /></div>
+                	<div id="descripcion_img1" class="descripcion" >descripcion 1</div>
+                
+                </div>
+	           
   	    	</li>
             
   	    	 <li id="foto_evento1">
-	           <div id="slide_sec2" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1 ;display:none;">slide secundario 2</div>
-  	    	   <div id="img_evento"><img src="img/fotos/2.jpg" id="f_evento2" /></div>
-                <div id="descripcion_img2" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 2</div>
+	           <div id="evento">
+                	<div id="slide_sec2" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 2</div>
+  	    	  		<div id="img_evento"><img src="img/fotos/2.jpg" onClick="mostrar_ocultar('slide_sec2','descripcion_img2')" /></div>
+                	<div id="descripcion_img2" class="descripcion" >descripcion 2</div>
+                
+                </div>
   	    	</li>
             
   	    	 <li id="foto_evento2">
-	           <div id="slide_sec3" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
-  	    	  <div id="img_evento"> <img src="img/fotos/3.jpg" /></div>
-                <div id="descripcion_img3" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 3</div>
+	          <div id="evento">
+                	<div id="slide_sec3" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
+  	    	  		<div id="img_evento"><img src="img/fotos/3.jpg" onClick="mostrar_ocultar('slide_sec3','descripcion_img3')" /></div>
+                	<div id="descripcion_img3" class="descripcion" >descripcion 3</div>
+                
+                </div>
   	    	</li>
             
   	    	 <li id="foto_evento4">
-	           <div id="slide_sec4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4</div>
-  	    	   <div id="img_evento"><img src="img/fotos/4.jpg" /></div>
-                <div id="descripcion_img4" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 4</div>
+	           <div id="evento">
+                	<div id="slide_sec4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4 </div>
+  	    	  		<div id="img_evento"><img src="img/fotos/4.jpg" onClick="mostrar_ocultar('slide_sec4','descripcion_img4')" /></div>
+                	<div id="descripcion_img4" class="descripcion" >descripcion 4</div>
+                
+                </div>
   	    	</li>
           </ul>
         </div>
