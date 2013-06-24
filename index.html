@@ -35,20 +35,18 @@ $(document).ready(function() {
 		$('#panelSecciones').slideToggle(800);
 	});
 	/*mostrar slide sec*/
-	/*$('#foto_evento').tap(function(){
-			$('#slide_sec').slideToggle(800);
-		});*/
-		//$('#foto_evento_1').click(function() {
-		//alert("holafsdfsfs");
-		//$('#slide_sec_1').slideToggle(800);
-	//});
-	function mensaje(slide_sec, des_img)
-	{//slide_sec_1 descripcion_img_1 'slide_sec_1', 'descripcion_img_1'
-		//alert("slide_sec:"+slide_sec+"   des_img:"+des_img);	
-		alert("imagenes");
-		//$(slide_sec).slideToggle(800);
-	}
+	 $("img[id^='f_evento']").click(function(){
+        $('div[id^="slide_sec"]').slideUp(500);
+        $("#"+$(this).attr("id")).slideToggle(500);        
+    });
 	
+	/*	$('#foto_evento_1').click(function() {
+		//alert("holafsdfsfs");
+		$('#slide_sec_1').slideToggle(800);
+	});
+	*/
+	//$.fn.mensaje = function() { alert("mensaje");}
+
 });
 </script>
 <script>
@@ -68,7 +66,20 @@ $(document).ready(function() {
 $( window ).orientationchange();
 
    */
-	
+	function mostrar_ocultar(slide_sec, des_img)
+	{//slide_sec_1 descripcion_img_1 'slide_sec_1', 'descripcion_img_1'
+		
+		if(document.getElementById(des_img).style.display=='')//visible
+		{
+			document.getElementById(des_img).style.display='none';
+			document.getElementById(slide_sec).style.display='';
+		}
+		else //oculta
+		{
+			document.getElementById(des_img).style.display='';
+			document.getElementById(slide_sec).style.display='none';
+		}
+	}
 
 </script>
 <style>
@@ -177,28 +188,28 @@ $( window ).orientationchange();
       <section class="slider">
         <div class="flexslider">
           <ul class="slides">
-            <li id="foto_evento_1" onClick="mensaje('slide_sec_1', 'descripcion_img_1');">
-	           <div id="slide_sec_1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
+            <li id="foto_evento1" onClick="mostrar_ocultar('slide_sec1','descripcion_img1')" >
+	           <div id="slide_sec1" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 1</div>
   	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                <div id="descripcion_img_1" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 1</div>
+                <div id="descripcion_img1" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 1</div>
   	    	</li>
             
-  	    	 <li id="foto_evento_1">
-	           <div id="slide_sec_2" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1 ;display:none;">slide secundario 2</div>
-  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                <div id="descripcion_img_2" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 2</div>
+  	    	 <li id="foto_evento1">
+	           <div id="slide_sec2" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1 ;display:none;">slide secundario 2</div>
+  	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" id="f_evento2" />
+                <div id="descripcion_img2" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 2</div>
   	    	</li>
             
-  	    	 <li id="foto_evento_2">
-	           <div id="slide_sec_3" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
+  	    	 <li id="foto_evento2">
+	           <div id="slide_sec3" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 3</div>
   	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                <div id="descripcion_img_3" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 3</div>
+                <div id="descripcion_img3" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 3</div>
   	    	</li>
             
-  	    	 <li id="foto_evento_4">
-	           <div id="slide_sec_4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4</div>
+  	    	 <li id="foto_evento4">
+	           <div id="slide_sec4" style="width:100%; height:161px; color:#FFF; margin-top:100px; background:#333; position:absolute; z-index:1; display:none;">slide secundario 4</div>
   	    	   <img src="img/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                <div id="descripcion_img_4" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 4</div>
+                <div id="descripcion_img4" style="width:100%; height:161px; color:#FFF; margin-top:-200px; background:#333; position:absolute; z-index:1">descripcion 4</div>
   	    	</li>
           </ul>
         </div>
