@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.Sintesis.App"
         version   = "1.0">
-    <name>ROSTROS SINT</name>
+    <name>ROSTROS</name>
 
     <description>
-        Rostros logo sintesis
+        Rostros
     </description>
 
     <author href="http://sintesis.mx" email="admin-web@sintesisdigital.com.mx">
-        Rostros logo sintesis
+        Rostros
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
