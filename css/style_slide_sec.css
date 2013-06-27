@@ -7,9 +7,9 @@
 	margin: 0 auto;
 }
 */
-.box {
-	width: 96px;
-	height: 96px;
+.box {/*cajas rojas*/
+	width: 241px;
+	height: 159px;
 	line-height: 96px;
 	text-align: center;
 	color: #FFF;
@@ -21,7 +21,8 @@
 }
 
 .box img {
-	width: 96px;
+	width: 241px;
+	height:159px;
 	vertical-align: middle;
 }
 
@@ -33,8 +34,8 @@
 .cbox,
 .fbox {
 	width: 210px;
-	height: 210px;
-	line-height: 210px;
+	height: 159px;
+	/*line-height: 210px;*/
 	text-align: center;
 	color: #FFF;
 	margin: 2px;
@@ -42,6 +43,7 @@
 	text-decoration: none;
 	overflow: hidden;
 	position: relative;
+	/*background:#666;*/
 }
 
 .centered .ibox,
@@ -63,9 +65,10 @@
 }
 
 .fbox {
-	width: 600px;
+	/*width: 600px;
 	height: 600px;
-	line-height: 600px;
+	line-height: 600px;*/
+/*	background:#666;*/
 }
 
 span.delta {
@@ -78,16 +81,16 @@ span.delta {
 }
 
 .ibox span.delta {
-	height: 210px;
+	/*height: 210px;*/
 }
 
 .active .box {
-	outline: 1px dashed green;
+	/*outline: 1px dashed green;*/
 }
 
 .gallery-holder {
 	margin: 0 auto;
-	outline: 1px dashed #666;
+/*	outline: 1px dashed #666;*/
 	margin: 0 auto 10px auto;
 	padding: 10px;
 }
@@ -96,12 +99,15 @@ span.delta {
 	/*width: 100%;*/
 	/*width: 800px;*/
 	overflow: hidden;
+	background:#3CC;
+/*	height:159px;*/
 }
 
 .gallery div.holder {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	background:#666;
 }
 
 .gallery div.list {
@@ -129,70 +135,9 @@ span.delta {
 	font-size: 11px;
 }
 
-
-/*
-a.prev,
-a.next,
-#moveTo,
-a.tablink,
-#counter {
-	border: 1px solid #CCC;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	padding: 6px;
-	margin-bottom: 6px;
-	font-size: 16px;
-	color: #333;
-	background: #EFEFEF;
-	text-decoration: none;
-}
-a.prev {float: left;}
-a.next {float: right;}
-
-#moveTo,
-#counter {
-	display: block;
-	margin: 0 auto;
-	overflow: hidden;
-	width: 200px;
-	text-align: center;
-}
-*/
 .focus .ibox {
-	outline: 1px dashed green;
+	/*outline: 1px dashed green;*/
 }
 .focus-old .ibox {
-	outline: 1px dashed red;
+/*	outline: 1px dashed red;*/
 }
-
-/*#tabs, #tabs2 {
-	text-align: center;
-}
-.tablink {
-	display: inline-block;
-	overflow: hidden;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	margin: 0 2px;
-}
-a.active {
-	border-color: #333;
-}
-
-#tabs2 .tablink {
-	display: inline-block;
-	overflow: hidden;
-	width: 15px;
-	height: 15px;
-	text-align: center;
-	margin: 0 10px;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	text-indent: -9999px;
-}
-
-#tabs2 a.active {
-	background-color: #666;
-}*/
