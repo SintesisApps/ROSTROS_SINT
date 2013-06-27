@@ -1,8 +1,7 @@
 body{
-	background-image: url(imagenes/patron.png);
-	font-family:  Helvetica, sans-serif;
+	font-family:  Helvetica;
 	height:100%;
-	width:70%;
+	/*width:70%;*/
 	
 	}
 @media screen and (min-width: 0px) and (max-width: 768px) {
