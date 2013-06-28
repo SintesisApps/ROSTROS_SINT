@@ -13,7 +13,9 @@
 	line-height: 96px;
 	text-align: center;
 	color: #FFF;
-	margin: 2px;
+	/*margin-right:8px;*/
+	padding-right:4px;
+	padding-left:4px;
 	display: block;
 	text-decoration: none;
 	overflow: hidden;
@@ -21,16 +23,17 @@
 }
 
 .box img {
-	width: 241px;
+	width: 241x;
 	height:159px;
 	vertical-align: middle;
 	overflow:hidden;
 	display:none;
+	
 }
 
-.box1 {background: red;}
+/*.box1 {background: red;}
 .box2 {background: blue;}
-.box3 {background: orange;}
+.box3 {background: orange;}*/
 
 .ibox,
 .cbox,
@@ -93,23 +96,25 @@ span.delta {
 .gallery-holder {
 	margin: 0 auto;
 /*	outline: 1px dashed #666;*/
-	margin: 0 auto 10px auto;
+	/*margin: 0 auto 10px auto;
 	padding: 10px;
+	background:#6F6;*/
 }
 
 .gallery {
-	width: 100%;
+	width: 96.48%;
 	/*width: 800px;*/
 	overflow: hidden;
 	height:159px;
 	margin-top:39px;
+	padding-left:1.36%;
+	padding-right:1.76%;
 }
 
 .gallery div.holder {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	background:#666;
 }
 
 .gallery div.list {
