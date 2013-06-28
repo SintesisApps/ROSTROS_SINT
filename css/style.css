@@ -1,6 +1,6 @@
 
 
-.bt-list { background-color: #fff; }
+.bt-list {/* background-color: #000; */}
 
 /*.bt-list {
     z-index: 9999;
@@ -8,13 +8,13 @@
     box-shadow:  0 8px 6px -8px black;
 }*/
 .slider li  {
-   display: none;
+   /*display: none;*/
    
     /*z-index: 8888;*/
 }
 .slider li img {
-    position: relative;
-	width: 100%;
+   /* position: relative;
+	width: 100%;*/
     /*z-index: 8888;*/
 }
 

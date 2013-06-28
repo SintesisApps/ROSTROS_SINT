@@ -65,7 +65,7 @@
 		margin: 0 auto;
 		width:768px;
 		height:980px;
-		background:#06F;
+		background:#000;
 	}
 	
 	 #contenido_slide, #cont_img
@@ -80,7 +80,17 @@
 		height:980px;
 
 	}*/
+	/*slide principal*/
+	.slider li  {
+   display: none;
+}
+.slider li img {
+    position: relative;
+	width: 100%;
+	}
+
 	
+	/*fin slide pricipal*/
 	.gallery {
 		width: 768px;
 		height:241px;
@@ -95,11 +105,13 @@
 		margin: 0 auto;
 		width:1024px;
 		height:724px;
+		background:#000;
 	}
 	 #contenido_slide, #cont_img
 	 {margin: 0 auto;
 		width:1024px;
 		height:724px;
+		background:#000;
 	}
 	#cont_publi, #cont_seccion
 	{
@@ -109,7 +121,14 @@
 
 	}
 	/*slide principal*/
-	
+	.slider li  {
+   display: none;
+}
+.slider li img {
+    position: relative;
+	width: 100%;
+	}
+
 	
 	/*fin slide pricipal*/
 	.gallery {
