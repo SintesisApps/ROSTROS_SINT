@@ -73,13 +73,13 @@
 		width:768px;
 		height:544px;
 	}
-	#cont_publi, #cont_seccion
+	/*#cont_publi, #cont_seccion
 	{
 		margin: 0 auto;
 		width:768px;
 		height:980px;
 
-	}
+	}*/
 	
 	.gallery {
 		width: 768px;
@@ -89,6 +89,7 @@
 
 @media (min-width: 1024px) 
 {
+	
 	#content_slide
 	{
 		margin: 0 auto;
@@ -107,6 +108,10 @@
 		height:724px;
 
 	}
+	/*slide principal*/
+	
+	
+	/*fin slide pricipal*/
 	.gallery {
 		width: 1024px;
 		height:241px;
