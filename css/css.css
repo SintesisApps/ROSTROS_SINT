@@ -12,6 +12,12 @@ body{
 }	
 #menu_inicial img
 {margin-left:-128px;}
+#cont_seccion, #cont_seccion img
+{
+	width:768px;
+	height:980px;
+}
+
 /*links*/
 #link_menu
 {
@@ -59,8 +65,10 @@ body{
 {
 	background:#000;
 }	
-#menu_inicial img
+#menu_inicial img, #cont_seccion img
 {margin-top:-128px;}
+#cont_seccion img
+{}
 
 /*links*/
 #link_menu

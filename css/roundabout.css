@@ -2,7 +2,7 @@
 
 /* Roundabout */
 
-.bt-slider { position: relative; display: block; margin:0px; }
+.bt-slider { position: relative; display: block; margin:20px; }
 .bt-slider .bt-list {overflow: hidden; display: block; margin: 0px; padding:0px; }/*foto hacia adentro*/
 .bt-slider .bt-track { position: relative; /*left: 0px; top: 0px; */}
 .bt-slider .bt-list .slide { display: block; list-style-type: none; float: left; }
