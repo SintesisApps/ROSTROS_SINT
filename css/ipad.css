@@ -73,6 +73,13 @@
 		width:768px;
 		height:544px;
 	}
+	#cont_img
+	{
+		margin: 0 auto;
+		width:768px;
+		height:980px;
+
+	}
 	
 	.gallery {
 		width: 768px;
@@ -92,6 +99,13 @@
 	 {margin: 0 auto;
 		width:1024px;
 		height:724px;
+	}
+	#cont_img
+	{
+		margin: 0 auto;
+		width:124px;
+		height:724px;
+
 	}
 	.gallery {
 		width: 1024px;
