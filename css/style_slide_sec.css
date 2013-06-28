@@ -24,6 +24,8 @@
 	width: 241px;
 	height:159px;
 	vertical-align: middle;
+	overflow:hidden;
+	display:none;
 }
 
 .box1 {background: red;}
@@ -96,11 +98,11 @@ span.delta {
 }
 
 .gallery {
-	/*width: 100%;*/
+	width: 100%;
 	/*width: 800px;*/
 	overflow: hidden;
-	background:#3CC;
-/*	height:159px;*/
+	height:159px;
+	margin-top:39px;
 }
 
 .gallery div.holder {
@@ -116,6 +118,7 @@ span.delta {
 	list-style: none;
 	width: 9999px;
 	overflow: hidden;
+	height:159px;
 }
 
 .gallery div.item {
@@ -126,14 +129,14 @@ span.delta {
 	background: yellow;
 }*/
 
-.debug-item {
+/*.debug-item {
 	padding: 1px 0;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: -1px;
 	color: #999;
 	font-size: 11px;
-}
+}*/
 
 .focus .ibox {
 	/*outline: 1px dashed green;*/
