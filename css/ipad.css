@@ -73,7 +73,7 @@
 		width:768px;
 		height:544px;
 	}
-	#cont_img
+	#cont_publi, #cont_seccion
 	{
 		margin: 0 auto;
 		width:768px;
@@ -100,7 +100,7 @@
 		width:1024px;
 		height:724px;
 	}
-	#cont_img
+	#cont_publi, #cont_seccion
 	{
 		margin: 0 auto;
 		width:124px;
