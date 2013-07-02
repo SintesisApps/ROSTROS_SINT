@@ -28,38 +28,31 @@
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
 	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
 	<script type="text/javascript">
-
-		(function(window, PhotoSwipe){
+	
+(function(window, PhotoSwipe){
 		
 			document.addEventListener('DOMContentLoaded', function(){
 			
 				var
-					options = {},//"div[id^='gallery_sec']"  '#Gallery1 a'
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('div[id^="Gallery"] a' ), options );
-					alert(this);
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options );
 					
-					
-					// onBeforeShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
 						console.log('onBeforeShow');
 					});
 					
-					// onShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
 						console.log('onShow');
 					});
 					
-					// onBeforeHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
 						console.log('onBeforeHide');
 					});
 					
-					// onHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
 						console.log('onHide');
 					});
 					
-					// onDisplayImage
 					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
 						console.log('onDisplayImage{');
 						console.log('onDisplayImage - e.action = ' + e.action);
@@ -68,22 +61,18 @@
 						console.log('onDisplayImage}');
 					});
 					
-					// onResetPosition
 					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
 						console.log('onResetPosition');
 					});
 					
-					// onSlideshowStart
 					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
 						console.log('onSlideshowStart');
 					});
 					
-					// onSlideshowStop
 					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
 						console.log('onSlideshowStop');
 					});
 					
-					// onTouch
 					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
 						console.log('onTouch{');
 						console.log('onTouch - e.action = ' + e.action);
@@ -92,53 +81,141 @@
 						console.log('onTouch}');
 					});
 					
-					// onBeforeCaptionAndToolbarShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
 						console.log('onBeforeCaptionAndToolbarShow');
 					});
 					
-					// onCaptionAndToolbarShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
 						console.log('onCaptionAndToolbarShow');
 					});
 					
-					// onBeforeCaptionAndToolbarHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
 						console.log('onBeforeCaptionAndToolbarHide');
 					});
 					
-					// onCaptionAndToolbarHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
 						console.log('onCaptionAndToolbarHide');
 					});
 					
-					// onToolbarTap
 					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
 						console.log('onToolbarTap');
 						console.log(e);
 					});
 					
-					// onBeforeZoomPanRotateShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
 						console.log('onBeforeZoomPanRotateShow');
 					});
 					
-					// onZoomPanRotateShow
 					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
 						console.log('onZoomPanRotateShow');
 					});
 					
-					// onBeforeZoomPanRotateHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
 						console.log('onBeforeZoomPanRotateHide');
 					});
 					
-					// onZoomPanRotateHide
 					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
 						console.log('onZoomPanRotateHide');
 					});
 					
-					// onZoomPanRotateTransform
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
+						console.log('onZoomPanRotateTransform');
+						console.log(e);
+					});
+					
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery2 a'), options );
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
+						console.log('onBeforeShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
+						console.log('onShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
+						console.log('onBeforeHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
+						console.log('onHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
+						console.log('onDisplayImage{');
+						console.log('onDisplayImage - e.action = ' + e.action);
+						console.log('onDisplayImage - e.index = ' + e.index);
+						console.log(instance.getCurrentImage());
+						console.log('onDisplayImage}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
+						console.log('onResetPosition');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
+						console.log('onSlideshowStart');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
+						console.log('onSlideshowStop');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
+						console.log('onTouch{');
+						console.log('onTouch - e.action = ' + e.action);
+						console.log('onTouch - e.point = ');
+						console.log(e.point);
+						console.log('onTouch}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
+						console.log('onBeforeCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+						console.log('onCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
+						console.log('onBeforeCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
+						console.log('onCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
+						console.log('onToolbarTap');
+						console.log(e);
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
+						console.log('onBeforeZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
+						console.log('onZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
+						console.log('onBeforeZoomPanRotateHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
+						console.log('onZoomPanRotateHide');
+					});
+					
 					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
 						console.log('onZoomPanRotateTransform');
 						console.log(e);
@@ -220,16 +297,6 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 
 	function mostrar_ocultar(slide_sec, box)
 	{
-			/*window.addEventListener("orientationchange", function() {
-			  // Announce the new orientation number 90 y -90: landscape 0 y 180 portrair
-			  //alert(window.orientation);
-			  if(window.orientation== "90" || window.orientation =="-90")
-			  {
-				  alert("lanscape");
-				}
-				else
-				{alert("portrait hkhkhkhk");}
-			}, false);*/
 		var orientacion;	
 		if (window.matchMedia("(orientation: portrait)").matches) {
 		   //alert("portrait");
@@ -248,41 +315,16 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 				$('div[id^="slide_sec"]').show();
 		}
 		
-
-			/*if (window.matchMedia("(orientation: landscape)").matches) {
-			   alert("landscape");
-			}*/	
-		
-		/* $( window ).on( "orientationchange", function( event ) {
-			 if(event.orientation=="landscape")
-			 {
-				 
-				$('div[id^="box_sumario"]').slideToggle(800);
-				$('div[id^="slide_sec"]').slideToggle(800);
-			}
-		
-		});
-			$( window ).orientationchange();*/
-		/* if(document.getElementById("box_sumario1").style.display=='')//visible
-				{
-					document.getElementById("slide_sec1").style.display='';
-					document.getElementById("box_sumario1").style.display='none';
-					//$('#slide_sec1').show();
-					//$('#box_sumario1').hide();
-					
-					alert("ocultas");
-					
-				}
-				else //oculta
-				{
-					//$('#slide_sec1').hide();
-					//$('#box_sumario1').show();
-					alert("muestras");
-					document.getElementById(box).style.display='';
-					document.getElementById(slide_sec).style.display='none';
-				}*/
 	}
-
+	
+	/*
+		function prueba(elemento)
+	{
+		elemento="#box_sumario1";
+		$(elemento).slideToggle(800);
+	}
+	*/
+	
 </script>
 
 </head> 
@@ -449,6 +491,10 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                     	<div id="img_seccion"> <img src="img/conoce.jpg" /></div>
                     </div>-->
                 </li>
+                 <li>
+  	    	    	<div id="" class="" onClick=""><img src="img/fotos/7.jpg" /></div>
+                	
+  	    		</li>
           </ul>
         </div>
 	</div>
