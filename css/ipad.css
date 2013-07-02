@@ -28,36 +28,7 @@
 	position:absolute;
 	z-index:1;
 }
-/*.titulo_evento
-{ 
-	width:48%;
-	height:150px;
-	float:left;
-	font-family:millerdisplaylight;
-	color:#FFF;
-	text-transform:uppercase;
-	font-size:28px;
-	padding-left:12px;
-}
-.sumario_evento
-{
-	width:48%;
-	height:150px;
-	float:left;
-	font-size:22px;
-	color:#FFF;
-	padding-left:12px;
-}
 
-.edicion_revista
-{
-	width:100%;
-	height:44px;
-	float:left;
-	font-size:12px;
-	color:#FFF;
-	font-family:  Helvetica;
-}*/
 @media (max-width: 768px) 
 {
 	#content_slide
@@ -81,7 +52,7 @@
 		height:544px;
 		display:block;
 		overflow:hidden;
-		margin-top:194px;
+		margin-top:195px;
 		
 	}
 	
@@ -90,7 +61,7 @@
    display: none;
    width:768px;
    height:980px;
-   background:#000;
+   background:#fff;
 }
 .slides li img {
     position: relative;
@@ -122,7 +93,51 @@
 		z-index:9999; 
 		position:relative;
 	}
-	
+	/*texto del box*/
+	.titulo_evento
+{ 
+color:#FFF;
+	width:48.7%;
+	height:150px;
+	/*float:left;*/
+	display:block;
+	font-family:millerdisplaylight;
+	text-transform:uppercase;
+	font-size:28px;
+	padding-left:12px;
+}
+.sumario_evento
+{
+	color:#FFF;
+	width:48%;
+	height:150px;
+	display:block;
+	margin-left:50.5%;
+	position:absolute;
+	margin-top:-150px;
+	font-size:22px;
+	padding-left:12px;
+}
+
+.edicion_revista
+{
+	color:#FFF;
+	width:100%;
+	height:45px;
+	font-size:12px;
+	font-family:  Helvetica;
+}
+/*secciones: conoce, disfruta ....*/
+#cont_seccion 
+	 {margin: 0 auto;
+		width:768px;
+		height:980px;
+		display:block;
+		overflow:hidden;
+		margin-top:0px;
+		
+	}
+
 }
 
 @media (min-width: 1024px) 
@@ -148,26 +163,7 @@
 		height:724px;
 		background:#000;
 	}
-	/*
-	#contenido_slide, #cont_img
-	 {margin: 0 auto;
-		width:1024px;
-		height:724px;
-		background:#000;
-	}
-	#cont_publi, #cont_seccion
-	{
-		margin: 0 auto;
-		width:1024px;
-		height:724px;
-		display:block;
-		overflow:hidden;
-
-	}*/
-	/*#cont_seccion img
-	{
-		width:100%;
-		height:auto;}*/
+	
 	/*slide principal*/
 	.slides li 
 	{
@@ -195,6 +191,7 @@
 		 z-index:9999; 
 		 position:relative;
 		 float:left;
+		 display:none;
 	}
 	.box_sumario
 	{
@@ -204,6 +201,45 @@
 		margin-top:-245px; 
 		z-index:9999; 
 		position:relative;
+	}
+	/*texto del box*/
+	.titulo_evento
+{ 
+	width:48%;
+	height:150px;
+	float:left;
+	font-family:millerdisplaylight;
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:28px;
+	padding-left:12px;
+}
+.sumario_evento
+{
+	width:48%;
+	height:150px;
+	float:left;
+	font-size:22px;
+	color:#FFF;
+	padding-left:12px;
+}
+
+.edicion_revista
+{
+	width:100%;
+	height:44px;
+	float:left;
+	font-size:12px;
+	color:#FFF;
+	font-family:  Helvetica;
+}
+/*seccion*/
+#cont_seccion
+	 {margin: 0 auto;
+		width:1024px;
+		height:724px;
+		background:#000;
+		margin-top:-44px;
 	}
 }
 @media (max-width: 320px) 

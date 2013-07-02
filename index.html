@@ -46,86 +46,113 @@ $(document).ready(function() {
 	//$("div[id^='slide_sec']").css("display", "none");
 		
 
-				
-
-});
-</script>
-<script>
-/*orientacion*/
-/*$( window ).on( "orientationchange", function( event ) {
-	if(event.orientation=="portrait")
-	{
-			
-	}
-	else
-	{
-		
-	
-	}
-
-});
-$( window ).orientationchange();
-
-   */
-
-	function mostrar_ocultar(slide_sec, box)
-	{
-		 if(document.getElementById("box_sumario1").style.display=='')//visible
-				{
-					document.getElementById("slide_sec1").style.display='none';
-					document.getElementById("box_sumario1").style.display='none';
-					
-					alert("ocultas");
-					
+/*window.addEventListener("orientationchange", function() {
+  // Announce the new orientation number
+  alert(window.orientation);
+}, false);	*/
+/*window.addEventListener("orientationchange", function() {
+			  // Announce the new orientation number 90 y -90: landscape 0 y 180 portrair
+			  //alert(window.orientation);
+			  if(window.orientation== "90" || window.orientation =="-90")
+			  {
+				  alert("lanscape");
 				}
-				else //oculta
-				{
-					alert("muestras");
-					document.getElementById("box_sumario1").style.display='';
-					document.getElementById("slide_sec1").style.display='none';
-				}
-		/* $( window ).on( "orientationchange", function( event ) {
+				else
+				{alert("portrait hkhkhkhk");}
+			}, false);*/
+
+/*if (window.matchMedia("(orientation: portrait)").matches) {
+   alert("portrait");
+}
+
+if (window.matchMedia("(orientation: landscape)").matches) {
+   alert("landscape");
+}*/	
+ $( window ).on( "orientationchange", function( event ) {
 			 if(event.orientation=="landscape")
-			 {//box_sumario1 slide_sec1
-				 //alert( "This device is in " + event.orientation + " mode!" );
-				 if(document.getElementById("box_sumario1").style.display=='')//visible
-				{
-					//document.getElementById("box_sumario1").style.display='none';
-					//document.getElementById("slide_sec1").style.display='';
-					alert("ocultas");
-					
-				}
-				else //oculta
-				{
-					alert("muestras");
-					//document.getElementById("box_sumario1").style.display='';
-					//document.getElementById("slide_sec1").style.display='none';
-				}
+			 {
+				//alert("landscape");
+				$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').hide();
+			}
+			else
+			{ //alert("portrait");
+				$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').show();
 			}
 		
 		});
-		$( window ).orientationchange();*/
-		
-		
-		//alert("mostrar  ocultar");
-		/*var num_eventos=document.getElementById("num_eventos").value;
-		
-		//alert("taille:"+capas.length);
-		if(document.getElementById(des_img).style.display=='')//visible
-		{
-			document.getElementById(des_img).style.display='none';
-			document.getElementById(slide_sec).style.display='';
-			document.getElementById("descripcion_img1").style.background='';
-			//alert("ocultas");
-			
+			$( window ).orientationchange();
+});
+
+
+</script>
+<script>
+
+
+	function mostrar_ocultar(slide_sec, box)
+	{
+			/*window.addEventListener("orientationchange", function() {
+			  // Announce the new orientation number 90 y -90: landscape 0 y 180 portrair
+			  //alert(window.orientation);
+			  if(window.orientation== "90" || window.orientation =="-90")
+			  {
+				  alert("lanscape");
+				}
+				else
+				{alert("portrait hkhkhkhk");}
+			}, false);*/
+		var orientacion;	
+		if (window.matchMedia("(orientation: portrait)").matches) {
+		   //alert("portrait");
+		   orientacion = 0;
 		}
-		else //oculta
+		else
+		{orientacion = 1;}
+		if(orientacion ==1)
 		{
-			//alert("muestras");
-			document.getElementById(des_img).style.display='';
-			document.getElementById(slide_sec).style.display='none';
-			document.getElementById("descripcion_img1").style.background='rgba(0,0, 0, 0.5)';
-		}*/
+			$('div[id^="box_sumario"]').slideToggle(800);
+				$('div[id^="slide_sec"]').slideToggle(800);
+		}
+		else
+		{alert("portrait no  haces nada");
+		$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').show();
+		}
+		
+
+			/*if (window.matchMedia("(orientation: landscape)").matches) {
+			   alert("landscape");
+			}*/	
+		
+		/* $( window ).on( "orientationchange", function( event ) {
+			 if(event.orientation=="landscape")
+			 {
+				 
+				$('div[id^="box_sumario"]').slideToggle(800);
+				$('div[id^="slide_sec"]').slideToggle(800);
+			}
+		
+		});
+			$( window ).orientationchange();*/
+		/* if(document.getElementById("box_sumario1").style.display=='')//visible
+				{
+					document.getElementById("slide_sec1").style.display='';
+					document.getElementById("box_sumario1").style.display='none';
+					//$('#slide_sec1').show();
+					//$('#box_sumario1').hide();
+					
+					alert("ocultas");
+					
+				}
+				else //oculta
+				{
+					//$('#slide_sec1').hide();
+					//$('#box_sumario1').show();
+					alert("muestras");
+					document.getElementById(box).style.display='';
+					document.getElementById(slide_sec).style.display='none';
+				}*/
 	}
 
 </script>
@@ -209,7 +236,7 @@ $( window ).orientationchange();
           <ul class="slides">
             	<li>
   	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
-                	<div id="slide_sec1" class="slide_sec" style="display:; z-index:9999">
+                	<div id="slide_sec1" class="slide_sec" style=" z-index:9999">
                    		<div class="gallery" id="gallery1">
                    		<div class="holder">
 		                   <div class="list">
@@ -231,14 +258,14 @@ $( window ).orientationchange();
                     
                     	</div>
                     <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo</div>
+                    		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
   	    		</li>
                 <li>
-  	    	    	<div id="cont_img" class="cont_img"><img src="img/fotos/2.jpg" /></div>
-                	<div id="slide_sec1" class="slide_sec">
+  	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec2','box_sumario2')"><img src="img/fotos/2.jpg" /></div>
+                	<div id="slide_sec2" class="slide_sec">
                    		<div class="gallery" id="gallery2">
                    		<div class="holder">
 		                   <div class="list">
@@ -260,14 +287,14 @@ $( window ).orientationchange();
                     
                     	</div>
                     <div id="box_sumario2" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo</div>
+                    		<div class="titulo_evento">Titulo2</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
   	    		</li>
                 <li>
-  	    	    	<div id="cont_img" class="cont_img"><img src="img/fotos/3.jpg" /></div>
-                	<div id="slide_sec1" class="slide_sec">
+  	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec3','box_sumario3')"><img src="img/fotos/3.jpg" /></div>
+                	<div id="slide_sec3" class="slide_sec">
                    		<div class="gallery" id="gallery3">
                    		<div class="holder">
 		                   <div class="list">
@@ -289,81 +316,17 @@ $( window ).orientationchange();
                     
                     	</div>
                     <div id="box_sumario3" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo</div>
+                    		<div class="titulo_evento">Titulo3</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
   	    		</li>
-                <!--<li>
-  	    	    	<div id="cont_img" class="cont_img"><img src="img/fotos/4.jpg" /></div>
-                	<div id="slide_sec1" class="slide_sec">
-                   		<div class="gallery" id="gallery1">
-                   		<div class="holder">
-		                   <div class="list">
-                           		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                            </div>
-                        </div>
-                   </div>
-                    
-                    	</div>
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
-                    </div>
-  	    		</li>-->
-              <!--  <li>
-  	    	    	<div id="cont_img" class="cont_img"><img src="img/fotos/5.jpg" /></div>
-                	<div id="slide_sec1" class="slide_sec">
-                   		<div class="gallery" id="gallery1">
-                   		<div class="holder">
-		                   <div class="list">
-                           		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
-                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
-                            </div>
-                        </div>
-                   </div>
-                    
-                    	</div>
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
-                    </div>
-  	    		</li>-->
-  	    		<!--<li>
-  	    	    <div id="img_evtn"><img src="img/fotos/1.jpg" /></div>
-                <div id="decripcion" style="width:100%; height:160px; background:#CCC; position:relative; z-index:9999; margin-top:-200px;">des2</div>
-  	    		</li>
-  	    		<li>
-  	    	    <div id="img_evtn"><img src="img/fotos/1.jpg" /></div>
-                <div id="decripcion" style="width:100%; height:160px; background:#CCC; position:relative; z-index:9999; margin-top:-200px;">des3</div>
-  	    		</li>
-  	    		<li>
-  	    	   <div id="img_evtn"><a href="http://www.google.com.mx"><img src="img/fotos/1.jpg" /></a></div>
-                <div id="decripcion" style="width:100%; height:160px; background:#CCC; position:relative; z-index:9999; margin-top:-200px; display:none">des4</div>
-  	    		</li>-->
+  	    		<li >
+                <div id="cont_seccion" ><img src="img/conoce.jpg" /></div>
+                	<!--<div id="cont_seccion" >
+                    	<div id="img_seccion"> <img src="img/conoce.jpg" /></div>
+                    </div>-->
+                </li>
           </ul>
         </div>
 	</div>
