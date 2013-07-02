@@ -235,7 +235,11 @@ $(document).ready(function() {
 	//boton ediciones
 	$('#btn_edicion').click(function() {
 		$('#panelSecciones').slideToggle(800);
-		//alert("jljljlj");
+		//alert("btn seccion");
+	});
+	$('#btn_edicion2').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
 	});
 	
 	$('#rubrica_name').click(function() {
@@ -352,23 +356,8 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 
 
 <!--  pagina 1-->
-<div data-role="page" id="page1" style="background:#000; margin:0;">
-	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
-        <img src="img/boton_ediciones.png" width="120" height="44"/>
-         </a></div><!--<a href="javascript:;" onClick="$('#panelSecciones').css('margin-top','0');" >
-        <img src="img/boton_ediciones.png" width="120" height="44"/>
-         </a>-->
-        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
-        	<img src="img/logo.png" width="131" height="42">
-        </a></div>
-       
-    </div>
-	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
-    <!--menu-->
-    
-        
-        <div id="panelSecciones"  class="panelSeccion"> 
+<!--menu-->
+<div id="panelSecciones"  class="panelSeccion"> 
            <ul>
              <li id="rubrica"><a href="#page2" id="rubrica_name">HOME</a></li>
             <li id="separador"></li>
@@ -395,7 +384,20 @@ if (window.matchMedia("(orientation: landscape)").matches) {
             <li  id="rubrica"><a href="#page2" id="rubrica_name">Contacto</a></li>
             </ul>
         </div>
-<!--   fin menu -->	
+        <!--menu-->
+<div data-role="page" id="page1" style="background:#000; margin:0;">
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
+        <img src="img/boton_ediciones.png" width="120" height="44"/>
+         </a></div>
+        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
+    <!--menu--><!--   fin menu -->	
   
                 
     
@@ -486,13 +488,14 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                     </div>
   	    		</li>
   	    		<li >
-                <div id="cont_seccion" ><img src="img/conoce.jpg" /></div>
+                <div id="cont_seccion" ><a href="#page2"><img src="img/conoce.jpg" /></a></div>
                 	<!--<div id="cont_seccion" >
                     	<div id="img_seccion"> <img src="img/conoce.jpg" /></div>
                     </div>-->
                 </li>
                  <li>
-  	    	    	<div id="" class="" onClick=""><img src="img/fotos/7.jpg" /></div>
+  	    	    	<div id="" class="">
+                    <a href="#page2" id="rubrica_name"> <img src="img/fotos/7.jpg" /></a></div>
                 	
   	    		</li>
           </ul>
@@ -513,19 +516,38 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 
 
 <!--pagina 2 -->
-<div data-role="page" id="page2">
-	<div data-role="header" data-position="fixed">
-		<div data-role="header">
-		<h1>Informacion</h1>
-        <a  data-role="button" data-theme="a" data-direction="reverse" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Atras</a>
+<div data-role="page" id="page2" style="background:#000; margin:0;">
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion2">
+        <img src="img/boton_ediciones.png" width="120" height="44"/>
+         </a></div>
+        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
+    
+			<div>
+            	<div class="wrapper">
+                  <div class="scrolls">
+                  	<div class="imageDiv">
+                           <img src="img/fotos/1.jpg" />
+                           <img src="img/fotos/2.jpg"/>
+                          <img src="img/fotos/3.jpg" />
+                           <img src="img/fotos/4.jpg"/>
+                           <img src="img/fotos/1.jpg" />
+                           <img src="img/fotos/2.jpg" />
+                          <img src="img/fotos/3.jpg"/>
+                           <img src="img/fotos/4.jpg"/>
+                      </div>
+                  </div>
+                </div>
+            
+            </div>
 	</div>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4>Pie de página</h4>
-	</div>
+	
 </div>
 <!-- fin  pagina 2-->
 
