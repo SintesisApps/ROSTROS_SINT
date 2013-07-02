@@ -34,8 +34,9 @@
 			document.addEventListener('DOMContentLoaded', function(){
 			
 				var
-					options = {},
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+					options = {},//"div[id^='gallery_sec']"  '#Gallery1 a'
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('div[id^="Gallery"] a' ), options );
+					alert(this);
 					
 					
 					// onBeforeShow
@@ -369,7 +370,7 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                        <div class="gallery_slide" id="gallery_sec2">
                    		<div class="holder">
 		                   <div class="list">
-                           		<div id="Gallery" class="gallery">
+                           		<div id="Gallery1" class="gallery">
                            		<div class="item"><div class="box box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
                                 <div class="item"><div class="box box1"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" width="210" height="159"/></a></div></div>
                                 <div class="item"><div class="box box1"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" width="210" height="159"/></a></div></div>
@@ -394,7 +395,7 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                    		<div class="gallery_slide" id="gallery_sec2">
                    		<div class="holder">
 		                   <div class="list">
-                           		<div id="Gallery" class="gallery">
+                           		<div id="Gallery2" class="gallery">
                            		
                                 <div class="item"><div class="box box1"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" width="210" height="159"/></a></div></div>
                                 <div class="item"><div class="box box1"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" width="210" height="159"/></a></div></div>
