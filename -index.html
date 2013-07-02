@@ -22,133 +22,6 @@
 <!-- slide sec -->
 <link rel="stylesheet" type="text/css" href="css/style_slide_sec.css" />
 <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-<!-- galeria -->
-<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
-<link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="galeria/klass.min.js"></script>
-	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
-	<script type="text/javascript">
-
-		(function(window, PhotoSwipe){
-		
-			document.addEventListener('DOMContentLoaded', function(){
-			
-				var
-					options = {},
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
-					
-					
-					// onBeforeShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
-						console.log('onBeforeShow');
-					});
-					
-					// onShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
-						console.log('onShow');
-					});
-					
-					// onBeforeHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
-						console.log('onBeforeHide');
-					});
-					
-					// onHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
-						console.log('onHide');
-					});
-					
-					// onDisplayImage
-					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
-						console.log('onDisplayImage{');
-						console.log('onDisplayImage - e.action = ' + e.action);
-						console.log('onDisplayImage - e.index = ' + e.index);
-						console.log(instance.getCurrentImage());
-						console.log('onDisplayImage}');
-					});
-					
-					// onResetPosition
-					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
-						console.log('onResetPosition');
-					});
-					
-					// onSlideshowStart
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
-						console.log('onSlideshowStart');
-					});
-					
-					// onSlideshowStop
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
-						console.log('onSlideshowStop');
-					});
-					
-					// onTouch
-					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
-						console.log('onTouch{');
-						console.log('onTouch - e.action = ' + e.action);
-						console.log('onTouch - e.point = ');
-						console.log(e.point);
-						console.log('onTouch}');
-					});
-					
-					// onBeforeCaptionAndToolbarShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
-						console.log('onBeforeCaptionAndToolbarShow');
-					});
-					
-					// onCaptionAndToolbarShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
-						console.log('onCaptionAndToolbarShow');
-					});
-					
-					// onBeforeCaptionAndToolbarHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
-						console.log('onBeforeCaptionAndToolbarHide');
-					});
-					
-					// onCaptionAndToolbarHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
-						console.log('onCaptionAndToolbarHide');
-					});
-					
-					// onToolbarTap
-					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
-						console.log('onToolbarTap');
-						console.log(e);
-					});
-					
-					// onBeforeZoomPanRotateShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
-						console.log('onBeforeZoomPanRotateShow');
-					});
-					
-					// onZoomPanRotateShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
-						console.log('onZoomPanRotateShow');
-					});
-					
-					// onBeforeZoomPanRotateHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
-						console.log('onBeforeZoomPanRotateHide');
-					});
-					
-					// onZoomPanRotateHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
-						console.log('onZoomPanRotateHide');
-					});
-					
-					// onZoomPanRotateTransform
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
-						console.log('onZoomPanRotateTransform');
-						console.log(e);
-					});
-					
-			}, false);
-			
-			
-		}(window, window.Code.PhotoSwipe));
-		
-	</script>
 <!--Codigo js  -->
 <script>
 $(document).ready(function() {
@@ -166,7 +39,7 @@ $(document).ready(function() {
 	
 	//$('#descripcion_img5').css("display", "none");
 	
-	$("div[id^='gallery_sec']").touchSlider({
+	$("div[id^='gallery']").touchSlider({
 			mode: 'shift',
 			offset: 'auto'
 	});
@@ -283,34 +156,6 @@ if (window.matchMedia("(orientation: landscape)").matches) {
 	}
 
 </script>
-<style>
-
-.wrapper { 
-        background:#EFEFEF;  
-        margin: auto; 
-        text-align: center; 
-        position: relative;
-        width: 100%;
-    }
-    .scrolls { 
-        overflow-x: scroll;
-        overflow-y: hidden;
-		 -webkit-overflow-scrolling: touch;
-        height: 195px;
-   		 white-space:nowrap
-    } 
-    .imageDiv img {  
-        margin: 2px;
-        height: 159px;
-		width:210px;
-        cursor: pointer;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    vertical-align:top;
-    }
-	
-</style>
 </head> 
 <body> 
 
@@ -391,24 +236,27 @@ if (window.matchMedia("(orientation: landscape)").matches) {
           <ul class="slides">
             	<li>
   	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
-                    
                 	<div id="slide_sec1" class="slide_sec" style=" z-index:9999">
-                       <div class="gallery_slide" id="gallery_sec2">
+                   		<div class="gallery" id="gallery1">
                    		<div class="holder">
 		                   <div class="list">
-                           		<div id="Gallery" class="gallery">
-                           		<div class="item"><div class="box box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" width="210" height="159"/></a></div></div>
-                            	</div>
+                           		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
                             </div>
                         </div>
-                     </div>      
- 	                
+                   </div>
                     
-                    </div>
+                    	</div>
                     <div id="box_sumario1" class="box_sumario"> 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
@@ -418,17 +266,21 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                 <li>
   	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec2','box_sumario2')"><img src="img/fotos/2.jpg" /></div>
                 	<div id="slide_sec2" class="slide_sec">
-                   		<div class="gallery_slide" id="gallery_sec2">
+                   		<div class="gallery" id="gallery2">
                    		<div class="holder">
 		                   <div class="list">
-                           		<div id="Gallery" class="gallery">
-                           		
-                                <div class="item"><div class="box box1"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" width="210" height="159"/></a></div></div>
-                                <div class="item"><div class="box box1"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" width="210" height="159"/></a></div></div>
-                            	</div>
+                           		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
                             </div>
                         </div>
                    </div>
@@ -443,7 +295,7 @@ if (window.matchMedia("(orientation: landscape)").matches) {
                 <li>
   	    	    	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec3','box_sumario3')"><img src="img/fotos/3.jpg" /></div>
                 	<div id="slide_sec3" class="slide_sec">
-                   		<div class="gallery_slide" id="gallery_sec3">
+                   		<div class="gallery" id="gallery3">
                    		<div class="holder">
 		                   <div class="list">
                            		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
