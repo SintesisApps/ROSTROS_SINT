@@ -93,7 +93,7 @@ span.delta {
 	/*outline: 1px dashed green;*/
 }
 
-.gallery-holder {
+.gallery_slide-holder {
 	margin: 0 auto;
 /*	outline: 1px dashed #666;*/
 	/*margin: 0 auto 10px auto;
@@ -101,7 +101,7 @@ span.delta {
 	background:#6F6;*/
 }
 
-.gallery {
+.gallery_slide {
 	width: 96.48%;
 	/*width: 800px;*/
 	overflow: hidden;
@@ -111,13 +111,13 @@ span.delta {
 	padding-right:1.76%;
 }
 
-.gallery div.holder {
+.gallery_slide div.holder {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 }
 
-.gallery div.list {
+.gallery_slide div.list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -126,7 +126,7 @@ span.delta {
 	height:159px;
 }
 
-.gallery div.item {
+.gallery_slide div.item {
 	float: left;
 }
 
