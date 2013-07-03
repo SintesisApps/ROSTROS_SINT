@@ -1,19 +1,4 @@
-body {
-	margin: 0;
-	padding: 10px;
-	font: 14px Helvetica, Arial, sans-serif;
-	color: #666;
-	max-width: 800px;
-	min-width: 300px;
-	margin: 0 auto;
-}
 
-h1, h2 {
-	margin: 0;
-	padding: 0 0 10px 0;
-	font-size: 16px;
-	color: #333;
-}
 
 .box_s {
 	width: 96px;
