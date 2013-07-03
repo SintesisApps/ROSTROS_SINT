@@ -489,9 +489,6 @@ if (window.matchMedia("(orientation: landscape)").matches) {
   	    		</li>
   	    		<li >
                 <div id="cont_seccion" ><a href="#page2"><img src="img/conoce.jpg" /></a></div>
-                	<!--<div id="cont_seccion" >
-                    	<div id="img_seccion"> <img src="img/conoce.jpg" /></div>
-                    </div>-->
                 </li>
                  <li>
   	    	    	<div id="" class="">
@@ -528,25 +525,37 @@ if (window.matchMedia("(orientation: landscape)").matches) {
     </div>
     
 	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
-    
+    <img src="img/fotos/1.jpg"/>
 			<div>
-            	<div class="wrapper">
-                  <div class="scrolls">
-                  	<div class="imageDiv">
-                           <img src="img/fotos/1.jpg" />
-                           <img src="img/fotos/2.jpg"/>
-                          <img src="img/fotos/3.jpg" />
-                           <img src="img/fotos/4.jpg"/>
-                           <img src="img/fotos/1.jpg" />
-                           <img src="img/fotos/2.jpg" />
-                          <img src="img/fotos/3.jpg"/>
-                           <img src="img/fotos/4.jpg"/>
-                      </div>
-                  </div>
-                </div>
-            
-            </div>
-	</div>
+           <!-- <div class="gallery" id="gallery8">
+                   		<div class="holder">
+		                   <div class="list">
+                           		<div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/3.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/4.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/5.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/1.jpg"/></div></div>
+                                <div class="item"><div class="box box1"><img src="img/fotos/2.jpg"/></div></div>
+                            </div>
+                        </div>
+                   </div>-->
+            	<!--<div id="content_r_mes"></div>
+           		<div class="flexslider2">
+                 	<ul class="slides">
+                        <li><div id="" class=""><img src="img/fotos/7.jpg" /></div></li>
+                        <li><div id="" class=""><img src="img/fotos/6.jpg" /></div></li>
+                        <li><div id="" class=""><img src="img/fotos/5.jpg" /></div></li>
+                        <li><div id="" class=""><img src="img/fotos/4.jpg" /></div></li>
+                  	</ul>
+        		</div>
+			</div>-->
+     </div>
 	
 </div>
 <!-- fin  pagina 2-->
@@ -588,11 +597,13 @@ if (window.matchMedia("(orientation: landscape)").matches) {
     });
     $(window).load(function(){
       $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
+        animation: "slide"
       });
+	  
+	  $('.flexslider2').flexslider({
+        animation: "slide"
+      });
+	  
     });
   </script>
 
