@@ -128,40 +128,39 @@ color:#FFF;
 	font-family:  Helvetica;
 }
 /*secciones: conoce, disfruta ....*/
-#cont_seccion 
+#secciones 
 	 {margin: 0 auto;
 		width:768px;
 		height:980px;
-		display:block;
 		overflow:hidden;
-		margin-top:0px;
-		
 	}
-/*slide interior*/
-.wrapper { 
-        background:#000;  
-        margin:0 auto; 
-        text-align: center; 
-        position: relative;
-        width: 768;
-    }
-    .scrolls { 
-        overflow-x: scroll;
-        overflow-y: hidden;
-		 -webkit-overflow-scrolling: touch;
-        height: 980px;
-   		 white-space:nowrap
-    } 
-    .imageDiv img {  
-        margin: 0px;
-        height: 980px;
-		width:768px;
-        cursor: pointer;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    vertical-align:top;
-    }
+#img_secciones 
+{ width:100px;
+height:200px;
+margin-left:-128px;
+}
+
+/*rosros del mes, entrevista....*/
+.rostros
+{
+	width:100%;
+	height:786px;
+	overflow:hidden;
+	margin-top:0px;
+}
+.box_sumario_r
+	{
+		width:100%; 
+		height:194px;
+		background-color: rgba(0,0, 0, 0.7);
+		margin-top:0px; 
+		z-index:9999; 
+		position:relative;
+	}
+	
+.full-width-slider .slider #item1 {
+	background:#FFF;	
+}
 }
 
 @media (min-width: 1024px) 
@@ -258,12 +257,12 @@ color:#FFF;
 	font-family:  Helvetica;
 }
 /*seccion*/
-#cont_seccion
-	 {margin: 0 auto;
+#secciones
+	 {/*margin: 0 auto;
 		width:1024px;
 		height:724px;
 		background:#000;
-		margin-top:-44px;
+		margin-top:-44px;*/
 	}
 /*slide interior*/
 

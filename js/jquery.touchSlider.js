@@ -13,7 +13,7 @@
 	$.fn.touchSlider = function(options){
 		
 		var options = $.extend({
-			item: 'div.item',
+			item: 'div.item_s',
 			holder: 'div.holder',
 			box: 'div.list',
 			debug: false,
