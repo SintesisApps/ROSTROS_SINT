@@ -55,18 +55,13 @@
 		margin-top:195px;
 		
 	}
+	.cont_img  img
+	{
+		width:100%;
+		height:auto;}
 	
-	/*slide principal*/
-	.slides li  {
-   display: none;
-   width:768px;
-   height:980px;
-   background:#fff;
-}
-.slides li img {
-    position: relative;
-	width: 100%;
-	}
+	
+
 
 	
 	/*fin slide pricipal*/
@@ -147,6 +142,10 @@ margin-left:-128px;
 	height:786px;
 	overflow:hidden;
 	margin-top:0px;
+}
+.rostros img
+{
+	/*width:100%;*/
 }
 .box_sumario_r
 	{
