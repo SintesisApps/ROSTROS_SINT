@@ -49,31 +49,23 @@
 	 .cont_img 
 	 {margin: 0 auto;
 		width:768px;
-		height:544px;
+		height:512px;
 		display:block;
 		overflow:hidden;
-		margin-top:194px;
+		margin-top:210px;
 		
 	}
 	.cont_img  img
 	{
 		width:100%;
-		height:auto;}
-	
+		/*height:544px;*/}
 	
 
-
-	
-	/*fin slide pricipal*/
-	.gallery_slide {
-		width: 768px;
-		height:241px;
-	}
 	
 	.slide_sec
 	{
-		width:100%; 
-		height:242px; background:url(../img/patrones/slide.png) repeat;
+		width:1024px; 
+		height:258px; background:url(../img/patrones/slide.png) repeat;
 		 margin-top:0px;
 		 z-index:9999; 
 		 position:relative;
@@ -82,9 +74,9 @@
 	.box_sumario
 	{
 		width:100%; 
-		height:194px;
+		height:210px;
 		background-color: rgba(0,0, 0, 0.7);
-		margin-top:-738px; 
+		margin-top:-722px; 
 		z-index:9999; 
 		position:relative;
 	}
@@ -130,27 +122,27 @@ color:#FFF;
 		overflow:hidden;
 	}
 #img_secciones 
-{ width:100px;
-height:200px;
+{ 
 margin-left:-128px;
 }
 
 /*rosros del mes, entrevista....*/
 .rostros
 {
-	width:100%;
-	height:786px;
+	width:768px;
+	height:600px;
 	overflow:hidden;
 	margin-top:0px;
 }
 .rostros img
 {
-	/*width:100%;*/
+	width:100%;
+	height:100%;
 }
-.box_sumario_r
+.sum_rostros
 	{
-		width:100%; 
-		height:194px;
+		width:768px; 
+		height:380px;
 		background-color: rgba(0,0, 0, 0.7);
 		margin-top:0px; 
 		z-index:9999; 
@@ -184,41 +176,28 @@ margin-left:-128px;
 		width:1024px;
 		height:724px;
 		background:#000;
+		overflow:hidden;
+	}
+	.cont_img img
+	{
+		/*width:100%;*/
 	}
 	
-	/*slide principal*/
-	.slides li 
-	{
-	   display: none;
-	   width:1024px;
-	   height:724px;
-	}
-	.slides li img 
-	{
-		position: relative;
-		width: 100%;
-	}
-
 	
-	/*fin slide pricipal*/
-	.gallery_slide {
-		width: 1024px;
-		height:241px;
-	}
 	.slide_sec
 	{
-		width:100%; 
-		height:241px; background:url(../img/patrones/slide.png) repeat;
+		width:1024px; 
+		height:258px; background:url(../img/patrones/slide.png) repeat;
 		 margin-top:-292px;
 		 z-index:9999; 
 		 position:relative;
 		 float:left;
-		 display:none;
+		/* display:none;*/
 	}
 	.box_sumario
 	{
 		width:100%; 
-		height:194px;
+		height:210px;
 		background-color: rgba(0,0, 0, 0.7);
 		margin-top:-245px; 
 		z-index:9999; 
@@ -257,39 +236,41 @@ margin-left:-128px;
 }
 /*seccion*/
 #secciones
-	 {/*margin: 0 auto;
+	 {margin: 0 auto;
 		width:1024px;
 		height:724px;
 		background:#000;
-		margin-top:-44px;*/
+		overflow:hidden
 	}
-/*slide interior*/
+	#img_secciones 
+{ 
+margin-top:-128px;
+}
 
+/*rosros del mes, entrevista....*/
+.rostros
+{
+	width:1024px;
+	height:724px;
+	overflow:hidden;
+	margin-top:-680px;
+}
+.rostros img
+{
+	width:100%;
+	height:100%;
+}
+.sum_rostros
+	{
+		width:1024px; 
+		height:258px;
+		background-color: rgba(0,0, 0, 0.7);
+		margin-top:422px; 
+		z-index:9999; 
+		position:relative;
+		display:;
+	}
 
-.wrapper { 
-        background:#000;  
-        margin:0 auto; 
-        text-align: center; 
-        position: relative;
-        width: 1024px;
-    }
-    .scrolls { 
-        overflow-x: scroll;
-        overflow-y: hidden;
-		 -webkit-overflow-scrolling: touch;
-        height: 724px;
-   		 white-space:nowrap
-    } 
-    .imageDiv img {  
-        margin: 0px;
-        height: 724px;
-		width:1024px;
-        cursor: pointer;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    vertical-align:top;
-    }
 	
 }
 @media (max-width: 320px) 

@@ -30,7 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 <!-- galeria -->
-<!--<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
+<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
 <link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
 	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
@@ -134,6 +134,7 @@
 			
 			
 		}(window, window.Code.PhotoSwipe));
+		
 		(function(window, PhotoSwipe){
 		
 			document.addEventListener('DOMContentLoaded', function(){
@@ -233,7 +234,7 @@
 			
 		}(window, window.Code.PhotoSwipe));
 		
-	</script>-->
+	</script>
 <!--Codigo js  -->
 <script>
 $(document).ready(function() {
@@ -255,14 +256,14 @@ $(document).ready(function() {
 	
 	//$('#descripcion_img5').css("display", "none");
 	
-	/*$("div[id^='gallery_sec']").touchSlider({
+	$("div[id^='gallery_sec']").touchSlider({
 			mode: 'shift',
 			offset: 'auto'
-	});*/
-	$('#gallery1').touchSlider({
+	});
+	/*$('#gallery1').touchSlider({
 					mode: 'shift',
 					offset: 'auto'
-				});
+				});*/
 
 	
  $( window ).on( "orientationchange", function( event ) {
@@ -391,23 +392,24 @@ $(document).ready(function() {
 			<div class = 'slider'>
 				
 				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.JPG" /></div>
                 	
                     
                 	<div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
-                        	<div class="gallery" id="gallery1" >
+                        	<div class="gallery_slide" id="gallery_sec1" >
                         		<div class="holder">
                                 	<div class="list">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    
+                                    <div id="Gallery1" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -428,22 +430,23 @@ $(document).ready(function() {
                 
 				<div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/2.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/2.JPG" /></div>
                                         
                     <div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
-                        	<div class="gallery" id="gallery1" >
+                        	<div class="gallery_slide" id="gallery_sec2" >
                         		<div class="holder">
                                 	<div class="list">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    
+                                    <div id="Gallery2" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -463,23 +466,24 @@ $(document).ready(function() {
                 
                 <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/3.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/3.JPG" /></div>
                     
                     
                     <div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
-                        	<div class="gallery" id="gallery1" >
+                        	<div class="gallery_slide" id="gallery_sec3" >
                         		<div class="holder">
                                 	<div class="list">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    
+                                    <div id="Gallery3" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -500,23 +504,24 @@ $(document).ready(function() {
                 
                 <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/4.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/4.JPG" /></div>
                     
                     
                    <div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
-                        	<div class="gallery" id="gallery1" >
+                        	<div class="gallery_slide" id="gallery_sec4" >
                         		<div class="holder">
                                 	<div class="list">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    
+                                    <div id="Gallery4" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.JPG" /></div></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -540,16 +545,16 @@ $(document).ready(function() {
                    
                 </div>
                 
-                <!--<div class = 'item' id = 'item1'>
+                <div class = 'item' id = 'item1'>
                 	
-                    <div id="box_sumario_r1" class="box_sumario_r"> 
+                    <div id="sum_rostros" class="sum_rostros" > 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
                     
                     <div id="" class="rostros" >
-                        <a href="#page2" > <img src="img/fotos/7.jpg" /></a>
+                        <a href="#page2" > <img src="img/fotos/7.JPG" /></a>
                     </div>
                     
                     

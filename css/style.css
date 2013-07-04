@@ -87,7 +87,7 @@ span.delta {
 	background:#009;
 }
 
-.gallery {
+.gallery_slide {
 	/*width: 100%;
 	overflow: hidden;*/
 		width: 96.48%;
@@ -99,13 +99,13 @@ span.delta {
 	padding-right:1.76%;
 }
 
-.gallery div.holder {
+.gallery_slide div.holder {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 }
 
-.gallery div.list {
+.gallery_slide div.list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -113,7 +113,7 @@ span.delta {
 	overflow: hidden;
 }
 
-.gallery div.item_s {
+.gallery_slide div.item_s {
 	float: left;
 }
 
