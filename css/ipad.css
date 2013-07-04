@@ -162,7 +162,7 @@ margin-left:-128px;
 	height:980px;
 	position:absolute;
 }
-.descripcion_rostros .r_descripcion
+/*.descripcion_rostros .r_descripcion
 {
 	width:305px;
 	z-index:9999;
@@ -170,7 +170,7 @@ margin-left:-128px;
 	background-color: rgba(0,0, 0, 0.7);
 	position:relative;
 	float:left;
-}
+}*/
 .descripcion_rostros .r_flecha
 {
 	width:16px;
@@ -193,7 +193,29 @@ margin-top:482px;}
 	position:absolute;
 	overflow:hidden;
 }
-
+/*scroll descripcion*/
+/*slide interior*/
+.r_descripcion {
+		width:305px;
+	z-index:9999;
+	height:980px;
+	background-color: rgba(0,0, 0, 0.7);
+	position:relative;
+	float:left;
+        /*background:#000;  
+        margin:0 auto; 
+        text-align: center; 
+        position: relative;
+        width: 768;*/
+    }
+    .r_texto { 
+        overflow-x: hidden;
+        overflow-y: scroll;
+		 -webkit-overflow-scrolling: touch;
+        height: 783px;
+		padding-top:5px;
+		padding-left:10px;
+    } 
 }
 
 @media (min-width: 1024px) 
