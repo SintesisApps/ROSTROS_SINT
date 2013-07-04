@@ -156,14 +156,34 @@ margin-left:-128px;
 /*interiores*/
 .descripcion_rostros
 {
-	width:305px;
+	width:321px;
 	z-index:9999;
 	/*height:100%;*/
 	height:980px;
-	background-color: rgba(0,0, 0, 0.7);
 	position:absolute;
-	
 }
+.descripcion_rostros .r_descripcion
+{
+	width:305px;
+	z-index:9999;
+	height:980px;
+	background-color: rgba(0,0, 0, 0.7);
+	position:relative;
+	float:left;
+}
+.descripcion_rostros .r_flecha
+{
+	width:16px;
+	height:980px;
+	text-align:center;
+	vertical-align:middle;
+	position:relative;
+	float:left;
+}
+.descripcion_rostros .r_flecha img
+{vertical-align:central;
+margin-top:482px;}
+
 .foto_rostros
 {
 	/*width:100%;

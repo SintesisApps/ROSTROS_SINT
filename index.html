@@ -260,10 +260,11 @@ $(document).ready(function() {
 			mode: 'shift',
 			offset: 'auto'
 	});
-	/*$('#gallery1').touchSlider({
-					mode: 'shift',
-					offset: 'auto'
-				});*/
+	
+	/*animacion  slide interior*/
+	$("#r_flecha1").click(function(){
+    $("#r_descripcion").animate({width:'toggle'});
+  });
 
 	
  $( window ).on( "orientationchange", function( event ) {
@@ -610,8 +611,13 @@ $(document).ready(function() {
 		</div>	
         </div>
         <div id="descripcion_rostros" class="descripcion_rostros">
-        hkhkhkh
-        
+        	<div id="r_descripcion" class="r_descripcion"></div>
+        	<div id="r_flecha" class="r_flecha">
+            <a href="javascript:;" id="r_flecha1">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            	<!--<img src="img/iconos_app/indicador.png" />-->
+            </div>
         </div>
           
      </div>
