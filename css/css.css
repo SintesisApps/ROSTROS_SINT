@@ -82,7 +82,7 @@ body{
 	height:350px;
 	margin-top:-290px;
 }
-#cab_menu
+#cab_menu, #cab_menu_int
 {
 	
 	width:120px; 
@@ -106,6 +106,40 @@ body{
 	position:absolute;
 	padding-top:1xp;
 	
+}
+
+#fecha_int
+{	
+	width:72px;
+	height:44px;
+	display:inline-block;
+	padding-top:0px;
+	text-align:center;
+	vertical-align:middle;
+	position:absolute;
+	z-index:3;
+	background:#000;
+	margin-left:120px;
+}
+#fecha_int img
+{
+	margin-top:9px;
+}
+#logo_int
+{
+	width:832px;
+	height:44px;
+	display:inline-block;
+	/*text-align:center;
+	vertical-align:central;*/
+	position:absolute;
+	padding-top:1xp;
+	background:#000;
+	margin-left:192px;
+}
+#logo_int img
+{
+	margin-left:254.5px;
 }
 }
 

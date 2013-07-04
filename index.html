@@ -580,10 +580,14 @@ $(document).ready(function() {
 <!--pagina 2 -->
 <div data-role="page" id="page2" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion2">
+     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
         <img src="img/boton_ediciones.png" width="120" height="44"/>
          </a></div>
-        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+         <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
+         	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
+         </div>
+        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        

@@ -1,8 +1,8 @@
 
 
 .box_s {
-	width: 241px;
-	height: 159px;
+	width: 251px;
+	height: 167px;
 	line-height: 96px;
 	text-align: center;
 	color: #FFF;
@@ -25,8 +25,8 @@
 }
 
 .box_s img {
-	width: 241px;
-	height: 159px;
+	width: 251px;
+	height: 167px;
 	vertical-align: middle;
 }
 
@@ -48,8 +48,10 @@
 
 
 .ibox_s img {
-	width:241px;
-	height:159px;
+	/*width: 251px;
+	height: 167px;*/
+	width:100%;
+	height:auto;
 	vertical-align: middle;
 }
 
@@ -84,7 +86,7 @@ span.delta {
 
 .gallery-holder {
 	margin: 0 auto;
-	background:#009;
+	/*background:#009;*/
 }
 
 .gallery_slide {
@@ -93,7 +95,7 @@ span.delta {
 		width: 96.48%;
 	/*width: 800px;*/
 	overflow: hidden;
-	height:159px;
+	height:167px;
 	margin-top:39px;
 	padding-left:1.36%;
 	padding-right:1.76%;
