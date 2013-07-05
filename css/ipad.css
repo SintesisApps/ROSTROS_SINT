@@ -372,13 +372,25 @@ margin-top:-128px;
 }
 
 /*rosros del mes, entrevista....*/
-.rostros
+/*rosros del mes, entrevista....*/
+.r_nom_persona
+	{
+		width:1024px; 
+		height:258px; 
+		background-color: rgba(0,0, 0, 0.7);
+		 margin-top:0px;
+		 z-index:9999; 
+		 position:relative;
+		 float:left;
+		 display:none;
+	}
+/*.rostros
 {
-	width:1024px;
-	height:724px;
+	width:768px;
+	height:600px;
 	overflow:hidden;
-	margin-top:-680px;
-}
+	margin-top:0px;
+}*/
 .rostros img
 {
 	width:100%;
@@ -386,13 +398,12 @@ margin-top:-128px;
 }
 .sum_rostros
 	{
-		width:1024px; 
-		height:258px;
+		width:100%; 
+		height:210px;
 		background-color: rgba(0,0, 0, 0.7);
-		margin-top:422px; 
+		margin-top:-300px; 
 		z-index:9999; 
 		position:relative;
-		display:;
 	}
 /*interiores*/
 .descripcion_rostros
