@@ -128,6 +128,16 @@ margin-left:-128px;
 
 
 /*rosros del mes, entrevista....*/
+.r_nom_persona
+	{
+		width:1024px; 
+		height:258px; 
+		background-color: rgba(0,0, 0, 0.7);
+		 margin-top:0px;
+		 z-index:9999; 
+		 position:relative;
+		 float:left;
+	}
 .rostros
 {
 	width:768px;
@@ -142,10 +152,10 @@ margin-left:-128px;
 }
 .sum_rostros
 	{
-		width:768px; 
-		height:380px;
+		width:100%; 
+		height:210px;
 		background-color: rgba(0,0, 0, 0.7);
-		margin-top:0px; 
+		margin-top:-722px; 
 		z-index:9999; 
 		position:relative;
 	}
