@@ -29,6 +29,7 @@ body{
 	margin-left:-313px;
 	height:350px;
 	margin-top:-375px;
+	/*background:#FFF;*/
 }
 #cab_menu, #cab_menu_int
 {
@@ -98,7 +99,7 @@ body{
 	background:#000;
 }	
 #menu_inicial img, #cont_seccion img
-{margin-top:-190px;}
+{margin-top:-128px;}
 #cont_seccion img
 {}
 
@@ -113,7 +114,6 @@ body{
 	margin-left:-310px;
 	height:350px;
 	margin-top:-290px;
-
 }
 #cab_menu, #cab_menu_int
 {
@@ -225,7 +225,7 @@ a{
 	width:120px;
 	height:auto;
 	text-align:center;
-	margin-top:44px;
+	margin:0;
 	padding:0;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -233,7 +233,15 @@ a{
 	z-index:20;
 	display:none;
 	background-color: rgba(0,0, 0, 0.5);
-	
+	/*background-image: url(../img/patrontrans.png);
+	background-color:transparent;*/
+	/*margin-top:-300px;
+	background-color:transparent;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;*/
 }
 
  ul
@@ -247,18 +255,11 @@ padding:0;
 {
 	height:45px;
 	width:100%;
-	color:#878787;
-	font-size:18px;
+	color:#FFF;
 }
 #separador
 {
 	height:1px;
-	background:#878787;
-	width:100%	;
-}
-#separador_2
-{
-	height:8px;
-	background:#F00;
+	background:#FFF;
 	width:100%	;
 }
