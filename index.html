@@ -265,6 +265,11 @@ $(document).ready(function() {
 	$("#r_flecha1").click(function(){
     $("#r_descripcion").animate({width:'toggle'});
   });
+  
+  $("#r_flecha2").click(function(){
+    $("#s_descripcion").animate({width:'toggle'});
+  });
+  
 
 	
  $( window ).on( "orientationchange", function( event ) {
@@ -320,7 +325,7 @@ $(document).ready(function() {
 <!-- page -->
 <!--pagina 2 -->
 
-<!--<div data-role="page" id="page">
+<div data-role="page" id="page">
 	<div data-role="content" style="width:100%; height:100%;">
     	<div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
 		 <img src="img/menu.jpg">
@@ -331,7 +336,7 @@ $(document).ready(function() {
                 <a href=""><div id="reality"></div></a>
             </div>
 	</div>
-</div>-->
+</div>
 <!-- fin  pagina 2-->
 
 
@@ -342,7 +347,7 @@ $(document).ready(function() {
 <!--menu-->
 <div id="panelSecciones"  class="panelSeccion"> 
            <ul>
-             <li id="rubrica"><a href="#page2" id="rubrica_name">HOME</a></li>
+             <li id="rubrica"><a href="#page2" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="35" width="35" />HOME</a></li>
             <li id="separador"></li>
             <li   id="rubrica"><a href="#page2" id="rubrica_name">Puebla</a></li>
             <li id="separador"></li>
@@ -359,7 +364,7 @@ $(document).ready(function() {
             <li  id="rubrica"><a href="#page2" id="rubrica_name">Yucat&aacute;n</a></li>
             <li id="separador"></li>
             <li  id="rubrica"><a href="#page2" id="rubrica_name">Oaxaca</a></li>
-            <li id="separador"></li>
+            <li id="separador_2"></li>
             <li  id="rubrica"><a href="#page2" id="rubrica_name">Revista Digital</a></li>
             <li id="separador"></li>
             <li  id="rubrica"><a href="#page2" id="rubrica_name">Realidad Virtual</a></li>
@@ -372,10 +377,10 @@ $(document).ready(function() {
 	<!-- cabecera -->
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
-        <img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/boton_ediciones.png" width="120" height="44"/>
+        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
          </a></div>
         <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
-        	<img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/logo.png" width="131" height="42">
+        	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
@@ -393,7 +398,7 @@ $(document).ready(function() {
 			<div class = 'slider'>
 				
 				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
                 	
                     
                 	<div id="slide_sec1" class="slide_sec" >
@@ -402,14 +407,14 @@ $(document).ready(function() {
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery1" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG"><img src="img/fotos/1.JPG" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -431,7 +436,7 @@ $(document).ready(function() {
                 
 				<div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/2.JPG" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/2.jpg" /></div>
                                         
                     <div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
@@ -439,14 +444,14 @@ $(document).ready(function() {
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery2" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -467,7 +472,7 @@ $(document).ready(function() {
                 
                 <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/3.JPG" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/3.jpg" /></div>
                     
                     
                     <div id="slide_sec1" class="slide_sec" >
@@ -476,14 +481,14 @@ $(document).ready(function() {
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery3" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -505,7 +510,7 @@ $(document).ready(function() {
                 
                 <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/4.JPG" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/4.jpg" /></div>
                     
                     
                    <div id="slide_sec1" class="slide_sec" >
@@ -514,14 +519,14 @@ $(document).ready(function() {
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery4" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/1.JPG" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -541,12 +546,30 @@ $(document).ready(function() {
                 
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page2"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/conoce.jpg" /></a></div>
+                    	<div id="img_secciones"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones"><a href="#page3"><img src="img/disfruta.jpg" /></a></div>
                     </div>
                    
                 </div>
                 
-                <div class = 'item' id = 'item1'>
+                 <div class = 'item' id = 'item1'>
                 	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/7.JPG" /></div>
                     
                     
@@ -562,6 +585,20 @@ $(document).ready(function() {
                  
                     
                 </div>
+               <!-- <div class = 'item' id = 'item1'>
+                	
+                    <div id="sum_rostros" class="sum_rostros" > 
+                    		<div class="titulo_evento">Titulo1</div>
+                            <div class="sumario_evento" id="su_evt">Sumario</div>
+                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
+                    </div>
+                    
+                    <div id="" class="rostros" >
+                        <a href="#page2" > <img src="img/fotos/5.jpg" /></a>
+                    </div>
+                    
+                    
+                </div>-->
 			
 			</div><!-- fin slider-->
 		
@@ -584,7 +621,7 @@ $(document).ready(function() {
 <div data-role="page" id="page2" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-        <img src="img/boton_ediciones.png" width="120" height="44"/>
+        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
          </a></div>
          <div id="fecha_int">
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
@@ -603,46 +640,40 @@ $(document).ready(function() {
 		
 			<div class = 'slider'>
 			
-				<div class = 'item' id = 'item1'><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/7.JPG" /></div>
-				<div class = 'item' id = 'item1'><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/6.JPG" /></div>
-                <div class = 'item' id = 'item1'><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/5.JPG" /></div>
-                <div class = 'item' id = 'item1'><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/4.JPG" /></div>
-                <div class = 'item' id = 'item1'><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/3.JPG" /></div>
+				<div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
+				<div class = 'item' id = 'item1'><img src="img/fotos/4.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/3.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/2.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/1.jpg" /></div>
 			</div>
 		
 		</div>	
         </div>
-        
         <div id="descripcion_rostros" class="descripcion_rostros">
         	<div id="r_descripcion" class="r_descripcion">
-            	<div id="r_name" class="r_name" style="width:100%; height:195px;">
-                	<span class="r_nombre" style="font-weight:bold; font-size:36px; color:#737373; padding-left:10px;"> ALEJANDRO</span><br>
-                    <span class="r_apellido" style=" font-size:30px; color:#545454;padding-left:10px;"> OCHOA</span>
+            	<div id="r_name" class="r_name" >
+                	<span class="r_nombre"> ALEJANDRO</span><br>
+                    <span class="r_apellido" > OCHOA</span>
                 </div>
-                <div class="r_separador" style="width:100%; height:2px; background:#9e9e9e"></div>
+                <div class="r_separador"></div>
             	<div class="r_texto">
-                	<span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta" style="font-weight:bold; font-size:18px; text-transform:lowercase; color:#9e9e9e;"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta" style=" font-size:16px;  color:#9e9e9e;">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                
                 </div>
             </div>
@@ -658,17 +689,74 @@ $(document).ready(function() {
 </div>
 <!-- fin  pagina 2-->
 
-<!-- pagina 3 -->
-<div data-role="page" id="page3">
-	<div data-role="header">
-		<h1>Página tres</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
+<!-- pagina 3 secciones concientete vy style-->
+<div data-role="page" id="page3" style=" margin:0;">
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
+        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
+         </a></div>
+         <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
+         	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
+         </div>
+        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" >	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
+   		<!-- div descripcion -->
+        <div id="foto_seccion" class="foto_seccion">
+        	<div class = 'snap-slider'>
+		
+			<div class = 'slider slider_seccion'>
+			
+				<div class = 'item' id = 'item1'><div id="flecha_mas" ><img src="img/iconos_app/mas@2x.png" width="68" height="68"></div><img src="img/bystyle.jpg" /></div>
+				<div class = 'item' id = 'item1'><img src="img/conoce.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/consientete.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/disfruta.jpg" /></div>
+			</div>
+		
+		</div>	
+        </div>
+        <div id="descripcion_seccion" class="descripcion_seccion">
+        	<div id="s_descripcion" class="s_descripcion">
+            	<div id="s_name" class="s_name" >
+                	<span class="s_titulo"> HIDRATA</span><br>
+                    <span class="s_subtitulo" > TU PIEL</span>
+                </div>
+                <div class="s_separador"></div>
+            	<div class="s_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+               
+                </div>
+            </div>
+        	<div id="r_flecha" class="r_flecha">
+            <a href="javascript:;" id="r_flecha2">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            </div>
+        </div>
+          
+     </div>
+	
 </div>
 <!-- fin pagina 3-->
 
