@@ -18,228 +18,28 @@
 <!--<script src="js/modernizr.js"></script>-->
 <!-- slide principal -->
   <!-- CSS -->
-		<link rel = "stylesheet" href = "css/default.css" />
-		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
+		<!--<link rel = "stylesheet" href = "css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "css/common.css" />-->
 		
 		<!-- JS -->
 		<!--<script src = "jquery-1.8.2.min.js"></script>-->
-		<script src = "js/jquery.easing-1.3.js"></script>
+		<!--<script src = "js/jquery.easing-1.3.js"></script>
 		<script src = "js/jquery.iosslider.js"></script>
-		<script src = "js/common.js"></script>
+		<script src = "js/common.js"></script>-->
 <!-- slide sec -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 <!-- galeria -->
-<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
+<!--<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
 <link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
-	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>-->
 	
-(function(window, PhotoSwipe){
-		
-			document.addEventListener('DOMContentLoaded', function(){
-			
-				var
-					options = {},
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options );
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
-						console.log('onBeforeShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
-						console.log('onShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
-						console.log('onBeforeHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
-						console.log('onHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
-						console.log('onDisplayImage{');
-						console.log('onDisplayImage - e.action = ' + e.action);
-						console.log('onDisplayImage - e.index = ' + e.index);
-						console.log(instance.getCurrentImage());
-						console.log('onDisplayImage}');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
-						console.log('onResetPosition');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
-						console.log('onSlideshowStart');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
-						console.log('onSlideshowStop');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
-						console.log('onTouch{');
-						console.log('onTouch - e.action = ' + e.action);
-						console.log('onTouch - e.point = ');
-						console.log(e.point);
-						console.log('onTouch}');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
-						console.log('onBeforeCaptionAndToolbarShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
-						console.log('onCaptionAndToolbarShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
-						console.log('onBeforeCaptionAndToolbarHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
-						console.log('onCaptionAndToolbarHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
-						console.log('onToolbarTap');
-						console.log(e);
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
-						console.log('onBeforeZoomPanRotateShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
-						console.log('onZoomPanRotateShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
-						console.log('onBeforeZoomPanRotateHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
-						console.log('onZoomPanRotateHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
-						console.log('onZoomPanRotateTransform');
-						console.log(e);
-					});
-					
-			}, false);
-			
-			
-		}(window, window.Code.PhotoSwipe));
-		
-		(function(window, PhotoSwipe){
-		
-			document.addEventListener('DOMContentLoaded', function(){
-			
-				var
-					options = {},
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery2 a'), options );
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
-						console.log('onBeforeShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
-						console.log('onShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
-						console.log('onBeforeHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
-						console.log('onHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
-						console.log('onDisplayImage{');
-						console.log('onDisplayImage - e.action = ' + e.action);
-						console.log('onDisplayImage - e.index = ' + e.index);
-						console.log(instance.getCurrentImage());
-						console.log('onDisplayImage}');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
-						console.log('onResetPosition');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
-						console.log('onSlideshowStart');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
-						console.log('onSlideshowStop');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
-						console.log('onTouch{');
-						console.log('onTouch - e.action = ' + e.action);
-						console.log('onTouch - e.point = ');
-						console.log(e.point);
-						console.log('onTouch}');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
-						console.log('onBeforeCaptionAndToolbarShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
-						console.log('onCaptionAndToolbarShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
-						console.log('onBeforeCaptionAndToolbarHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
-						console.log('onCaptionAndToolbarHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
-						console.log('onToolbarTap');
-						console.log(e);
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
-						console.log('onBeforeZoomPanRotateShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
-						console.log('onZoomPanRotateShow');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
-						console.log('onBeforeZoomPanRotateHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
-						console.log('onZoomPanRotateHide');
-					});
-					
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
-						console.log('onZoomPanRotateTransform');
-						console.log(e);
-					});
-					
-			}, false);
-			
-			
-		}(window, window.Code.PhotoSwipe));
-		
-	</script>
 <!--Codigo js  -->
 <script>
 $(document).ready(function() {
 
-
+slide_principal();
 	//boton ediciones
 	$('#btn_edicion').click(function() {
 		$('#panelSecciones').slideToggle(800);
@@ -289,6 +89,60 @@ $(document).ready(function() {
 			$( window ).orientationchange();
 });
 
+    
+    //funciones  que llaman a la BD
+    
+    function slide_principal(plaza)
+    {
+	//alert("hola2");
+        var plaza="puebla";
+        $.ajax({
+               type: "POST",
+               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#content_slide').html(message);
+               }
+               });
+        
+    }
+	
+	/*rostros del mes....*/
+	
+	function eventos_especiales(pagina)
+	{
+		//alert("eventos especiales:"+pagina);	
+		 var plaza="puebla";
+        $.ajax({
+               type: "POST",
+               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#cont_evento_especial').html(message);
+               }
+               });
+		window.location.href = pagina; 
+	}
+	
+	function secciones(pagina)
+	{//
+		var plaza="puebla";
+        $.ajax({
+               type: "POST",
+               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/secciones.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#content_secciones').html(message);
+               }
+               });
+		window.location.href = pagina; 
+	}
 
 </script>
 <script>
@@ -316,32 +170,50 @@ $(document).ready(function() {
 		
 	}
 	
-	
+    function video()
+    {
+        var video=document.getElementById("intro");
+        //video.autoplay=true;
+        video.play();
+        video.addEventListener('ended', function(){
+                               //alert("se termina");
+                               var pagina="#page1";
+                               window.location.href = pagina;
+                               });
+    }
 </script>
 
 </head> 
-<body> 
+<body onload="video()"> 
 
-<!-- page -->
-<!--pagina 2 -->
 
+<!--pagina-->
 <div data-role="page" id="page">
-	<div data-role="content" style="width:100%; height:100%;">
-    	<div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
-		 <img src="img/menu.jpg">
-        </div>
-        	<div id="link_menu">
-                <a href="#page1"><div id="events"></div></a>
-                <a href=""><div id="d_magazine"></div></a>
-                <a href=""><div id="reality"></div></a>
-            </div>
+	<div data-role="content" style="width:100%; height:100%;background:#fff;">
+        <video id="intro"  src="video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#fff;"></video>
 	</div>
 </div>
-<!-- fin  pagina 2-->
+<!-- fin  pagina-->
 
+    <!--pagina 1-->
+    
+    <div data-role="page" id="page1">
+        <div data-role="content" style="width:100%; height:100%;background:#fff;">
 
-<!-- fin page-->
-
+            <div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
+             <img src="img/menu.jpg">
+             </div>
+             <div id="link_menu">
+             <a href="#page2"><div id="events"></div></a>
+             <a href=""><div id="d_magazine"></div></a>
+             <a href=""><div id="reality"></div></a>
+             </div>
+        </div>
+    </div>
+    
+    
+    <!-- fin  pagina 1-->
+    
 
 <!--  pagina 1-->
 <!--menu-->
@@ -373,32 +245,32 @@ $(document).ready(function() {
             </ul>
         </div>
         <!--menu-->
-<div data-role="page" id="page1" style="background:#000; margin:0;">
+<div data-role="page" id="page2" style="background:#fff; margin:0;">
 	<!-- cabecera -->
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
         <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
          </a></div>
-        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
     <!--  fin cabecera-->
     
-    <!-- contenedor principal -->
-	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
-    <!--menu--><!--   fin menu -->	
     
-        <!-- slide -->
-        <div id="content_slide"><!-- conetnedor principal--><input type="hidden" id="num_eventos" value="4">
+	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
+    
+    
+        
+        <div id="content_slide">
             <div class="contenido_slide">
-                <div class = 'full-width-slider'>
+            <!--    <div class = 'full-width-slider'>
 
 			<div class = 'slider'>
 				
 				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="../img/fotos/1.jpg" /></div>
                 	
                     
                 	<div id="slide_sec1" class="slide_sec" >
@@ -570,7 +442,7 @@ $(document).ready(function() {
                 </div>
                 
                  <div class = 'item' id = 'item1'>
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/7.JPG" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/5.JPG" /></div>
                     
                     
                    <div id="r_nom_persona" class="r_nom_persona" >
@@ -585,7 +457,7 @@ $(document).ready(function() {
                  
                     
                 </div>
-               <!-- <div class = 'item' id = 'item1'>
+               <div class = 'item' id = 'item1'>
                 	
                     <div id="sum_rostros" class="sum_rostros" > 
                     		<div class="titulo_evento">Titulo1</div>
@@ -598,27 +470,26 @@ $(document).ready(function() {
                     </div>
                     
                     
-                </div>-->
+                </div>
 			
-			</div><!-- fin slider-->
+			</div>
 		
-		</div><!-- fin full-width-slider-->
+		</div>-->
 		
             </div>
         </div>
-        <!-- fin  slide-->
+       
   
 		
 	</div>
-	<!-- fin contenedor principal -->
     
 </div>
-<!-- fin pagina 1 -->
+<!-- fin pagina 2 -->
 
 
 
-<!--pagina 2  maneja rostros del mes y demas-->
-<div data-role="page" id="page2" style=" margin:0;">
+<!--pagina 3  maneja rostros del mes y demas-->
+<div data-role="page" id="page3" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
         <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
@@ -627,15 +498,15 @@ $(document).ready(function() {
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
          	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
          </div>
-        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
     
-	<div data-role="content" >	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
-   		<!-- div descripcion -->
-        <div id="foto_rostros" class="foto_rostros">
+	<div data-role="content" id="cont_evento_especial" >	
+   		
+        <!--<div id="foto_rostros" class="foto_rostros">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider'>
@@ -647,7 +518,7 @@ $(document).ready(function() {
                 <div class = 'item' id = 'item1'><img src="img/fotos/1.jpg" /></div>
 			</div>
 		
-		</div>	
+			</div>	
         </div>
         <div id="descripcion_rostros" class="descripcion_rostros">
         	<div id="r_descripcion" class="r_descripcion">
@@ -682,15 +553,15 @@ $(document).ready(function() {
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>
+        </div>-->
           
      </div>
 	
 </div>
-<!-- fin  pagina 2-->
+<!-- fin  pagina 3-->
 
-<!-- pagina 3 secciones concientete vy style-->
-<div data-role="page" id="page3" style=" margin:0;">
+<!-- pagina 4 secciones concientete vy style-->
+<div data-role="page" id="page4" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
         <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
@@ -699,15 +570,15 @@ $(document).ready(function() {
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
          	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
          </div>
-        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
     
-	<div data-role="content" >	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
+	<div data-role="content" id="content_secciones">	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
    		<!-- div descripcion -->
-        <div id="foto_seccion" class="foto_seccion">
+      <!--  <div id="foto_seccion" class="foto_seccion">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider slider_seccion'>
@@ -718,7 +589,7 @@ $(document).ready(function() {
                 <div class = 'item' id = 'item1'><img src="img/disfruta.jpg" /></div>
 			</div>
 		
-		</div>	
+			</div>	
         </div>
         <div id="descripcion_seccion" class="descripcion_seccion">
         	<div id="s_descripcion" class="s_descripcion">
@@ -753,16 +624,16 @@ $(document).ready(function() {
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>
+        </div>-->
           
      </div>
 	
 </div>
-<!-- fin pagina 3-->
+<!-- fin pagina 4-->
 
 
-<!--  pagina  4 -->
-<div data-role="page" id="page4">
+<!--  pagina  5 -->
+<div data-role="page" id="page5">
 	<div data-role="header">
 		<h1>Página cuatro</h1>
 	</div>
