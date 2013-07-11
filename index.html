@@ -10,7 +10,7 @@
 <meta http-equiv="Pragma" CONTENT="no-cache">No Guarda cache -->
 
 <link rel="stylesheet" href="css/css.css">
-<link rel="stylesheet" href="css/ipad.css">
+<link rel="stylesheet" href="css/ios.css">
 <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.1.min.js"></script>
@@ -110,21 +110,41 @@ else
 	}*/
 		if(screen.width=="320")
 	{
-		//alert("ipod");
+		//menu
 		var img_menu = document.getElementById('img_menu_ini');
-				img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+		
+		/*btn ediciones*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion');
+		img_btn_edicion.src = "img/iconos_app/menu.png";
+		img_btn_edicion.width="44";
+		img_btn_edicion.height="44";
 	}
 	else
 	{
 		if(screen.width=="320" && screen.height=="568")
 		{
-			alert("iphone5");	
+			//menu
+		var img_menu = document.getElementById('img_menu_ini');
+		img_menu.src="img/iphone_ipod/menu_iphone.jpg";
+		
+		/*btn ediciones*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion');
+		img_btn_edicion.src = "img/iconos_app/menu@2x.png";
+		img_btn_edicion.width="44";
+		img_btn_edicion.height="44";	
 		}
 		else 
 		{
 				//alert("ipad");	
-				var img_menu = document.getElementById('img_menu_ini');
-				img_menu.src="img/menu.jpg";
+			var img_menu = document.getElementById('img_menu_ini');
+			img_menu.src="img/menu.jpg";
+			/*btn ediciones*/
+			var img_btn_edicion = document.getElementById('img_btn_edicion');
+			img_btn_edicion.src = "img/iconos_app/boton_ediciones.png";
+			img_btn_edicion.width="120";
+			img_btn_edicion.height="44";
+				
 		}	
 	}
 
@@ -265,12 +285,12 @@ else
     <div data-role="page" id="page1">
         <div data-role="content" style="width:100%; height:100%;background:#fff;">
 
-            <!--<div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
+            <div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
              <img src="" id="img_menu_ini">
-             </div>-->
-             <div style="width:100%; height:100%; position:absolute; overflow:hidden">
+             </div>
+             <!--<div style="width:100%; height:100%; position:absolute; overflow:hidden">
                 <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div>
+            </div>PUBLICIDAD-->
              <div id="link_menu">
              <a href="#page2"><div id="events"></div></a>
              <a href=""><div id="d_magazine"></div></a>
@@ -313,13 +333,14 @@ else
             </ul>
         </div>
         <!--menu-->
-<div data-role="page" id="page2" style="background:#fff; margin:0;">
+<div data-role="page" id="page2" style="background:#000; margin:0;">
 	<!-- cabecera -->
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
-        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
-         </a></div>
-        <div id="logo"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <img src="" id="img_btn_edicion">
+        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
+         </a></div><!-- "-->
+        <div id="logo"> <a href="#page1" >
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
