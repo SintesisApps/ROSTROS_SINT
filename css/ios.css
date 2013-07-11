@@ -743,7 +743,7 @@ margin-top:354px;}
 	.box_sumario
 	{
 		width:100%; 
-		height:136px;
+		height:137px;
 		background-color: rgba(0,0, 0, 0.7);
 		margin-top:0px; 
 		z-index:9999; 
@@ -751,35 +751,38 @@ margin-top:354px;}
 	}
 	.titulo_evento
 { 
-	/*color:#FFF;
+	color:#FFF;
 	width:48.7%;
-	height:150px;
+	height:112px;
 	display:block;
 	font-family:millerdisplaylight;
 	text-transform:uppercase;
-	font-size:28px;
-	padding-left:12px;*/
+	font-size:12px;
+	padding-left:12px;
+	background:#FC3;
 }
 .sumario_evento
 {
-	/*color:#FFF;
+	color:#FFF;
 	width:48%;
-	height:150px;
+	height:112px;
 	display:block;
 	margin-left:50.5%;
 	position:absolute;
-	margin-top:-150px;
-	font-size:22px;
-	padding-left:12px;*/
+	margin-top:-112px;
+	font-size:18px;
+	padding-left:12px;
+	background:#6C9;
 }
 
 .edicion_revista
 {
-/*	color:#FFF;
+	color:#FFF;
 	width:100%;
-	height:45px;
-	font-size:12px;
-	font-family:  Helvetica;*/
+	height:25px;
+	font-size:8px;
+	font-family:  Helvetica;
+	background:#F69;
 }
 /*secciones: conoce, disfruta ....*/
 #secciones 
