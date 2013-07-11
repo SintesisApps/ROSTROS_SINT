@@ -104,7 +104,8 @@
 
 /* snap */
 /* full width */
-@media (max-width: 768px) 
+/*@media (max-width: 768px) */
+@media screen and (min-width: 321px) and (max-width: 768px) 
 {
 	.snap-slider {
 	position: relative;
@@ -117,7 +118,8 @@
 	height: 980px;
 }
 }
-@media (min-width: 1024px) 
+/*@media (min-width: 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px)
 {
 	.snap-slider {
 	position: relative;
@@ -774,7 +776,8 @@
 }
 
 /* full width */
-@media (max-width: 768px) 
+/*@media (max-width: 768px) */
+@media screen and (min-width: 321px) and (max-width: 768px) 
 {
 	.full-width-slider {
 	position: relative;
@@ -783,7 +786,8 @@
 	height: 980px;
 	}
 }
-@media (min-width: 1024px) 
+/*@media (min-width: 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px)
 {
 	.full-width-slider {
 	position: relative;

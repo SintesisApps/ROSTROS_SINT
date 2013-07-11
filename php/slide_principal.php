@@ -64,7 +64,7 @@ slide_principal();
 		$("#panelSecciones").slideToggle(800);
 	});
 	
-	//$("#descripcion_img5").css("display", "none");
+	
 	
 	$("div[id^=\'gallery_sec\']").touchSlider({
 			mode: "shift",

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Rostros</title>
+<title>Rostros Smarth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <!--<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
 <meta name="viewport" content="width=device-width">
@@ -11,35 +11,236 @@
 
 <link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="css/ipad.css">
+<link rel="stylesheet" href="css/css_smartphone.css">
 <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.1.min.js"></script>
 <script src="phonegap.js" type="text/javascript"></script>
-<!--<script src="js/modernizr.js"></script>-->
+<script src="js/modernizr.js"></script>
 <!-- slide principal -->
   <!-- CSS -->
-		<!--<link rel = "stylesheet" href = "css/default.css" />
-		<link rel = "stylesheet" media = "screen" href = "css/common.css" />-->
+		<link rel = "stylesheet" href = "css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
 		
 		<!-- JS -->
 		<!--<script src = "jquery-1.8.2.min.js"></script>-->
-		<!--<script src = "js/jquery.easing-1.3.js"></script>
+		<script src = "js/jquery.easing-1.3.js"></script>
 		<script src = "js/jquery.iosslider.js"></script>
-		<script src = "js/common.js"></script>-->
+		<script src = "js/common.js"></script>
 <!-- slide sec -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 <!-- galeria -->
-<!--<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
-<link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
+    <link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
+    <link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
-	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>-->
+	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
+	<script type="text/javascript">
 	
+(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options );
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
+						console.log('onBeforeShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
+						console.log('onShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
+						console.log('onBeforeHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
+						console.log('onHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
+						console.log('onDisplayImage{');
+						console.log('onDisplayImage - e.action = ' + e.action);
+						console.log('onDisplayImage - e.index = ' + e.index);
+						console.log(instance.getCurrentImage());
+						console.log('onDisplayImage}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
+						console.log('onResetPosition');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
+						console.log('onSlideshowStart');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
+						console.log('onSlideshowStop');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
+						console.log('onTouch{');
+						console.log('onTouch - e.action = ' + e.action);
+						console.log('onTouch - e.point = ');
+						console.log(e.point);
+						console.log('onTouch}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
+						console.log('onBeforeCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+						console.log('onCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
+						console.log('onBeforeCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
+						console.log('onCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
+						console.log('onToolbarTap');
+						console.log(e);
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
+						console.log('onBeforeZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
+						console.log('onZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
+						console.log('onBeforeZoomPanRotateHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
+						console.log('onZoomPanRotateHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
+						console.log('onZoomPanRotateTransform');
+						console.log(e);
+					});
+					
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery2 a'), options );
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
+						console.log('onBeforeShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
+						console.log('onShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
+						console.log('onBeforeHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
+						console.log('onHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
+						console.log('onDisplayImage{');
+						console.log('onDisplayImage - e.action = ' + e.action);
+						console.log('onDisplayImage - e.index = ' + e.index);
+						console.log(instance.getCurrentImage());
+						console.log('onDisplayImage}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
+						console.log('onResetPosition');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
+						console.log('onSlideshowStart');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
+						console.log('onSlideshowStop');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
+						console.log('onTouch{');
+						console.log('onTouch - e.action = ' + e.action);
+						console.log('onTouch - e.point = ');
+						console.log(e.point);
+						console.log('onTouch}');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
+						console.log('onBeforeCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
+						console.log('onCaptionAndToolbarShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
+						console.log('onBeforeCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
+						console.log('onCaptionAndToolbarHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
+						console.log('onToolbarTap');
+						console.log(e);
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
+						console.log('onBeforeZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
+						console.log('onZoomPanRotateShow');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
+						console.log('onBeforeZoomPanRotateHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
+						console.log('onZoomPanRotateHide');
+					});
+					
+					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
+						console.log('onZoomPanRotateTransform');
+						console.log(e);
+					});
+					
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
 <!--Codigo js  -->
 <script>
 $(document).ready(function() {
 
-slide_principal();
+
 	//boton ediciones
 	$('#btn_edicion').click(function() {
 		$('#panelSecciones').slideToggle(800);
@@ -65,10 +266,10 @@ slide_principal();
 	$("#r_flecha1").click(function(){
     $("#r_descripcion").animate({width:'toggle'});
   });
-  /*
+  
   $("#r_flecha2").click(function(){
     $("#s_descripcion").animate({width:'toggle'});
-  });*/
+  });
   
 
 	
@@ -83,14 +284,18 @@ slide_principal();
 			{ //alert("portrait");
 				$('div[id^="box_sumario"]').show();
 				$('div[id^="slide_sec"]').show();
+				
+				if(screen.width=="320")
+				{
+				$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').hide();
+				}
 			}
 		
 		});
 			$( window ).orientationchange();
-			
-			
-/*imgs*/
-/*if(screen.width=="320")
+	//alert(screen.height);		
+if(screen.width=="320")
 {	
 	//$("#menu_inicial").append("<img id='' src='img/iphone-ipod/menu.jpg'/>");
 	var img_menu = document.getElementById('img_menu_inicial');
@@ -103,88 +308,11 @@ slide_principal();
 
 }
 else
-{alert("ipad");
-	var img_menu = document.getElementById('img_menu_ini');
-	img_menu.src="img/iphone_ipod/menu_ipod.jpg";
-	
-	}*/
-		if(screen.width=="320")
-	{
-		//alert("ipod");
-		var img_menu = document.getElementById('img_menu_ini');
-				img_menu.src="img/iphone_ipod/menu_ipod.jpg";
-	}
-	else
-	{
-		if(screen.width=="320" && screen.height=="568")
-		{
-			alert("iphone5");	
-		}
-		else 
-		{
-				//alert("ipad");	
-				var img_menu = document.getElementById('img_menu_ini');
-				img_menu.src="img/menu.jpg";
-		}	
-	}
-
-
+{var img_menu = document.getElementById('img_menu_inicial');
+	img_menu.src = "img/iphone-ipod/menu.jpg";}
 });
 
-    
-    //funciones  que llaman a la BD
-    
-    function slide_principal(plaza)
-    {
-	//alert("hola2");
-        var plaza="puebla";
-        $.ajax({
-               type: "POST",
-               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
-               data: "",
-               cache: false,
-               success: function(message)
-               {
-               $('#content_slide').html(message);
-               }
-               });
-        
-    }
-	
-	/*rostros del mes....*/
-	
-	function eventos_especiales(pagina)
-	{
-		//alert("eventos especiales:"+pagina);	
-		 var plaza="puebla";
-        $.ajax({
-               type: "POST",
-               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
-               data: "",
-               cache: false,
-               success: function(message)
-               {
-               $('#cont_evento_especial').html(message);
-               }
-               });
-		window.location.href = pagina; 
-	}
-	
-	function secciones(pagina)
-	{//
-		var plaza="puebla";
-        $.ajax({
-               type: "POST",
-               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/secciones.php",
-               data: "",
-               cache: false,
-               success: function(message)
-               {
-               $('#content_secciones').html(message);
-               }
-               });
-		window.location.href = pagina; 
-	}
+
 
 </script>
 <script>
@@ -212,76 +340,32 @@ else
 		
 	}
 	
-    function video()
-    {
-        var video=document.getElementById("intro");
-        //video.autoplay=true;
-        video.play();
-        video.addEventListener('ended', function(){
-                               //alert("se termina");
-                               var pagina="#page1";
-                               window.location.href = pagina;
-                               });
-    }
-	
-	/*CAMBIO DE ICONOS A PARTIR DE LAS MEDIDAS DE LOS DISPOSITIVOS*/
-	
-	//alert("ANCHO:"+screen.height+"ALTO:"+screen.width);			
-/*	if(screen.width=="320")
-	{
-		alert("ipod");
-		var img_menu = document.getElementById('img_menu_inicial');
-		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
-	}
-	else
-	{
-		if(screen.width=="320" && screen.height=="568")
-		{
-			alert("iphone5");	
-		}
-		else 
-		{
-				alert("ipad");	
-				$("#img_menu_inicial").attr("src","img/menu.jpg");
-		}	
-	}*/
 	
 </script>
 
 </head> 
-<body onload="video()"> 
+<body> 
 
+<!-- page -->
+<!--pagina 2 -->
 
-<!--pagina-->
-<!--<div data-role="page" id="page">
-	<div data-role="content" style="width:100%; height:100%;background:#fff;">
-        <video id="intro"  src="video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#fff;"></video>
-	</div>
-</div>-->
-<!-- fin  pagina-->
-
-    <!--pagina 1-->
-    
-    <div data-role="page" id="page1">
-        <div data-role="content" style="width:100%; height:100%;background:#fff;">
-
-            <!--<div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
-             <img src="" id="img_menu_ini">
-             </div>-->
-             <div style="width:100%; height:100%; position:absolute; overflow:hidden">
-                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div>
-             <div id="link_menu">
-             <a href="#page2"><div id="events"></div></a>
-             <a href=""><div id="d_magazine"></div></a>
-             <a href=""><div id="reality"></div></a>
-             </div>
+<div data-role="page"  id="page"><!--  -->
+	<div data-role="content"  style="width:100%; height:100%;">
+    	<div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:; ">
+		 <img src="" id="img_menu_inicial">
         </div>
-    </div>
-    
-    
-    <!-- fin  pagina 1-->
-    
+        	<div id="link_menu">
+                <a href="#page1"><div id="events"></div></a>
+                <a href=""><div id="d_magazine"></div></a>
+                <a href=""><div id="reality"></div></a>
+            </div>
+	</div>
+</div>
+<!-- fin  pagina 2-->
+
+
+<!-- fin page-->
+
 
 <!--  pagina 1-->
 <!--menu-->
@@ -313,32 +397,33 @@ else
             </ul>
         </div>
         <!--menu-->
-<div data-role="page" id="page2" style="background:#fff; margin:0;">
-	<!-- cabecera -->
+<div data-role="page" id="page1" style="background:#000; margin:0;">
+	
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
-        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
+        <img src="" id="img_btn_edicion" >
+       <!-- <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
          </a></div>
-        <div id="logo"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
-    <!--  fin cabecera-->
+  
     
     
 	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
+   
     
-    
-        
+       
         <div id="content_slide">
             <div class="contenido_slide">
-            <!--    <div class = 'full-width-slider'>
+                <div class = 'full-width-slider'>
 
 			<div class = 'slider'>
 				
 				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="../img/fotos/1.jpg" /></div>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
                 	
                     
                 	<div id="slide_sec1" class="slide_sec" >
@@ -376,7 +461,7 @@ else
                 
 				<div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/2.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
                                         
                     <div id="slide_sec1" class="slide_sec" >
                     <div class="gallery-holder" style="z-index:9999;">
@@ -410,7 +495,7 @@ else
                     
                 </div>
                 
-                <div class = 'item' id = 'item1'>
+               <!-- <div class = 'item' id = 'item1'>
                 	
                 	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/3.jpg" /></div>
                     
@@ -445,10 +530,10 @@ else
                     </div>
                     
                     
-                </div>
+                </div>-->
                 
                 
-                <div class = 'item' id = 'item1'>
+                <!--<div class = 'item' id = 'item1'>
                 	
                 	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/4.jpg" /></div>
                     
@@ -482,7 +567,7 @@ else
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
                     
-                </div>
+                </div>-->
                 
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
@@ -498,19 +583,19 @@ else
                 </div>
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
+                    	<div id="img_secciones"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
                     </div>
                    
                 </div>
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/disfruta.jpg" /></a></div>
+                    	<div id="img_secciones"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
                     </div>
                    
                 </div>
                 
                  <div class = 'item' id = 'item1'>
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/5.JPG" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/7.JPG" /></div>
                     
                     
                    <div id="r_nom_persona" class="r_nom_persona" >
@@ -525,56 +610,43 @@ else
                  
                     
                 </div>
-               <div class = 'item' id = 'item1'>
-                	
-                    <div id="sum_rostros" class="sum_rostros" > 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
-                    </div>
-                    
-                    <div id="" class="rostros" >
-                        <a href="#page2" > <img src="img/fotos/5.jpg" /></a>
-                    </div>
-                    
-                    
-                </div>
 			
 			</div>
 		
-		</div>-->
+		</div>
 		
             </div>
         </div>
-       
+        
   
 		
 	</div>
+	
     
 </div>
-<!-- fin pagina 2 -->
+<!-- fin pagina 1 -->
 
 
 
-<!--pagina 3  maneja rostros del mes y demas-->
-<div data-role="page" id="page3" style=" margin:0;">
+<!--pagina 2  maneja rostros del mes y demas-->
+<!--<div data-role="page" id="page2" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
         <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
          </a></div>
          <div id="fecha_int">
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
-         	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
+         	
          </div>
-        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
     
-	<div data-role="content" id="cont_evento_especial" >	
+	<div data-role="content" >	
    		
-        <!--<div id="foto_rostros" class="foto_rostros">
+        <div id="foto_rostros" class="foto_rostros">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider'>
@@ -586,7 +658,7 @@ else
                 <div class = 'item' id = 'item1'><img src="img/fotos/1.jpg" /></div>
 			</div>
 		
-			</div>	
+		</div>	
         </div>
         <div id="descripcion_rostros" class="descripcion_rostros">
         	<div id="r_descripcion" class="r_descripcion">
@@ -621,32 +693,32 @@ else
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>-->
+        </div>
           
      </div>
 	
-</div>
-<!-- fin  pagina 3-->
+</div>-->
+<!-- fin  pagina 2-->
 
-<!-- pagina 4 secciones concientete vy style-->
-<div data-role="page" id="page4" style=" margin:0;">
+<!-- pagina 3 secciones concientete vy style-->
+<!--<div data-role="page" id="page3" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
         <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
          </a></div>
          <div id="fecha_int">
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
-         	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
+         
          </div>
-        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        <div id="logo_int"> <a href="#page" onClick="$('#panelSecciones').css('margin-top','-300px');">
         	<img src="img/logo.png" width="131" height="42">
         </a></div>
        
     </div>
     
-	<div data-role="content" id="content_secciones">	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
-   		<!-- div descripcion -->
-      <!--  <div id="foto_seccion" class="foto_seccion">
+	<div data-role="content" >	
+    
+        <div id="foto_seccion" class="foto_seccion">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider slider_seccion'>
@@ -657,7 +729,7 @@ else
                 <div class = 'item' id = 'item1'><img src="img/disfruta.jpg" /></div>
 			</div>
 		
-			</div>	
+		</div>	
         </div>
         <div id="descripcion_seccion" class="descripcion_seccion">
         	<div id="s_descripcion" class="s_descripcion">
@@ -692,16 +764,16 @@ else
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>-->
+        </div>
           
      </div>
 	
-</div>
-<!-- fin pagina 4-->
+</div>-->
+<!-- fin pagina 3-->
 
 
-<!--  pagina  5 -->
-<div data-role="page" id="page5">
+<!--  pagina  4 -->
+<!--<div data-role="page" id="page4">
 	<div data-role="header">
 		<h1>Página cuatro</h1>
 	</div>
@@ -711,7 +783,7 @@ else
 	<div data-role="footer">
 		<h4>Pie de página</h4>
 	</div>
-</div>
+</div>-->
  
 
 </body>

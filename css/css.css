@@ -5,7 +5,8 @@ body{
 	/*width:70%;*/
 	
 	}
-@media screen and (min-width: 0px) and (max-width: 768px) {
+/*@media screen and (max-height: 481px) and (max-height: 1000px){*/
+@media screen and (min-width: 321px) and (max-width: 768px) {
 
 /*IPAD PORTRAIT*/
 /*@media screen and (max-width: 768px) and (max-height: 1024px) {*/
@@ -257,8 +258,129 @@ body{
 
 }
 /*telefonos*/
-@media only screen and (max-width : 320px)  and (max-width : 480pxpx){
+@media only screen and (max-width : 320px)  and (max-height : 480px){
+
+#menu_inicial
+{
+	background:#000;
+}	
+#menu_inicial img
+{margin-left:-80px;}
+/*#cont_seccion, #cont_seccion img
+{
+	width:320px;
+	height:480px;
+}
+
+
+#link_menu
+{
+	z-index:3;
+	position:absolute;
+	top:82%;
+	left:50%;
+	width:626px;
+	margin-left:-313px;
+	height:350px;
+	margin-top:-375px;
+}
+#cab_menu, #cab_menu_int
+{
 	
+	width:120px; 
+	height:44px;	
+	display:inline-block;
+	padding-top:0px;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;
+	z-index:10000;
+	background:#000;	
+}
+
+#logo
+{
+	width:648px;
+	height:44px;
+	display:inline-block;
+	margin-left:10%;
+	text-align:center;
+	vertical-align:central;
+	position:absolute;
+	padding-top:1xp;
+}
+
+#fecha_int
+{	
+	width:72px;
+	height:44px;
+	display:inline-block;
+	padding-top:0px;
+	text-align:center;
+	vertical-align:middle;
+	position:absolute;
+	z-index:3;
+	background:#000;
+	margin-left:120px;
+}
+#fecha_int img
+{
+	margin-top:9px;
+}
+#logo_int
+{
+	width:576px;
+	height:44px;
+	display:inline-block;
+	position:absolute;
+	padding-top:1xp;
+	background:#000;
+	margin-left:192px;
+}
+#logo_int img
+{
+	margin-left:126.5px;
+}
+
+
+
+#panelSecciones{
+	width:120px;
+	height:auto;
+	text-align:center;
+	margin-top:44px;
+	padding:0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position:absolute;
+	z-index:20;
+	display:none;
+	background-color: rgba(0,0, 0, 0.5);
+	
+}
+
+
+#rubrica
+{
+	height:45px;
+	width:100%;
+	color:#878787;
+	font-size:18px;
+}
+#separador
+{
+	height:1px;
+	background:#878787;
+	width:100%	;
+}
+#separador_2
+{
+	height:8px;
+	background:#F00;
+	width:100%	;
+}
+*/
+/*	
 	#menu_inicial
 {
 	background:#000;
@@ -270,7 +392,6 @@ body{
 #cont_seccion img
 {}
 
-/*links*/
 #link_menu
 {
 	z-index:3;
@@ -284,7 +405,7 @@ body{
 
 }
 
-
+*/
 
 }
 
