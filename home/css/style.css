@@ -1,0 +1,121 @@
+
+
+.box_s {
+	width: 251px;
+	height: 167px;
+	line-height: 96px;
+	text-align: center;
+	color: #FFF;
+	/*margin-right:8px;*/
+	margin-right:4px;
+	margin-left:4px;
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	/*width: 241px;
+	height: 159px;
+	text-align: center;
+	color: #FFF;
+	margin: 8px;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	float:left;*/
+}
+
+.box_s img {
+	width: 251px;
+	height: 167px;
+	vertical-align: middle;
+}
+
+/*
+.ibox_s,
+.cbox,
+.fbox {
+	width: 241px;
+	height: 159px;
+	text-align: center;
+	color: #FFF;
+	margin: 2px;
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+}*/
+
+
+
+.ibox_s img {
+	/*width: 251px;
+	height: 167px;*/
+	width:100%;
+	height:auto;
+	vertical-align: middle;
+}
+
+.cbox img,
+.fbox img{
+	width: 100%;
+	vertical-align: middle;
+}
+/*
+.fbox {
+	width: 600px;
+	height: 600px;
+	line-height: 600px;
+}*/
+
+span.delta {
+	position: absolute;
+	top: 0;
+	width: 1px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: magenta;
+}
+
+.ibox_s span.delta {
+	height: 210px;
+}
+
+.active .box_s {
+	/*outline: 1px dashed green;*/
+}
+
+.gallery-holder {
+	margin: 0 auto;
+	/*background:#009;*/
+}
+
+.gallery_slide {
+	/*width: 100%;
+	overflow: hidden;*/
+		width: 96.48%;
+	/*width: 800px;*/
+	overflow: hidden;
+	height:167px;
+	margin-top:39px;
+	padding-left:1.36%;
+	padding-right:1.76%;
+}
+
+.gallery_slide div.holder {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery_slide div.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 9999px;
+	overflow: hidden;
+}
+
+.gallery_slide div.item_s {
+	float: left;
+}
+

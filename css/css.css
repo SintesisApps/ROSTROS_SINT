@@ -6,9 +6,12 @@ body{
 	
 	}
 @media screen and (min-width: 0px) and (max-width: 768px) {
+
+/*IPAD PORTRAIT*/
+/*@media screen and (max-width: 768px) and (max-height: 1024px) {*/
 #menu_inicial
 {
-	/*background:#666;*/
+	/*background:#000;*/
 }	
 #menu_inicial img
 {margin-left:-128px;}
@@ -78,8 +81,6 @@ body{
 	width:576px;
 	height:44px;
 	display:inline-block;
-	/*text-align:center;
-	vertical-align:central;*/
 	position:absolute;
 	padding-top:1xp;
 	background:#000;
@@ -90,8 +91,51 @@ body{
 	margin-left:126.5px;
 }
 
+/*menu_edciones*/
+
+#panelSecciones{
+	width:120px;
+	height:auto;
+	text-align:center;
+	margin-top:44px;
+	padding:0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position:absolute;
+	z-index:20;
+	display:none;
+	background-color: rgba(0,0, 0, 0.5);
+	
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+#rubrica
+{
+	height:45px;
+	width:100%;
+	color:#878787;
+	font-size:18px;
+}
+#separador
+{
+	height:1px;
+	background:#878787;
+	width:100%	;
+}
+#separador_2
+{
+	height:8px;
+	background:#F00;
+	width:100%	;
+}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+/*IPAD  LANDSCAPE*/
+
+/*@media screen and (max-width: 1024x) and (max-height: 768px) {*/
 
 #menu_inicial
 {
@@ -163,8 +207,6 @@ body{
 	width:832px;
 	height:44px;
 	display:inline-block;
-	/*text-align:center;
-	vertical-align:central;*/
 	position:absolute;
 	padding-top:1xp;
 	background:#000;
@@ -174,6 +216,45 @@ body{
 {
 	margin-left:254.5px;
 }
+
+/*menu ediciones*/
+#panelSecciones{
+	width:120px;
+	height:auto;
+	text-align:center;
+	margin-top:44px;
+	padding:0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position:absolute;
+	z-index:20;
+	display:none;
+	background-color: rgba(0,0, 0, 0.5);
+	
+}
+
+
+#rubrica
+{
+	height:45px;
+	width:100%;
+	color:#878787;
+	font-size:18px;
+}
+#separador
+{
+	height:1px;
+	background:#878787;
+	width:100%	;
+}
+#separador_2
+{
+	height:8px;
+	background:#F00;
+	width:100%	;
+}
+
+
 }
 /*telefonos*/
 @media only screen and (max-width : 320px)  and (max-width : 480pxpx){
@@ -202,7 +283,12 @@ body{
 	margin-top:-290px;
 
 }
+
+
+
 }
+
+
 
 a{
 	text-decoration:none;
@@ -248,22 +334,6 @@ a{
 }
 
 
-
-#panelSecciones{
-	width:120px;
-	height:auto;
-	text-align:center;
-	margin-top:44px;
-	padding:0;
-	overflow-y: auto;
-	overflow-x: hidden;
-	position:absolute;
-	z-index:20;
-	display:none;
-	background-color: rgba(0,0, 0, 0.5);
-	
-}
-
  ul
 {list-style:none;
 /*background:#333;*/
@@ -271,22 +341,4 @@ margin:0;
 top:0;
 padding:0;
 }
-#rubrica
-{
-	height:45px;
-	width:100%;
-	color:#878787;
-	font-size:18px;
-}
-#separador
-{
-	height:1px;
-	background:#878787;
-	width:100%	;
-}
-#separador_2
-{
-	height:8px;
-	background:#F00;
-	width:100%	;
-}
+

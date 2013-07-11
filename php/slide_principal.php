@@ -13,7 +13,8 @@ echo'
 		<script src = "js/common.js"></script>
 		
 		<!-- slidesec -->
-		
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 		
 		
 		<!-- galeria-->
@@ -44,6 +45,48 @@ echo'
 		}(window, window.jQuery, window.Code.PhotoSwipe));
 		
 </script>
+
+<script>
+$(document).ready(function() {
+
+slide_principal();
+	//boton ediciones
+	$("#btn_edicion").click(function() {
+		$("#panelSecciones").slideToggle(800);
+		//alert("btn seccion");
+	});
+	$("#btn_edicion2").click(function() {
+		$("#panelSecciones").slideToggle(800);
+		//alert("btn seccion"");
+	});
+	
+	$("#rubrica_name").click(function() {
+		$("#panelSecciones").slideToggle(800);
+	});
+	
+	//$("#descripcion_img5").css("display", "none");
+	
+	$("div[id^=\'gallery_sec\']").touchSlider({
+			mode: "shift",
+			offset: "auto"
+	});
+	
+	/*animacion  slide interior*/
+	$("#r_flecha1").click(function(){
+    $("#r_descripcion").animate({width:"toggle"});
+  });
+  
+  $("#r_flecha2").click(function(){
+    $("#s_descripcion").animate({width:"toggle"});
+  });
+  
+
+	
+});
+
+</script>
+
+
 		
 		
 <div class = "full-width-slider">
