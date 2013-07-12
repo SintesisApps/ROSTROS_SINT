@@ -434,31 +434,14 @@ slide_principal();
 
                 	<div id="cont_img" class="cont_img" ><a href="#" ><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/5.JPG" onClick="javascript:eventos_especiales(\'#page3\');" /></a></div>
 
-                    
-
-                    
-
                    <div id="r_nom_persona" class="r_nom_persona" >
-
                     		<DIV>NOMBRE DE LA PERSONA</DIV>
-
-                    
-
                     </div>
 
-                    
-
-                   
 
                     <div id="sum_rostros" class="sum_rostros"> 
-
                     		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
-
                     </div>
-
-                 
-
-                    
 
                 </div>
 

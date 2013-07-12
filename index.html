@@ -37,6 +37,28 @@
 	
 <!--Codigo js  -->
 <script>
+
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery1 a").photoSwipe(options);
+			
+			});
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery2 a").photoSwipe(options);
+			
+			});
+			
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+</script>
+<script>
 $(document).ready(function() {
 
 //slide_principal();
@@ -81,8 +103,17 @@ $(document).ready(function() {
 			}
 			else
 			{ //alert("portrait");
-				$('div[id^="box_sumario"]').show();
-				$('div[id^="slide_sec"]').show();
+				
+				if(screen.width=="320" && screen.height=="480")
+				{
+					$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').hide();
+				}
+				else
+				{
+					$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').show();	
+				}
 			}
 		
 		});
@@ -119,6 +150,31 @@ else
 		img_btn_edicion.src = "img/iconos_app/menu.png";
 		img_btn_edicion.width="44";
 		img_btn_edicion.height="44";
+		
+		/*ediciones interior*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion_int');
+		img_btn_edicion.src = "img/iconos_app/menu.png";
+		img_btn_edicion.width="44";
+		img_btn_edicion.height="44";
+		
+		
+		
+		
+		/*secciones*/
+		document.getElementById("img_secciones_ipad1").style.display="none";
+		document.getElementById("img_secciones_ipad2").style.display="none";
+		document.getElementById("img_secciones_ipad3").style.display="none";
+		document.getElementById("img_secciones_ipad4").style.display="none";
+		
+		document.getElementById("img_secciones1").style.display="";
+		document.getElementById("img_secciones2").style.display="";
+		document.getElementById("img_secciones3").style.display="";
+		document.getElementById("img_secciones4").style.display="";
+		
+		/*rostros*/
+		document.getElementById("r_nom_persona").style.display="none";
+		document.getElementById("sum_rostros").style.display="";
+		
 	}
 	else
 	{
@@ -144,6 +200,21 @@ else
 			img_btn_edicion.src = "img/iconos_app/boton_ediciones.png";
 			img_btn_edicion.width="120";
 			img_btn_edicion.height="44";
+			
+			/*secciones*/
+			document.getElementById("img_secciones_ipad1").style.display="";
+			document.getElementById("img_secciones_ipad2").style.display="";
+			document.getElementById("img_secciones_ipad3").style.display="";
+			document.getElementById("img_secciones_ipad4").style.display="";
+			
+			document.getElementById("img_secciones1").style.display="none";
+			document.getElementById("img_secciones2").style.display="none";
+			document.getElementById("img_secciones3").style.display="none";
+			document.getElementById("img_secciones4").style.display="none";
+			
+			/*rostros*/
+		document.getElementById("r_nom_persona").style.display="";
+		document.getElementById("sum_rostros").style.display="";
 				
 		}	
 	}
@@ -176,17 +247,17 @@ else
 	function eventos_especiales(pagina)
 	{
 		//alert("eventos especiales:"+pagina);	
-		 var plaza="puebla";
+		 /*var plaza="puebla";
         $.ajax({
                type: "POST",
-               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
+			   url: "php/evento_especial.php",
                data: "",
                cache: false,
                success: function(message)
                {
                $('#cont_evento_especial').html(message);
                }
-               });
+               });*/
 		window.location.href = pagina; 
 	}
 	
@@ -225,9 +296,19 @@ else
 				$('div[id^="slide_sec"]').slideToggle(800);
 		}
 		else
-		{alert("portrait no  haces nada");
-		$('div[id^="box_sumario"]').show();
-				$('div[id^="slide_sec"]').show();
+		{//salert("portrait no  haces nada");
+		
+				
+				if(screen.width=="320" && screen.height=="480")
+				{
+					$('div[id^="box_sumario"]').slideToggle(800);
+				$('div[id^="slide_sec"]').slideToggle(800);
+				}
+				else
+				{
+					$('div[id^="box_sumario"]').show();
+					$('div[id^="slide_sec"]').show();
+				}
 		}
 		
 	}
@@ -359,28 +440,28 @@ else
 			<div class = 'slider'>
 				
 				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/13.jpg" /></div>
                 	
                     
                 	<div id="slide_sec1" class="slide_sec" >
-                    <!--<div class="gallery-holder" style="z-index:9999;">
+                    <div class="gallery-holder" style="z-index:2000;">
                         	<div class="gallery_slide" id="gallery_sec1" >
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery1" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
                                     </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>
                     
                     </div>
                     
@@ -395,24 +476,24 @@ else
                     
                 </div>
                 
-				<!--<div class = 'item' id = 'item1'>
+				<div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/2.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/10.jpg" /></div>
                                         
                     <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:9999;">
+                    <div class="gallery-holder" style="z-index:2000;">
                         	<div class="gallery_slide" id="gallery_sec2" >
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery2" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -429,27 +510,27 @@ else
                     </div>
                     
                     
-                </div>-->
+                </div>
                 
-                <!--<div class = 'item' id = 'item1'>
+                <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/3.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/15.jpg" /></div>
                     
                     
                     <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:9999;">
+                    <div class="gallery-holder" style="z-index:2000;">
                         	<div class="gallery_slide" id="gallery_sec3" >
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery3" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -466,28 +547,28 @@ else
                     </div>
                     
                     
-                </div>-->
+                </div>
                 
                 
-               <!-- <div class = 'item' id = 'item1'>
+               <div class = 'item' id = 'item1'>
                 	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/4.jpg" /></div>
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/14.jpg" /></div>
                     
                     
                    <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:9999;">
+                    <div class="gallery-holder" style="z-index:2000;">
                         	<div class="gallery_slide" id="gallery_sec4" >
                         		<div class="holder">
                                 	<div class="list">
                                     <div id="Gallery4" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
-                                    <div class="item_s"><div class="box_s box1"><img src="img/fotos/1.jpg" /></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
                                     </div>
                                     </div>
                                 </div>
@@ -503,63 +584,52 @@ else
                             <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
                     </div>
                     
-                </div>-->
-              <!--  
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
-                    </div>
-                   
                 </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
-                    </div>
-                   
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
-                    </div>
-                   
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div id="img_secciones"><a href="#page3"><img src="img/disfruta.jpg" /></a></div>
-                    </div>
-                   
-                </div>-->
                 
-                <!-- <div class = 'item' id = 'item1'>
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="http://192.168.1.115/app_rostros/ROSTROS_SINT/img/fotos/5.JPG" /></div>
-                    
-                    
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones_ipad1"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
+                        <div id="img_secciones1"><a href="#page3"><img src="img/iphone_ipod/conoce.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones_ipad2"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
+                        <div id="img_secciones2"><a href="#page3"><img src="img/iphone_ipod/bystyle.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones_ipad3"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
+                        <div id="img_secciones3"><a href="#page3"><img src="img/iphone_ipod/consientete.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div id="img_secciones_ipad4"><a href="#page3"><img src="img/disfruta.jpg" /></a></div>
+                        <div id="img_secciones4"><a href="#page3"><img src="img/iphone_ipod/disfruta.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                
+              <div class = "item" id = "item1"><!--javascript:eventos_especiales(\'#page2\');-->
+
+                	<div id="cont_img" class="cont_img" ><a href="javascript:eventos_especiales();" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
+
                    <div id="r_nom_persona" class="r_nom_persona" >
                     		<DIV>NOMBRE DE LA PERSONA</DIV>
-                    
                     </div>
-                    
-                   
+
+
                     <div id="sum_rostros" class="sum_rostros"> 
                     		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
                     </div>
-                 
-                    
-                </div>-->
-               <!--<div class = 'item' id = 'item1'>
-                	
-                    <div id="sum_rostros" class="sum_rostros" > 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
-                    </div>
-                    
-                    <div id="" class="rostros" >
-                        <a href="#page2" > <img src="img/fotos/5.jpg" /></a>
-                    </div>
-                    
-                    
-                </div>-->
+
+                </div>
+                
 			
 			</div>
 		
@@ -581,7 +651,7 @@ else
 <div data-role="page" id="page3" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
+       <img src="" id="img_btn_edicion_int">
          </a></div>
          <div id="fecha_int">
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
@@ -595,7 +665,7 @@ else
     
 	<div data-role="content" id="cont_evento_especial" >	
    		
-        <!--<div id="foto_rostros" class="foto_rostros">
+       <div id="foto_rostros" class="foto_rostros">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider'>
@@ -604,7 +674,7 @@ else
 				<div class = 'item' id = 'item1'><img src="img/fotos/4.jpg" /></div>
                 <div class = 'item' id = 'item1'><img src="img/fotos/3.jpg" /></div>
                 <div class = 'item' id = 'item1'><img src="img/fotos/2.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/1.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/6.jpg" /></div>
 			</div>
 		
 			</div>	
@@ -642,7 +712,7 @@ else
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>-->
+        </div>
           
      </div>
 	
