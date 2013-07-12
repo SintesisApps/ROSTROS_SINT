@@ -154,16 +154,15 @@ else
 		
 		
 		/*secciones*/
-		document.getElementById("img_secciones_ipad1").style.display="none";
-		document.getElementById("img_secciones_ipad2").style.display="none";
-		document.getElementById("img_secciones_ipad3").style.display="none";
-		document.getElementById("img_secciones_ipad4").style.display="none";
+		$(".img_secciones_ipod").css("display","");
+		$(".img_secciones_iphone").css("display","none");
+		$(".img_secciones_ipad").css("display","none");
 		
-		document.getElementById("img_secciones1").style.display="";
-		document.getElementById("img_secciones2").style.display="";
-		document.getElementById("img_secciones3").style.display="";
-		document.getElementById("img_secciones4").style.display="";
-		
+		/*rostros*/
+		//muestras  img_int_rostros_ipod
+		$(".img_int_secciones_ipod").css("display","");
+		$(".img_int_secciones_ipad").css("display","none");
+		$(".img_int_secciones_iphone").css("display","none");
 		
 		
 	}
@@ -180,6 +179,21 @@ else
 		img_btn_edicion.src = "img/iconos_app/menu@2x.png";
 		img_btn_edicion.width="44";
 		img_btn_edicion.height="44";	
+		
+		/*secciones*/
+		$(".img_secciones_ipod").css("display","none");
+		$(".img_secciones_iphone").css("display","");
+		$(".img_secciones_ipad").css("display","none");
+		
+		
+		/*rostros*/
+		//muestras  img_int_secciones_iphone5
+		$(".img_int_secciones_ipod").css("display","none");
+		$(".img_int_secciones_ipad").css("display","none");
+		$(".img_int_secciones_iphone").css("display","");
+		
+		
+		
 		}
 		else 
 		{
@@ -193,15 +207,16 @@ else
 			img_btn_edicion.height="44";
 			
 			/*secciones*/
-			document.getElementById("img_secciones_ipad1").style.display="";
-			document.getElementById("img_secciones_ipad2").style.display="";
-			document.getElementById("img_secciones_ipad3").style.display="";
-			document.getElementById("img_secciones_ipad4").style.display="";
+			$(".img_secciones_ipod").css("display","none");
+			$(".img_secciones_iphone").css("display","none");
+			$(".img_secciones_ipad").css("display","");
 			
-			document.getElementById("img_secciones1").style.display="none";
-			document.getElementById("img_secciones2").style.display="none";
-			document.getElementById("img_secciones3").style.display="none";
-			document.getElementById("img_secciones4").style.display="none";
+			
+			/*rostros*/
+		//muestras  img_int_secciones_ipad
+		$(".img_int_secciones_ipod").css("display","none");
+		$(".img_int_secciones_ipad").css("display","");
+		$(".img_int_secciones_iphone").css("display","none");
 			
 			
 		}	
@@ -450,7 +465,7 @@ else
                     <div id="box_sumario1" class="box_sumario"> 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
+                            <div class="edicion_revista">Edicion</div>
                     </div>
                     
                     
@@ -486,11 +501,18 @@ else
                     <div id="box_sumario1" class="box_sumario"> 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
+                            <div class="edicion_revista">Edicion</div>
                     </div>
                     
                     
                 </div>
+                
+                <div class = 'item' id = 'item1'>
+                <div style="width:100%; height:100%; position:absolute; overflow:hidden">
+                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
+            </div>
+                </div>
+                
                 
                <div class = 'item' id = 'item1'>
                 	
@@ -523,7 +545,7 @@ else
                     <div id="box_sumario1" class="box_sumario"> 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
+                            <div class="edicion_revista">Edicion</div>
                     </div>
                     
                     
@@ -561,42 +583,46 @@ else
                     <div id="box_sumario1" class="box_sumario"> 
                     		<div class="titulo_evento">Titulo1</div>
                             <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista"><a href="javascript:mostrar_ocultar();">Edicion</a></div>
+                            <div class="edicion_revista">Edicion</div>
                     </div>
                     
                 </div>
                 
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones_ipad1"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
-                        <div id="img_secciones1"><a href="#page3"><img src="img/iphone_ipod/conoce.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/conoce.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/conoce.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/conoce.jpg" /></a></div>
                     </div>
                    
                 </div>
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones_ipad2"><a href="#page3"><img src="img/bystyle.jpg" /></a></div>
-                        <div id="img_secciones2"><a href="#page3"><img src="img/iphone_ipod/bystyle.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/bystyle.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/bystyle.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/bystyle.jpg" /></a></div>
                     </div>
                    
                 </div>
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones_ipad3"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
-                        <div id="img_secciones3"><a href="#page3"><img src="img/iphone_ipod/consientete.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/consientete.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/consientete.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/consientete.jpg" /></a></div>
                     </div>
                    
                 </div>
                 <div class = 'item' id = 'item1'>
                 	<div id="secciones" >
-                    	<div id="img_secciones_ipad4"><a href="#page3"><img src="img/disfruta.jpg" /></a></div>
-                        <div id="img_secciones4"><a href="#page3"><img src="img/iphone_ipod/disfruta.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/disfruta.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/disfruta.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/disfruta.jpg" /></a></div>
                     </div>
                    
                 </div>
                 
               <div class = "item" id = "item1">
-				<div id="cont_img" class="cont_img" ><a href="javascript:eventos_especiales();" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
+				<div id="cont_img" class="cont_img" ><a href="#" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
 
                    <div id="r_nom_persona" class="r_nom_persona" >
                     		<DIV>NOMBRE DE LA PERSONA</DIV>
@@ -606,16 +632,6 @@ else
                     <div id="sum_rostros" class="sum_rostros"> 
                     		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
                     </div>
-                    <!--<div id="cont_img" class="cont_img" ><a href="javascript:eventos_especiales();" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
-
-                   <div id="r_nom_persona" class="r_nom_persona" >
-                    		<DIV>NOMBRE DE LA PERSONA</DIV>
-                    </div>
-
-
-                    <div id="sum_rostros" class="sum_rostros"> 
-                    		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
-                    </div>-->
 
                 </div>
                 
@@ -660,10 +676,9 @@ else
 			<div class = 'slider'>
 			
 				<div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
-				<div class = 'item' id = 'item1'><img src="img/fotos/4.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/3.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/2.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/6.jpg" /></div>
+				<div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
+                <div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
 			</div>
 		
 			</div>	
@@ -726,20 +741,37 @@ else
     
 	<div data-role="content" id="content_secciones">	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
    		<!-- div descripcion -->
-      <!--  <div id="foto_seccion" class="foto_seccion">
+        <div id="foto_seccion" class="foto_seccion">
         	<div class = 'snap-slider'>
 		
 			<div class = 'slider slider_seccion'>
 			
 				<div class = 'item' id = 'item1'><div id="flecha_mas" ><img src="img/iconos_app/mas@2x.png" width="68" height="68"></div><img src="img/bystyle.jpg" /></div>
-				<div class = 'item' id = 'item1'><img src="img/conoce.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/consientete.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/disfruta.jpg" /></div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipod"><img src="img/ipod/bystyle.jpg" /></div>
+                    <div class="img_int_secciones_ipad"><img src="img/bystyle.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div><!--iphone 5 -->
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipod"><img src="img/ipod/conoce.jpg" /></div>
+                    <div class="img_int_secciones_ipad"><img src="img/conoce.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipod"><img src="img/ipod/consientete.jpg" /></div>
+                    <div class="img_int_secciones_ipad"><img src="img/consientete.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipod"><img src="img/ipod/disfruta.jpg" /></div>
+                    <div class="img_int_secciones_ipad"><img src="img/disfruta.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                </div>
 			</div>
 		
 			</div>	
         </div>
-        <div id="descripcion_seccion" class="descripcion_seccion">
+       <!-- <div id="descripcion_seccion" class="descripcion_seccion">
         	<div id="s_descripcion" class="s_descripcion">
             	<div id="s_name" class="s_name" >
                 	<span class="s_titulo"> HIDRATA</span><br>

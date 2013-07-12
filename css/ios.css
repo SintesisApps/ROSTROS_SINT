@@ -109,7 +109,8 @@ color:#FFF;
 		height:980px;
 		overflow:hidden;
 	}
-#img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4, .slider_seccion img
+/*#img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4, .slider_seccion img*/
+.img_secciones_ipad, .slider_seccion img
 { 
 margin-left:-128px;
 }
@@ -368,7 +369,8 @@ margin-top:482px;}
 		background:#000;
 		overflow:hidden
 	}
-	#img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4 , .slider_seccion img
+/*#img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4 , .slider_seccion img*/
+.img_secciones_ipad, .slider_seccion img
 { 
 margin-top:-128px;
 }
@@ -794,19 +796,17 @@ width:276px;
 		height:436px;
 		overflow:hidden;
 	}
-#img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4 
-{
-	display:none;
-}
-#img_secciones1, #img_secciones2,#img_secciones3,#img_secciones4,.slider_seccion img
-{
-	width:320px;
-	height:100px;
-}
-#img_secciones1 img, #img_secciones2 img,#img_secciones3 img,#img_secciones4 img
+
+.img_int_secciones_ipod,.slider_seccion img
 {
 	width:320px;
 	height:436px;
+}
+.img_int_secciones_ipod img
+{
+	width:320px;
+	height:436px;
+	margin-top:-44px;
 }
 
 
@@ -924,8 +924,8 @@ margin-top:482px;}
 
 .foto_seccion
 {
-	width:768px;
-	height:980px;
+	width:320px;
+	height:436px;
 	position:absolute;
 	overflow:hidden;
 }
