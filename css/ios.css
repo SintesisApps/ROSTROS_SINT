@@ -728,13 +728,9 @@ width:276px;
 	}
 	.cont_img  img
 	{
-		/*width:320;
-		height:200px;*/}
-		.foto_evnt
-		{
-			width:100px;
-			height:100px;
-		}
+		width:100%;
+		height:auto}
+		
 	
 
 	
