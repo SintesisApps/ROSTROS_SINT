@@ -795,24 +795,45 @@ width:276px;
 		overflow:hidden;
 	}
 #img_secciones_ipad1 ,#img_secciones_ipad2 ,#img_secciones_ipad3 ,#img_secciones_ipad4 
-{ 
-margin-left:-128px;
+{
+	display:none;
 }
 #img_secciones1, #img_secciones2,#img_secciones3,#img_secciones4,.slider_seccion img
-{}
+{
+	width:320px;
+	height:100px;
+}
+#img_secciones1 img, #img_secciones2 img,#img_secciones3 img,#img_secciones4 img
+{
+	width:320px;
+	height:436px;
+}
 
 
 /*rosros del mes, entrevista....*/
+
 .r_nom_persona
 	{
-		width:1024px; 
-		height:258px; 
+		width:320px; 
+		height:146px; 
 		background-color: rgba(0,0, 0, 0.7);
 		 margin-top:0px;
 		 z-index:9999; 
 		 position:relative;
 		 float:left;
+		 
 	}
+	.sum_rostros
+	{
+		width:100%; 
+		height:90px;
+		background-color: rgba(0,0, 0, 0.7);
+		margin-top:-290px; 
+		z-index:2000; 
+		position:relative;
+		
+	}
+
 .rostros
 {
 	width:768px;
@@ -825,15 +846,7 @@ margin-left:-128px;
 	width:100%;
 	height:100%;
 }
-.sum_rostros
-	{
-		width:100%; 
-		height:137px;
-		background-color: rgba(0,0, 0, 0.7);
-		margin-top:0px; 
-		z-index:9999; 
-		position:relative;
-	}
+
 	
 .full-width-slider .slider #item1 {
 	background:#FFF;	
