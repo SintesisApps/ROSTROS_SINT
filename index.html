@@ -27,7 +27,7 @@
 		<script src = "js/jquery.iosslider.js"></script>
 		<script src = "js/common.js"></script>
 <!-- slide sec -->
-	<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 <!-- galeria -->
 <!--<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
@@ -108,7 +108,7 @@ else
 	img_menu.src="img/iphone_ipod/menu_ipod.jpg";
 	
 	}*/
-		if(screen.width=="320")
+		if(screen.width=="320" && screen.height=="480")
 	{
 		//menu
 		var img_menu = document.getElementById('img_menu_ini');
@@ -123,7 +123,7 @@ else
 	else
 	{
 		if(screen.width=="320" && screen.height=="568")
-		{
+		{alert("i5");
 			//menu
 		var img_menu = document.getElementById('img_menu_ini');
 		img_menu.src="img/iphone_ipod/menu_iphone.jpg";
@@ -362,8 +362,8 @@ else
                 <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/1.jpg" /></div>
                 	
                     
-                <!--	<div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:9999;">
+                	<div id="slide_sec1" class="slide_sec" >
+                    <!--<div class="gallery-holder" style="z-index:9999;">
                         	<div class="gallery_slide" id="gallery_sec1" >
                         		<div class="holder">
                                 	<div class="list">
@@ -380,9 +380,9 @@ else
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     
-                    </div>-->
+                    </div>
                     
                     
                     

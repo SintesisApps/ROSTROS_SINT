@@ -733,9 +733,11 @@ margin-top:354px;}
 	
 	.slide_sec
 	{
-		width:1024px; 
-		height:258px; background:url(../img/patrones/slide.png) repeat;
-		 margin-top:0px;
+		width:320px; 
+		height:137px; 
+		/*background:url(../img/patrones/slide.png) repeat;*/
+		background:#F03;
+		 margin-top:-10px;
 		 z-index:9999; 
 		 position:relative;
 		 float:left;
@@ -759,7 +761,7 @@ margin-top:354px;}
 	text-transform:uppercase;
 	font-size:12px;
 	padding-left:12px;
-	background:#FC3;
+	background:#0C0;
 }
 .sumario_evento
 {
@@ -962,6 +964,12 @@ secciones
 {width:100%; height:2px; background:#c5bb9f;}*/
 
 
+}
+@media only screen and (min-height : 960px){
+	#menu_inicial
+	{
+		background:#C63;
+	}
 }
 	/*#content_slide
 	{
