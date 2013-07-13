@@ -158,11 +158,14 @@ else
 		$(".img_secciones_iphone").css("display","none");
 		$(".img_secciones_ipad").css("display","none");
 		
-		/*rostros*/
+		/*secciones interiores*/
 		//muestras  img_int_rostros_ipod
-		$(".img_int_secciones_ipod").css("display","");
-		$(".img_int_secciones_ipad").css("display","none");
+		$(".img_int_secciones_ipodIpad").css("display","");
 		$(".img_int_secciones_iphone").css("display","none");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","");
+		$(".img_int_rostrs_iphone").css("display","none");
 		
 		
 	}
@@ -186,11 +189,13 @@ else
 		$(".img_secciones_ipad").css("display","none");
 		
 		
-		/*rostros*/
-		//muestras  img_int_secciones_iphone5
-		$(".img_int_secciones_ipod").css("display","none");
-		$(".img_int_secciones_ipad").css("display","none");
+		/*secciones interiores*/
+		$(".img_int_secciones_ipodIpad").css("display","none");
 		$(".img_int_secciones_iphone").css("display","");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","none");
+		$(".img_int_rostros_iphone").css("display","");
 		
 		
 		
@@ -211,12 +216,13 @@ else
 			$(".img_secciones_iphone").css("display","none");
 			$(".img_secciones_ipad").css("display","");
 			
-			
-			/*rostros*/
-		//muestras  img_int_secciones_ipad
-		$(".img_int_secciones_ipod").css("display","none");
-		$(".img_int_secciones_ipad").css("display","");
+			/*secciones interiores*/
+		$(".img_int_secciones_ipodIpad").css("display","");
 		$(".img_int_secciones_iphone").css("display","none");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","");
+		$(".img_int_rostros_iphone").css("display","none");
 			
 			
 		}	
@@ -510,7 +516,7 @@ else
                 <div class = 'item' id = 'item1'>
                 <div style="width:100%; height:100%; position:absolute; overflow:hidden">
                 <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div>
+            </div> 	
                 </div>
                 
                 
@@ -675,10 +681,28 @@ else
 		
 			<div class = 'slider'>
 			
-				<div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
-				<div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
-                <div class = 'item' id = 'item1'><img src="img/fotos/5.jpg" /></div>
+				<div class = 'item' id = 'item1'>
+                
+                    <div id="flecha_mas" ><img src="img/iconos_app/mas@2x.png" width="68" height="68"></div>
+                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/conciente.jpg" /></div>
+                </div>
+                <div class = 'item' id = ''>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                </div>
 			</div>
 		
 			</div>	
@@ -746,26 +770,27 @@ else
 		
 			<div class = 'slider slider_seccion'>
 			
-				<div class = 'item' id = 'item1'><div id="flecha_mas" ><img src="img/iconos_app/mas@2x.png" width="68" height="68"></div><img src="img/bystyle.jpg" /></div>
 				<div class = 'item' id = 'item1'>
-                	<div class="img_int_secciones_ipod"><img src="img/ipod/bystyle.jpg" /></div>
-                    <div class="img_int_secciones_ipad"><img src="img/bystyle.jpg" /></div>
-                    <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div><!--iphone 5 -->
+                
+                    <div id="flecha_mas" ><img src="img/iconos_app/mas@2x.png" width="68" height="68"></div>
+                    <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
 				<div class = 'item' id = 'item1'>
-                	<div class="img_int_secciones_ipod"><img src="img/ipod/conoce.jpg" /></div>
-                    <div class="img_int_secciones_ipad"><img src="img/conoce.jpg" /></div>
-                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div>
                 </div>
                 <div class = 'item' id = 'item1'>
-                	<div class="img_int_secciones_ipod"><img src="img/ipod/consientete.jpg" /></div>
-                    <div class="img_int_secciones_ipad"><img src="img/consientete.jpg" /></div>
-                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conciente.jpg" /></div>
                 </div>
-                <div class = 'item' id = 'item1'>
-                	<div class="img_int_secciones_ipod"><img src="img/ipod/disfruta.jpg" /></div>
-                    <div class="img_int_secciones_ipad"><img src="img/disfruta.jpg" /></div>
-                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div><!--iphone 5 -->
+                <div class = 'item' id = ''>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                   <div class="img_int_secciones_iphone"><img src="img/iphone/disfruta.jpg" /></div>
                 </div>
 			</div>
 		

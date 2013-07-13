@@ -157,6 +157,7 @@
 
 .snap-slider .slider {
 	height: 100%;
+	width:100%;
 }
 
 /*.snap-slider .slider .item {
@@ -164,9 +165,9 @@
 	height: 100%;
 }*/
 
-.snap-slider .slider #item1 {
+/*.snap-slider .slider #item1 {
 	background: #666;
-}
+}*/
 
 .snap-slider .slider #item2 {
 	background: #999;
