@@ -134,21 +134,29 @@ else
 	}*/
 		if(screen.width=="320" && screen.height=="480")
 	{
-		//alert("iphne4");//menu
+		alert("iphne4");//menu
 		var img_menu = document.getElementById('img_menu_ini');
 		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
 		
 		/*btn ediciones*/
 		var img_btn_edicion = document.getElementById('img_btn_edicion');
 		img_btn_edicion.src = "img/iconos_app/menu.png";
-		img_btn_edicion.width="44";
-		img_btn_edicion.height="44";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
 		
 		/*ediciones interior*/
 		var img_btn_edicion = document.getElementById('img_btn_edicion_int');
 		img_btn_edicion.src = "img/iconos_app/menu.png";
-		img_btn_edicion.width="44";
-		img_btn_edicion.height="44";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
+                  
+        var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+        img_btn_edicion1.src = "img/iconos_app/menu.png";
+        img_btn_edicion1.width="36";
+        img_btn_edicion1.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
 		
 		
 		
@@ -172,7 +180,8 @@ else
 	else
 	{
 		if(screen.width=="320" && screen.height=="568")
-		{//alert("i5");
+		{
+                  alert("i5");
 			//menu
 		var img_menu = document.getElementById('img_menu_ini');
 		img_menu.src="img/iphone_ipod/menu_iphone.jpg";
@@ -180,8 +189,28 @@ else
 		/*btn ediciones*/
 		var img_btn_edicion = document.getElementById('img_btn_edicion');
 		img_btn_edicion.src = "img/iconos_app/menu@2x.png";
-		img_btn_edicion.width="44";
-		img_btn_edicion.height="44";	
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        
+        /*btn ediciones*/
+        var img_btn_edicion = document.getElementById('img_btn_edicion');
+        img_btn_edicion.src = "img/iconos_app/menu.png";
+        img_btn_edicion.width="36";
+        img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
+                  
+        /*ediciones interior*/
+        var img_btn_edicion = document.getElementById('img_btn_edicion_int');
+        img_btn_edicion.src = "img/iconos_app/menu.png";
+        img_btn_edicion.width="36";
+        img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
+                  
+        var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+        img_btn_edicion1.src = "img/iconos_app/menu.png";
+        img_btn_edicion1.width="36";
+        img_btn_edicion1.height="36";
+        document.getElementById("img_btn_edicion_int1").style.margin="4px 0 0 0";
 		
 		/*secciones*/
 		$(".img_secciones_ipod").css("display","none");
@@ -211,6 +240,21 @@ else
 			img_btn_edicion.width="120";
 			img_btn_edicion.height="44";
 			
+            var img_btn_edicion_int = document.getElementById('img_btn_edicion_int');
+                  img_btn_edicion_int.src = "img/iconos_app/boton_ediciones.png";
+                  img_btn_edicion_int.width="120";
+                  img_btn_edicion_int.height="44";
+                  
+            var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+                  img_btn_edicion1.src = "img/iconos_app/boton_ediciones.png";
+                  img_btn_edicion1.width="120";
+                  img_btn_edicion1.height="44";
+                  
+                  
+                  
+                  
+                  
+                  
 			/*secciones*/
 			$(".img_secciones_ipod").css("display","none");
 			$(".img_secciones_iphone").css("display","none");
@@ -751,7 +795,8 @@ else
 <div data-role="page" id="page4" style=" margin:0;">
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-        <img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>
+        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
+            <img src="" id="img_btn_edicion_int1">
          </a></div>
          <div id="fecha_int">
          <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha@2x.png" width="26" height="26"/></a>
@@ -796,7 +841,7 @@ else
 		
 			</div>	
         </div>
-       <!-- <div id="descripcion_seccion" class="descripcion_seccion">
+        <div id="descripcion_seccion" class="descripcion_seccion" >
         	<div id="s_descripcion" class="s_descripcion">
             	<div id="s_name" class="s_name" >
                 	<span class="s_titulo"> HIDRATA</span><br>
@@ -829,7 +874,7 @@ else
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
-        </div>-->
+        </div>
           
      </div>
 	
