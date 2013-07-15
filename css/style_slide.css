@@ -80,9 +80,9 @@ span.delta {
 	position: absolute;
 	top: 0;
 	width: 1px;
-	text-indent: -9999px;
+	/*text-indent: -9999px;*/
 	overflow: hidden;
-	background: magenta;
+	/*background: magenta;*/
 }
 
 .box_s span.delta {
