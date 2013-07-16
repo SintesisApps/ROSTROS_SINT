@@ -5,9 +5,8 @@
 
 <title>Rostros</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<!--<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="Pragma" CONTENT="no-cache">No Guarda cache -->
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+<meta http-equiv="Pragma" CONTENT="no-cache">
 
 <link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="css/ios.css">
@@ -61,7 +60,7 @@
 <script>
 $(document).ready(function() {
 
-slide_principal();
+slide_principal("puebla","");
 	//boton ediciones
 	$('#btn_edicion').click(function() {
 		$('#panelSecciones').slideToggle(800);
@@ -76,12 +75,7 @@ slide_principal();
 		$('#panelSecciones').slideToggle(800);
 	});
 	
-	//$('#descripcion_img5').css("display", "none");
-	
-	/*$("div[id^='gallery_sec']").touchSlider({
-			mode: 'shift',
-			offset: 'auto'
-	});*/
+
 	
 	/*animacion  slide interior*/
 	$("#r_flecha1").click(function(){
@@ -119,11 +113,9 @@ slide_principal();
     
     //funciones  que llaman a la BD
     
-    function slide_principal(plaza)
+    function slide_principal(plaza, pagina)
     {
-	//alert("holagal");desarrollosintesis.com/ios/Rostros
-	//url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
-        var plaza="puebla";
+		
         $.ajax({
                type: "POST",
               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
@@ -131,24 +123,28 @@ slide_principal();
 				cache: false,
                success: function(message)
                {
-				  // alert("mensaje:"+message);
+				  alert("recibes");
                $('#content_slide').html(message);
-			  // alert("termina recibe");
+			alert("impreimes");
                }
                });
-        
+			   alert("redireccionaas");
+			   if(pagina=="")
+			   {}
+			   else
+			   { window.location.href = pagina; }
+       
     }
 	
 	/*rostros del mes....*/
 	
-	function eventos_especiales(pagina)
+	function eventos_especiales(pagina, plaza, id_evento)
 	{
-		//alert("eventos especiales:"+pagina);	
-		 var plaza="puebla";
+		
         $.ajax({
                type: "POST",
 			   url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
-               data: "",
+               data: "plaza="+plaza+"id_evento="+id_evento,
                cache: false,
                success: function(message)
                {
@@ -158,14 +154,14 @@ slide_principal();
 		window.location.href = pagina; 
 	}
 	
-	function fn_secciones(pagina)
+	function fn_secciones(pagina, plaza, id_evento)
 	{
-		alert("eventos especiales:"+pagina);	
+		
 		 var plaza="puebla";
         $.ajax({
                type: "POST",
 			   url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/secciones.php",
-               data: "",
+               data: "plaza="+plaza+"id_evento="+id_evento,
                cache: false,
                success: function(message)
                {
@@ -218,7 +214,7 @@ slide_principal();
     }
 	
 	
-	
+
 </script>
 
 </head> 
@@ -260,29 +256,29 @@ slide_principal();
 <!--menu-->
 <div id="panelSecciones"  class="panelSeccion"> 
            <ul>
-             <li id="rubrica"><a href="#page2" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="35" width="35" />HOME</a></li>
+             <li id="rubrica"><a href="javascript:slide_pricipal('puebla','#page2');" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="35" width="35" />HOME</a></li>
             <li id="separador"></li>
-            <li   id="rubrica"><a href="#page2" id="rubrica_name">Puebla</a></li>
+            <li   id="rubrica"><a href="javascript:slide_pricipal('puebla','#page2');" id="rubrica_name">Puebla</a></li>
             <li id="separador"></li>
-            <li   id="rubrica"><a href="#page2" id="rubrica_name">Jalisco</a></li>
+            <li   id="rubrica"><a href="javascript:slide_pricipal('jalisco','#page2');" id="rubrica_name">Jalisco</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Veracruz</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('veracruz','#page2');" id="rubrica_name">Veracruz</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Chiapas</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('chiapas','#page2');" id="rubrica_name">Chiapas</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Hidalgo</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('hidalgo','#page2');" id="rubrica_name">Hidalgo</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Tlaxcala</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('tlaxcala','#page2');" id="rubrica_name">Tlaxcala</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Yucat&aacute;n</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('yucatan','#page2');" id="rubrica_name">Yucat&aacute;n</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Oaxaca</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('oaxaca','#page2');" id="rubrica_name">Oaxaca</a></li>
             <li id="separador_2"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Revista Digital</a></li>
+            <li  id="rubrica"><a href="javascript:slide_pricipal('puebla','#page2');" id="rubrica_name">Revista Digital</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Realidad Virtual</a></li>
+            <li  id="rubrica"><a href="http://www.gogle.com" target="new" id="rubrica_name">Realidad Virtual</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="#page2" id="rubrica_name">Contacto</a></li>
+            <li  id="rubrica"><a href="mailto:admin-web@sintesisdigital.com.mx" id="rubrica_name">Contacto</a></li>
             </ul>
         </div>
         <!--menu-->
