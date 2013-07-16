@@ -173,7 +173,7 @@
 {
 	.box_s {
 	width: 157px;
-	height: 124px;
+	height: 110px;
 /*	line-height: 96px;*/
 	text-align: center;
 	color: #FFF;
@@ -226,8 +226,8 @@
 	.gallery_slide {
 		width: 96.48%;
 		overflow: hidden;
-		height:124px;
-		margin-top:39px;
+		height:110px;
+		margin-top:16px;
 		padding-left:1.36%;
 		padding-right:1.76%;
 	}
