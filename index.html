@@ -112,12 +112,64 @@ slide_principal("puebla","");
 
     
     //funciones  que llaman a la BD
+    /*
+    function slide_principal(plaza, pagina)
+    {
+        
+        $.ajax({
+               type: "POST",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
+               data: "plaza="+plaza,
+               cache: false,
+               success: function(message)
+               {	
+               $('.content_slide').html(message);
+               }
+               });
+        
+        if(pagina=="")
+        {}
+        else
+        {
+            window.location.href = pagina; }
+    }*/
+    
     
     function slide_principal(plaza, pagina)
     {
-		//alert("slide principal");
-        ////url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
         $.ajax({
+               type: "POST",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
+               data: "plaza="+plaza,
+               cache: false,
+               success: function(message)
+               {
+               $('#content_slide').html(message);
+               }
+               });
+        
+        if(pagina=="")
+        {}
+        else
+        {
+            window.location.href = pagina; }
+		
+        ////url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
+      /*
+        $.ajax({
+               type:"POST",
+               url:"http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
+               data:"plaza="+plaza,
+               cache: false;
+               success: function(message)
+               {
+                    $('')
+               }
+        
+        
+        });*/
+        
+        /*  $.ajax({
                type: "POST",
               url: "http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
                data: "plaza="+plaza,
@@ -134,7 +186,7 @@ slide_principal("puebla","");
 			   {}
 			   else
 			   { //alert("mandas");
-			   window.location.href = pagina; }
+			   window.location.href = pagina; }*/
        
     }
 	
@@ -240,9 +292,6 @@ slide_principal("puebla","");
             <div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
              <img src="" id="img_menu_ini">
              </div>
-             <!--<div style="width:100%; height:100%; position:absolute; overflow:hidden">
-                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div>PUBLICIDAD-->
              <div id="link_menu">
              <a href="#page2" ><div id="events"></div></a>
              <a href="https://itunes.apple.com/us/app/revistadigital/id674245096?l=es&ls=1&mt=8" target="new"><div id="d_magazine"></div></a>
@@ -259,25 +308,25 @@ slide_principal("puebla","");
 <!--menu-->
 <div id="panelSecciones"  class="panelSeccion"> 
            <ul>
-             <li id="rubrica"><a href="javascript:slide_principal('puebla','#page1');" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="26" width="26" />HOME</a></li>
+             <li id="rubrica"><a href="#" onClick="slide_principal('puebla','#page1');" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="26" width="26" />HOME</a></li>
             <li id="separador"></li>
-            <li   id="rubrica"><a href="javascript:slide_principal('puebla','#page2');" id="rubrica_name">Puebla</a></li>
+            <li   id="rubrica"><a href="#" onClick="slide_principal('puebla','#page2');" id="rubrica_name">Puebla</a></li>
             <li id="separador"></li>
-            <li   id="rubrica"><a href="javascript:slide_principal('jalisco','#page2');" id="rubrica_name">Jalisco</a></li>
+            <li   id="rubrica"><a href="#" onClick="slide_principal('jalisco','#page2');" id="rubrica_name">Jalisco</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('veracruz','#page2');" id="rubrica_name">Veracruz</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('veracruz','#page2');" id="rubrica_name">Veracruz</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('chiapas','#page2');" id="rubrica_name">Chiapas</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('chiapas','#page2');" id="rubrica_name">Chiapas</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('hidalgo','#page2');" id="rubrica_name">Hidalgo</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('hidalgo','#page2');" id="rubrica_name">Hidalgo</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('tlaxcala','#page2');" id="rubrica_name">Tlaxcala</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('tlaxcala','#page2');" id="rubrica_name">Tlaxcala</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('yucatan','#page2');" id="rubrica_name">Yucat&aacute;n</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('yucatan','#page2');" id="rubrica_name">Yucat&aacute;n</a></li>
             <li id="separador"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('oaxaca','#page2');" id="rubrica_name">Oaxaca</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('oaxaca','#page2');" id="rubrica_name">Oaxaca</a></li>
             <li id="separador_2"></li>
-            <li  id="rubrica"><a href="javascript:slide_principal('puebla','#page2');" id="rubrica_name">Revista Digital</a></li>
+            <li  id="rubrica"><a href="#" onClick="slide_principal('puebla','#page2');" id="rubrica_name">Revista Digital</a></li>
             <li id="separador"></li>
             <li  id="rubrica"><a href="https://itunes.apple.com/us/app/revistadigital/id674245096?l=es&ls=1&mt=8" target="new" id="rubrica_name">Realidad Virtual</a></li>
             <li id="separador"></li>
@@ -290,7 +339,7 @@ slide_principal("puebla","");
 	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
      	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
         <img src="" id="img_btn_edicion">
-        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
+        
          </a></div><!-- "-->
         <div id="logo"> <a href="#page1" >
         	<img src="img/logo.png" width="131" height="42">
@@ -305,218 +354,7 @@ slide_principal("puebla","");
     
         
         <div id="content_slide">
-            <!--<div class="contenido_slide">
-                <div class = 'full-width-slider'>
-
-			<div class = 'slider'>
-				
-				<div class = 'item' id = 'item1'>
-                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/8.jpg" class="foto_evnt" /></div>
-                	
-                    
-                	<div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:2000;">
-                        	<div class="gallery_slide" id="gallery_sec1" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery1" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    
-                    
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista">Edicion</div>
-                    </div>
-                    
-                    
-                </div>
-                
-				<div class = 'item' id = 'item1'>
-                	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/10.jpg" /></div>
-                                        
-                    <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:2000;">
-                        	<div class="gallery_slide" id="gallery_sec2" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery2" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista">Edicion</div>
-                    </div>
-                    
-                    
-                </div>
-                
-                <div class = 'item' id = 'item1'>
-                <div style="width:100%; height:100%; position:absolute; overflow:hidden">
-                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div> 	
-                </div>
-                
-                
-               <div class = 'item' id = 'item1'>
-                	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/15.jpg" /></div>
-                    
-                    
-                    <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:2000;">
-                        	<div class="gallery_slide" id="gallery_sec3" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery3" class="gallery">
-                                   <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div> 
-                    
-                    
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista">Edicion</div>
-                    </div>
-                    
-                    
-                </div>
-                
-                
-               <div class = 'item' id = 'item1'>
-                	
-                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/14.jpg" /></div>
-                    
-                    
-                   <div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:2000;">
-                        	<div class="gallery_slide" id="gallery_sec4" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery4" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                   
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">Titulo1</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista">Edicion</div>
-                    </div>
-                    
-                </div>
-                
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/conoce.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/conoce.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/conoce.jpg" /></a></div>
-                    </div>
-                   
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/bystyle.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/bystyle.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/bystyle.jpg" /></a></div>
-                    </div>
-                   
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/consientete.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/consientete.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/consientete.jpg" /></a></div>
-                    </div>
-                   
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/disfruta.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/disfruta.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#"><img src="img/disfruta.jpg" onClick="javascript:fn_secciones('#page4');"/></a></div>
-                    </div>
-                   
-                </div>
-                
-              <div class = "item" id = "item1">
-				<div id="cont_img" class="cont_img" ><a href="#" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
-
-                   <div id="r_nom_persona" class="r_nom_persona" >
-                    		<DIV>NOMBRE DE LA PERSONA</DIV>
-                    </div>
-
-
-                    <div id="sum_rostros" class="sum_rostros"> 
-                    		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
-                    </div>
-
-                </div>
-               
-			
-			</div>
-		
-		</div>
-		
-            </div>-->
+           
         </div>
        
   
@@ -544,72 +382,7 @@ slide_principal("puebla","");
     </div>
     
 	<div data-role="content" id="cont_evento_especial" >	
-   		
-       <!--<div id="foto_rostros" class="foto_rostros">
-        	<div class = 'snap-slider'>
-		
-			<div class = 'slider'>
-			
-				<div class = 'item' id = 'item1'>
-                
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                </div>
-				<div class = 'item' id = 'item1'>
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                </div>
-				<div class = 'item' id = 'item1'>
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
-                </div>
-                <div class = 'item' id = 'item1'>
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
-                </div>
-                <div class = 'item' id = ''>
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
-                </div>
-			</div>
-		
-			</div>	
-        </div>
-        <div id="descripcion_rostros" class="descripcion_rostros">
-        	<div id="r_descripcion" class="r_descripcion">
-            	<div id="r_name" class="r_name" >
-                	<span class="r_nombre"> ALEJANDRO</span><br>
-                    <span class="r_apellido" > OCHOA</span>
-                </div>
-                <div class="r_separador"></div>
-            	<div class="r_texto">
-                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-               
-                </div>
-            </div>
-        	<div id="r_flecha" class="r_flecha">
-            <a href="javascript:;" id="r_flecha1">
-        <img src="img/iconos_app/indicador.png" />
-         </a>
-            </div>
-        </div>-->
+   	
           
      </div>
 	
@@ -635,77 +408,36 @@ slide_principal("puebla","");
     </div>
     
 	<div data-role="content" id="content_secciones">	
-        <!--<div id="foto_seccion" class="foto_seccion">
-        	<div class = 'snap-slider'>
-		
-                <div class = 'slider slider_seccion'>
-                
-                    <div class = 'item' id = 'item1'>
-                    
-                        <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
-                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
-                            <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                    </div>
-                    <div class = 'item' id = 'item1'>
-                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
-                        <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                    </div>
-                    <div class = 'item' id = 'item1'>
-                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
-                        <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div>
-                    </div>
-                    <div class = 'item' id = 'item1'>
-                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
-                        <div class="img_int_secciones_iphone"><img src="img/iphone/conciente.jpg" /></div>
-                    </div>
-                    <div class = 'item' id = ''>
-                        <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
-                       <div class="img_int_secciones_iphone"><img src="img/iphone/disfruta.jpg" /></div>
-                    </div>
-                </div>
-		
-			</div>	
-        </div>
-        <div id="descripcion_seccion" class="descripcion_seccion" >
-        	<div id="s_descripcion" class="s_descripcion">
-            	<div id="s_name" class="s_name" >
-                	<span class="s_titulo"> HIDRATA</span><br>
-                    <span class="s_subtitulo" > TU PIEL</span>
-                </div>
-                <div class="s_separador"></div>
-            	<div class="s_texto">
-                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
-               
-                </div>
-            </div>
-        	<div id="s_flecha" class="s_flecha">
-            <a href="javascript:;" id="s_flecha2">
-        <img src="img/iconos_app/indicador.png" />
-         </a>
-            </div>
-        </div>-->
-          
+        
      </div>
 	
 </div>
 <!-- fin pagina 4-->
 <!--  pagina  5 -->
+
+	<!--s<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion3">
+       
+            <img src="" id="img_btn_edicion_int1">
+         </a></div>
+         <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_seccion"/></a>
+         	
+         </div>
+        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" id="content_secciones">	
+        
+          
+     </div>
+	
+</div>-->
+
+<!-- fin pagina 5-->
 
 
 	<script>

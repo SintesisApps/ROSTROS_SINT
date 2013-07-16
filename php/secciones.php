@@ -1,7 +1,8 @@
 <?php
 echo '
 
-
+    <link rel="stylesheet" href="css/ios.css">
+    <link rel = "stylesheet" href = "css/default.css" />
 	<link rel = "stylesheet" href = "css/default.css" />
 		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
 		
