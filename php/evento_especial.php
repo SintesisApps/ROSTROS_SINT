@@ -39,7 +39,7 @@ $(document).ready(function() {
 			
 				<div class = "item" id = "item1">
                 
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_rostros_img"></div>
+                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="3" height="3" id="flecha_mas_rostros_img"></div>
                     <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                         <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	<script>
 			if(screen.width=="320" && screen.height=="480")
 	{
-		alert("iphne4");//menu
+		//alert("iphne4");//menu
 		var img_menu = document.getElementById("img_menu_ini");
 		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
 		
@@ -241,7 +241,7 @@ $(document).ready(function() {
 		}
 		else 
 		{
-				alert("ipad");	
+				//alert("ipad");	
 			var img_menu = document.getElementById("img_menu_ini");
 			img_menu.src="img/menu.jpg";
 			
@@ -281,23 +281,23 @@ $(document).ready(function() {
 		
 		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
 		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
-		flecha_mas_seccion.width="44";
-		flecha_mas_seccion.height="44";
+		flecha_mas_seccion.width="36";
+		flecha_mas_seccion.height="36";
 		
 		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
 		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
-		flecha_mas_rostros.width="44";
-		flecha_mas_rostros.height="44";
+		flecha_mas_rostros.width="36";
+		flecha_mas_rostros.height="36";
 		
 		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
 		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
-		flecha_in_trostros.width="44";
-		flecha_in_trostros.height="44"
+		flecha_in_trostros.width="36";
+		flecha_in_trostros.height="36"
 		
 		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
 		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
-		flecha_in_seccion.width="44";
-		flecha_in_seccion.height="44"
+		flecha_in_seccion.width="36";
+		flecha_in_seccion.height="36"
 			
 		}	
 	}

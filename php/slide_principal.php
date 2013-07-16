@@ -228,33 +228,33 @@ $(document).ready(function() {
                 
                 <div class = "item" id = "item1">
                 	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/conoce.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/conoce.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/conoce.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/conoce.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/conoce.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#"><img src="img/conoce.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
                     </div>
                    
                 </div>
                 <div class = "item" id = "item1">
                 	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/bystyle.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/bystyle.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/bystyle.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/bystyle.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/bystyle.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#"><img src="img/bystyle.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
                     </div>
                    
                 </div>
                 <div class = "item" id = "item1">
                 	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/consientete.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/consientete.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/consientete.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/consientete.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/consientete.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#"><img src="img/consientete.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
                     </div>
                    
                 </div>
                 <div class = "item" id = "item1">
                 	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/disfruta.jpg" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/disfruta.jpg" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/disfruta.jpg" /></a></div>
+                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/disfruta.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/disfruta.jpg" onClick="javascript:secciones(\'#page4\');" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#"><img src="img/disfruta.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
                     </div>
                    
                 </div>
@@ -281,7 +281,7 @@ $(document).ready(function() {
 		<script>
 			if(screen.width=="320" && screen.height=="480")
 	{
-		alert("iphne4");//menu
+		//alert("iphne4");//menu
 		var img_menu = document.getElementById("img_menu_ini");
 		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
 		
@@ -419,7 +419,7 @@ $(document).ready(function() {
 		}
 		else 
 		{
-				alert("ipad");	
+				//alert("ipad");	
 			var img_menu = document.getElementById("img_menu_ini");
 			img_menu.src="img/menu.jpg";
 			
@@ -459,23 +459,23 @@ $(document).ready(function() {
 		
 		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
 		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
-		flecha_mas_seccion.width="44";
-		flecha_mas_seccion.height="44";
+		flecha_mas_seccion.width="36";
+		flecha_mas_seccion.height="36";
 		
 		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
 		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
-		flecha_mas_rostros.width="44";
-		flecha_mas_rostros.height="44";
+		flecha_mas_rostros.width="36";
+		flecha_mas_rostros.height="36";
 		
 		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
 		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
-		flecha_in_trostros.width="44";
-		flecha_in_trostros.height="44"
+		flecha_in_trostros.width="36";
+		flecha_in_trostros.height="36"
 		
 		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
 		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
-		flecha_in_seccion.width="44";
-		flecha_in_seccion.height="44"
+		flecha_in_seccion.width="36";
+		flecha_in_seccion.height="36"
 			
 		}	
 	}
