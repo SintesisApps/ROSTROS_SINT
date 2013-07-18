@@ -4,48 +4,9 @@ include("conex.php");
 
 $plaza=$_POST["plaza"];
 
-$url_dominio="http://166.78.73.11/";
-/*ID de la plaza*/
-$reg_plaza="select * from plazas where seudonimo='".$plaza."'";
-$query_plaza=mysql_query($reg_plaza,$conexion);
+$selecciona_usuario="SELECT * FROM usuarios";
 
-while($row_plaza=mysql_fetch_array($query_plaza))
-{
-	$id_plaza=$row_plaza["id"];
-$nom_plaza=$row_plaza["plaza"];
-}
-
-/*DIRECCIONES DE LOS ROSTROS*/
-switch ($id_plaza) {
-	case 1:
-			$url="http://166.78.73.11/rostrospuebla/";
-	case 2:
-			$url="http://166.78.73.11/rostrospuebla/";
-}
-
-
-
-/*Consulta de las 3 tabas*/
-    
-    $reg_tablas="SELECT id, id_plaza, orden, referencia FROM app_eventos where id_plaza='".$id_plaza."'
-    UNION
-    select  id, id_plaza, orden, referencia FROM app_publicidad where id_plaza='".$id_plaza."'
-    UNION
-    select  id, id_plaza, orden, referencia FROM app_secciones where id_plaza='".$id_plaza."'
-    ORDER  BY orden, referencia ASC";
-    
-    
-/*$reg_tablas="SELECT * FROM app_eventos where id_plaza='".$id_plaza."'
-			UNION
-			select  * FROM app_publicidad where id_plaza='".$id_plaza."'
-			UNION
-			select  * FROM app_publicidad where id_plaza='".$id_plaza."'
-			ORDER  BY orden, referencia ASC";*/
-$query_tablas=mysql_query($reg_tablas, $conexion);
-$row_tablas="";
-
-$contador=1;//contador para las galerias
-
+$respuesta_usuario=mysql_query($selecciona_usuario,$conexion);
 
 
 echo'<link rel="stylesheet" href="css/ios.css">
@@ -117,84 +78,9 @@ $(document).ready(function() {
    
                 <div class = "full-width-slider">
 
-			<div class = "slider">';
-			while($row_tablas = mysql_fetch_array($query_tablas))
-			{
-				if($row_tablas["referencia"]==1)//EVENTOS
-				{
-					echo'<div class = "item" id = "item1">';
-					/*Foto principal del eveto*/
-					$id_evento=$row_tablas['id_evento'];
-					$eventos="select * from eventos where id='".$id_evento."'";
-					$query_eventos=mysql_query($eventos, $conexion);
-					$row_eventos=mysql_fetch_array($query_eventos);
-					
-					
-                //<div id="cont_img" class="cont_img" onClick="mostrar_ocultar();"><img src="img/fotos/8.jpg" class="foto_evnt" /></div>
-                	
-                    
-                	echo'<div id="slide_sec1" class="slide_sec" >
-                    <div class="gallery-holder" style="z-index:2000;">
-                        	<div class="gallery_slide" id="gallery_sec'.$contador.'" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery1" class="gallery">
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    
-                    
-                    <div id="box_sumario1" class="box_sumario"> 
-                    		<div class="titulo_evento">fhfghfdghfhfdhdfgh</div>
-                            <div class="sumario_evento" id="su_evt">Sumario</div>
-                            <div class="edicion_revista">Edicion</div>
-                    </div>
-                    
-                    
-                </div>';
-					
-				}
-				else
-				{
-					if($row_tablas["referencia"]==2)//PUBLICIDAD
-					{
-						echo'  <div class = "item" id = "item1">
-                <div style="width:100%; height:100%; position:absolute; overflow:hidden">
-               	 <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            	</div> 	
-                </div>';
-					}
-					else //secciones
-					{
-						echo'<div class = "item" id = "item1">
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/consientete.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/consientete.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#"><img src="img/consientete.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
-                    </div>
-                   
-                </div>
-                        
-                        
-                        ';
-					}
-				}
-			}
-		
-		/*		echo'<div class = "item" id = "item1">
+			<div class = "slider">
+				
+				<div class = "item" id = "item1">
                 <div id="cont_img" class="cont_img" onClick="mostrar_ocultar();"><img src="img/fotos/8.jpg" class="foto_evnt" /></div>
                 	
                     
@@ -269,8 +155,8 @@ $(document).ready(function() {
                 
                 <div class = "item" id = "item1">
                 <div style="width:100%; height:100%; position:absolute; overflow:hidden">
-               	 <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            	</div> 	
+                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
+            </div> 	
                 </div>
                 
                 
@@ -372,7 +258,6 @@ $(document).ready(function() {
                     </div>
                    
                 </div>
-				
                 <div class = "item" id = "item1">
                 	<div id="secciones" >
                     	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/disfruta.jpg" onClick="javascript:fn_secciones(\'#page4\');"/></a></div>
@@ -394,10 +279,9 @@ $(document).ready(function() {
                     		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
                     </div>
 
-                </div>';*/
+                </div>
                
-			echo'
-    
+			
 			</div>
 		
 		</div>
@@ -412,8 +296,8 @@ $(document).ready(function() {
 		
 		var img_btn_edicion = document.getElementById("img_btn_edicion");
 		img_btn_edicion.src = "img/iconos_app/menu.png";
-		img_btn_edicion.width="24";
-		img_btn_edicion.height="24";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
         document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
 		
 		

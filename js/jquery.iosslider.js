@@ -1012,7 +1012,7 @@
 				'scrollbarBorder': '0',
 				'scrollbarMargin': '5px',
 				'scrollbarBackground': '#000',
-				'scrollbarBorderRadius': '100px',
+				'scrollbarBorderRadius': '700px',
 				'scrollbarShadow': '0 0 0 #000',
 				'scrollbarElasticPullResistance': 0.9,
 				'desktopClickDrag': false,

@@ -1,8 +1,7 @@
 body{
 	font-family:  Helvetica;
 	height:100%;
-	background:#fff;
-	color:#FFF;
+	background:#000;
 	/*width:70%;*/
 	
 	}
@@ -106,7 +105,8 @@ body{
 	position:absolute;
 	z-index:9999;
 	display:none;
-	background-color: rgba(0,0, 0, 0.5);
+	/*background-color: rgba(0,0, 0, 0.0);*/
+    background:#000;
 	
 }
 
@@ -115,8 +115,9 @@ body{
 {
 	height:45px;
 	width:100%;
-	color:#666;
+	color:#878787;
 	font-size:18px;
+    z-index:9999;
 }
 #separador
 {
@@ -253,7 +254,8 @@ body{
 	position:absolute;
 	z-index:9999;
 	display:none;
-	background-color: rgba(0,0, 0, 0.8);
+	/*background-color: rgba(0,0, 0, 0.0);*/
+    background:#000;
 	
 	
 }
@@ -329,7 +331,7 @@ a{
 
 
 
- ul
+ ul, ul li
 {list-style:none;
 /*background:#333;*/
 margin:0;
