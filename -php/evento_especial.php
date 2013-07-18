@@ -1,58 +1,4 @@
 <?php
-    /*Conexion a la BD*/
-	include("conex.php");
-//recibe el id del evento
-$plaza=$_POST['plaza'];
-$id_evento=$_POST['id_evento'];
-
-$evento="select * from eventos where id='".$id_evento."' ";
-$query_evento=mysql_query($evento,$conexion );
-$row_evento=mysql_fetch_array($query_evento);
-
-
-switch ($plaza['id_plaza'])
-		{
-			case 1:
-				$plaza="Puebla";	
-				$url="http://www.rostrospuebla.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-			
-			case 2:
-				$plaza="Tlaxcala";	
-				$url="http://www.losrostrostlaxcala.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 3:
-				$plaza="Hidalgo";	
-				$url="http://www.losrostroshidalgo.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 4:
-				$plaza="Veracruz";	
-				$url="http://www.losrostrosveracruz.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 5:
-				$plaza="Oaxaca";	
-				$url="http://www.losrostrosoaxaca.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 6:
-				$plaza="Chiapas";	
-				$url="http://www.losrostroschiapas.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 7:
-				$plaza="Yucat&aacute;n";	
-				$url="http://losrostrosyucatan.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 8:
-				$plaza="jalisco";	
-				$url="http://www.losrostrosjalisco.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-		}
-
 
 echo'
 
@@ -90,62 +36,31 @@ $(document).ready(function() {
 <div id="foto_rostros" class="foto_rostros">
         	<div class = "snap-slider">
 		
-			<div class = "slider">';
-			//carrousel
+			<div class = "slider">
 			
-			$carrousel="select * from imagenes_eventos where id_evento='".$id_evento."' ";
-			$query_carrousel=mysql_query($carrousel, $conexion);
-			$item=1;
-			while($row_carrousel=mysql_fetch_array($carrousel))
-			{
-				if ($item==1)
-				{
-					echo'
-					<div class = "item" id = "item1">
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipod'].'" /></div>
-                        <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                </div>
-					';	
-				}
-				else
-				{
-					echo'
-						<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                    <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                </div>
-					';
-				}
-			}
-			
-				/*<div class = "item" id = "item1">
+				<div class = "item" id = "item1">
+                
                     <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
                     <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                         <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
-				
 				<div class = "item" id = "item1">
                 	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                     <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
-				
 				<div class = "item" id = "item1">
                 	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                     <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
                 </div>
-				
                 <div class = "item" id = "item1">
                 	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                     <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
                 </div>
-				
                 <div class = "item" id = "">
                 	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
                    <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
-                </div>*/
-				
-			echo'</div>
+                </div>
+			</div>
 		
 			</div>	
         </div>

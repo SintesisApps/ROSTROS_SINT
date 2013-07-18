@@ -1,75 +1,17 @@
 <?php
-    /*Conexion a la BD*/
-	include("conex.php");
-//recibe el id del evento
-$plaza=$_POST['plaza'];
-$id_evento=$_POST['id_evento'];
-
-$evento="select * from eventos where id='".$id_evento."' ";
-$query_evento=mysql_query($evento,$conexion );
-$row_evento=mysql_fetch_array($query_evento);
-
-
-switch ($plaza['id_plaza'])
-		{
-			case 1:
-				$plaza="Puebla";	
-				$url="http://www.rostrospuebla.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-			
-			case 2:
-				$plaza="Tlaxcala";	
-				$url="http://www.losrostrostlaxcala.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 3:
-				$plaza="Hidalgo";	
-				$url="http://www.losrostroshidalgo.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 4:
-				$plaza="Veracruz";	
-				$url="http://www.losrostrosveracruz.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 5:
-				$plaza="Oaxaca";	
-				$url="http://www.losrostrosoaxaca.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 6:
-				$plaza="Chiapas";	
-				$url="http://www.losrostroschiapas.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 7:
-				$plaza="Yucat&aacute;n";	
-				$url="http://losrostrosyucatan.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-				
-			case 8:
-				$plaza="jalisco";	
-				$url="http://www.losrostrosjalisco.com.mx/redisenoV2/images/imagenes-eventos/";
-				break;
-		}
-
-
-echo'
-
+echo '
 
     <link rel="stylesheet" href="css/ios.css">
     <link rel = "stylesheet" href = "css/default.css" />
-<link rel = "stylesheet" href = "css/default.css" />
+	<link rel = "stylesheet" href = "css/default.css" />
 		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
 		
 		<!-- JS -->
-		<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/jquery.mobile-1.3.1.min.js"></script>
-		
 		<script src = "js/jquery.easing-1.3.js"></script>
 		<script src = "js/jquery.iosslider.js"></script>
 		<script src = "js/common.js"></script>
 		
+		<!-- slidesec -->
 <script>
 $(document).ready(function() {
 	/*animacion  slide interior*/
@@ -85,78 +27,45 @@ $(document).ready(function() {
 	});
 
 </script>
-
-		
-<div id="foto_rostros" class="foto_rostros">
+  <div id="foto_seccion" class="foto_seccion">
         	<div class = "snap-slider">
 		
-			<div class = "slider">';
-			//carrousel
+			<div class = "slider slider_seccion">
 			
-			$carrousel="select * from imagenes_eventos where id_evento='".$id_evento."' ";
-			$query_carrousel=mysql_query($carrousel, $conexion);
-			$item=1;
-			while($row_carrousel=mysql_fetch_array($carrousel))
-			{
-				if ($item==1)
-				{
-					echo'
-					<div class = "item" id = "item1">
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipod'].'" /></div>
-                        <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                </div>
-					';	
-				}
-				else
-				{
-					echo'
-						<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                    <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                </div>
-					';
-				}
-			}
-			
-				/*<div class = "item" id = "item1">
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                </div>
-				
 				<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                
+                    <div id="flecha_mas_seccion" ><img src=""  id="flecha_mas_seccion_img"></div>
+                    <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
-				
 				<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
                 </div>
-				
+				<div class = "item" id = "item1">
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                </div>
                 <div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conciente.jpg" /></div>
                 </div>
-				
                 <div class = "item" id = "">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
-                </div>*/
-				
-			echo'</div>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                   <div class="img_int_secciones_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                </div>
+			</div>
 		
 			</div>	
         </div>
-        <div id="descripcion_rostros" class="descripcion_rostros">
-        	<div id="r_descripcion" class="r_descripcion">
-            	<div id="r_name" class="r_name" >
-                	<span class="r_nombre"> ALEJANDRO</span><br>
-                    <span class="r_apellido" > OCHOA</span>
+        <div id="descripcion_seccion" class="descripcion_seccion" >
+        	<div id="s_descripcion" class="s_descripcion">
+            	<div id="s_name" class="s_name" >
+                	<span class="s_titulo"> HIDRATA</span><br>
+                    <span class="s_subtitulo" > TU PIEL</span>
                 </div>
-                <div class="r_separador"></div>
-            	<div class="r_texto">
+                <div class="s_separador"></div>
+            	<div class="s_texto">
                 	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
@@ -177,16 +86,15 @@ $(document).ready(function() {
                
                 </div>
             </div>
-        	<div id="r_flecha" class="r_flecha">
-            <a href="javascript:;" id="r_flecha1">
+        	<div id="s_flecha" class="s_flecha">
+            <a href="javascript:;" id="s_flecha2">
         <img src="img/iconos_app/indicador.png" />
          </a>
             </div>
         </div>
-          
-     </div>
-
-	<script>
+		
+		
+		<script>
 			if(screen.width=="320" && screen.height=="480")
 	{
 		//alert("iphne4");//menu
@@ -327,7 +235,7 @@ $(document).ready(function() {
 		}
 		else 
 		{
-				//alert("ipad");	
+			//	alert("ipad");	
 			var img_menu = document.getElementById("img_menu_ini");
 			img_menu.src="img/menu.jpg";
 			

@@ -107,6 +107,7 @@ body{
 	display:none;
 	/*background-color: rgba(0,0, 0, 0.0);*/
     background:#000;
+	color:#fff;
 	
 }
 
@@ -118,6 +119,7 @@ body{
 	color:#878787;
 	font-size:18px;
     z-index:9999;
+	line-height:45px;
 }
 #separador
 {
@@ -267,6 +269,7 @@ body{
 	width:100%;
 	color:#878787;
 	font-size:18px;
+	line-height:45px;
 }
 #separador
 {

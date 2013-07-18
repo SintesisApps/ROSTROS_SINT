@@ -96,6 +96,7 @@ color:#FFF;
 	font-size:28px;
 	padding-left:12px;
 }
+
 .sumario_evento
 {
 	color:#FFF;
@@ -797,6 +798,8 @@ width:232px;
 	width:100%;
 	color:#878787;
 	font-size:12px;
+	line-height:45px;
+	
 }
 #separador
 {
@@ -1269,6 +1272,7 @@ width:232px;
 	width:100%;
 	color:#878787;
 	font-size:12px;
+	line-height:45px;
 }
 #separador
 {
