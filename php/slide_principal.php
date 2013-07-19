@@ -118,49 +118,8 @@ echo'<link rel="stylesheet" href="css/ios.css">
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
 	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
    
-   <!--<script>
+  
 
-		(function(window, $, PhotoSwipe){
-			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#Gallery1 a").photoSwipe(options);
-			
-			});
-			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#Gallery2 a").photoSwipe(options);
-			
-			});
-			
-			
-		}(window, window.jQuery, window.Code.PhotoSwipe));
-		
-</script>
--->
-<!-- doc-->
-<script>
-$(document).ready(function() {
-
-
-	
-	
-	$("div[id^=\"gallery_sec\"]").touchSlider({
-			mode: "shift",
-			offset: "auto"
-	});
-	
-	
-	
-	
-
-
-});
-</script>
-<!-- fin doc -->
 
  
    
@@ -172,7 +131,7 @@ $(document).ready(function() {
 			<div class = "slider">';
 			while($row_tablas = mysql_fetch_array($query_tablas))
 			{
-				if($row_tablas["referencia"]==1)//EVENTOS
+				if($row_tablas["referencia"]=='1')//EVENTOS
 				{
 					 echo'<div class = "item" id = "item1">';
 					//buscamso evento e iprimimos
@@ -211,7 +170,7 @@ $(document).ready(function() {
 					if( ($tipo_evento==1 && $categoria_eventos==16) || ($tipo_evento==1 && $categoria_eventos==9)  || ($tipo_evento==3))//eventos, buscamos   categoria del evento 16:rostros exclusivo/rostro_entrevista
 			{
 				echo'
-				<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'" onClick="javascript:eventos_especiales(\'#page3\');" /></a></div>
+				<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'" onClick="javascript:eventos_especiales(\'#page3\', \''.$id_evento.'\');" /></a></div>
 				 
 					 <div id="r_nom_persona" class="r_nom_persona" >
 					 '.utf8_encode($row_res_evento['titulo']).'
@@ -240,14 +199,14 @@ $(document).ready(function() {
 			else //evento normal
 			{
 				
-				echo'<div id="cont_img" class="cont_img" onClick="mostrar_ocultar();"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
-			
+				//echo'<div id="cont_img" class="cont_img" onClick="mostrar_ocultar();"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
+			    echo'<div id="cont_img" class="cont_img" onClick="fotogaleria_muestra(\''.$id_evento.'\')"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
 			
 			
 			
 			
 			echo'<div id="slide_sec1" class="slide_sec" >
-				<div class="sumario_evento" id="su_evt">'.utf8_encode($row_res_evento['sumario']).'</div>
+				<div class="sumario_evento" id="su_evt">'.utf8_encode($row_res_evento['sumario']).$query_tablas.'</div>
 				
 			</div>
 			<div id="box_sumario1" class="box_sumario">
@@ -266,29 +225,21 @@ $(document).ready(function() {
 				}
 				else
 				{
-					if($row_tablas["referencia"]==2)//PUBLICIDAD
-					{// <div class = "item" id = "item1">
-					
-						/*echo'
-						<div class = "item" id = "item1">
-                <div style="width:100%; height:100%; position:absolute; overflow:hidden">
-                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div> 	
-                </div>
-						';*/
+					if($row_tablas["referencia"]=='2')//PUBLICIDAD
+					{
 						
 						//buscamos la pibli
-						$pub="select * from app_publicidaad where id='".$row_tablas['id']."' ";
+						$pub="select * from app_publicidad where id='".$row_tablas['id']."' ";
 						$query_pub=mysql_query($pub, $conexion);
 						while($row_pub=mysql_fetch_array($query_pub))
 						{
-							if($row_pub==1)//video
+							if($row_pub['posicion']==1)//video
 							{
 								//page5 --> reproductor de video 
 								echo'
 									<div class = "item" id = "item1">
 										<div style="width:100%; height:100%; position:absolute; overflow:hidden">
-											<div style="width:100%; height:100%; position:absolute; overflow:scroll;" >
+											<div style="width:100%; height:100%; position:absolute; overflow:scroll;background:#000" >
 												<a href="#" onclick="javascript:ver_video(\'#page5\', \''.$url_video_publi.$row_pub['url'].'\')"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
 											</div>
 										</div> 	
@@ -297,6 +248,31 @@ $(document).ready(function() {
 							}
 							else
 							{
+								if($row_pub['url']=="NULL")
+								{
+									echo'
+									<div class = "item" id = "item1">
+										<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+											<div style="width:100%; height:100%; position:absolute; overflow:scroll;" >
+												<a href="#"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
+											</div>
+										</div> 	
+									</div>		
+								';		
+								}
+								else
+								{
+									echo'
+									<div class = "item" id = "item1">
+										<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+											<div style="width:100%; height:100%; position:absolute; overflow:scroll;" >
+												<a href="'.$row_pub['url'].'" target="_new"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
+											</div>
+										</div> 	
+									</div>		
+								';	
+								}
+								
 								
 							}
 						}
@@ -305,32 +281,31 @@ $(document).ready(function() {
 					}
 					else //secciones
 					{
+						/**/
+						$seccion="select * from app_secciones";
+						$query_seccion=mysql_query($seccion, $conexion);
+						$row_seccion=mysql_fetch_array($query_seccion);
+						$id_seccion=$row_seccion['id'];
+						$tipo_seccion=$row_seccion['id_tipos_secciones'];
 						
-						echo'
-						 <div class = "item" id = "item1">
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/disfruta.jpg" onClick="javascript:fn_secciones(\'#page4\');"/></a></div>
-                        <div class="img_secciones_iphone"><a href="#"><img src="img/iphone/disfruta.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#"><img src="img/disfruta.jpg" onClick="javascript:fn_secciones(\'#page4\');" /></a></div>
-                    </div>
+						if($tipo_seccion=="3")//bystyle
+						{
+							
+							echo'
+						<div class = "item" id = "item1">
+							<div id="secciones" >
+								 
+								<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/bystyle.jpg" onClick="javascript:fn_secciones(\'#page4\', 3, \''.$id_seccion.'\');"/></a></div>
+								<div class="img_secciones_iphone"><a href="#"><img src="img/iphone/bystyle.jpg" onClick="javascript:fn_secciones(\'#page4\', 3, \''.$id_seccion.'\');" /></a></div>
+								<div class="img_secciones_ipad"><a href="#"><img src="img/bystyle.jpg" onClick="javascript:fn_secciones(\'#page4\', 3, \''.$id_seccion.'\');" /></a></div>
+							</div>
                    
-                </div>
-						';
-					/*	//buscamos las secciones
-						$secc="select * from app_secciones where id='".$row_tablas['id']."' ";
-						$query_secc=mysql_query($secc, $conexion);
-						$row_secc=mysql_fetch_array($query_secc);
-						echo'<div class = "item" id = "item1">
-                	<div id="secciones" >
-                    	<div class="img_secciones_ipod"><a href="#"><img src="'.$row_secc['img_ipod'].'" onClick="javascript:fn_secciones(\'#page4\', \''.$row_secc['id'].'\');" /></a></div>
-                        <div class="img_secciones_iphone"><a href="#"><img src="'.$row_secc['img_iphone'].'" onClick="javascript:fn_secciones(\'#page4\',\''.$row_secc['id'].'\');" /></a></div>
-                        <div class="img_secciones_ipad"><a href="#"><img src="'.$row_secc['img_ipad'].'" onClick="javascript:fn_secciones(\'#page4\',\''.$row_secc['id'].'\');" /></a></div>
-                    </div>
-                   
-                </div>
-                        
-                        
-                        ';*/
+                		</div>';	
+						}
+						
+						
+						
+					
 					}
 				}
 				$contador++;

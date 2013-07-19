@@ -1,0 +1,961 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Rostros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!--<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Pragma" CONTENT="no-cache">No Guarda cache -->
+
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/ios.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<!--<script src="js/modernizr.js"></script>-->
+<!-- slide principal -->
+  <!-- CSS -->
+		<link rel = "stylesheet" href = "css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
+		
+		<!-- JS -->
+		<!--<script src = "jquery-1.8.2.min.js"></script>-->
+		<script src = "js/jquery.easing-1.3.js"></script>
+		<script src = "js/jquery.iosslider.js"></script>
+		<script src = "js/common.js"></script>
+<!-- slide sec -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<!-- galeria -->
+<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
+<link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="galeria/klass.min.js"></script>
+	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
+	
+<!--Codigo js  -->
+<script>
+
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery1 a").photoSwipe(options);
+			
+			});
+			
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery2 a").photoSwipe(options);
+			
+			});
+			
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+</script>
+<script>
+$(document).ready(function() {
+
+//slide_principal();
+	//boton ediciones
+	$('#btn_edicion').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	$('#btn_edicion2').click(function() {
+		$('#panelSecciones').slideToggle(800);
+		//alert("btn seccion");
+	});
+	
+	$('#rubrica_name').click(function() {
+		$('#panelSecciones').slideToggle(800);
+	});
+	
+	//$('#descripcion_img5').css("display", "none");
+	
+	$("div[id^='gallery_sec']").touchSlider({
+			mode: 'shift',
+			offset: 'auto'
+	});
+	
+	/*animacion  slide interior*/
+	$("#r_flecha1").click(function(){
+    $("#r_descripcion").animate({width:'toggle'});
+  });
+  
+  $("#s_flecha2").click(function(){
+    $("#s_descripcion").animate({width:'toggle'});
+  });
+  
+
+	
+ $( window ).on( "orientationchange", function( event ) {
+			 if(event.orientation=="landscape")
+			 {
+				//alert("landscape");
+				$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').hide();
+			}
+			else
+			{ //alert("portrait");
+				
+					$('div[id^="box_sumario"]').show();
+				$('div[id^="slide_sec"]').show();	
+				
+			}
+		
+		});
+			$( window ).orientationchange();
+			
+			
+/*imgs*/
+/*if(screen.width=="320")
+{	
+	//$("#menu_inicial").append("<img id='' src='img/iphone-ipod/menu.jpg'/>");
+	var img_menu = document.getElementById('img_menu_inicial');
+	img_menu.src = "img/iphone-ipod/menu.jpg";
+	
+	var img_btn_edicion = document.getElementById('img_btn_edicion');
+	img_btn_edicion.src = "img/iconos_app/menu@2x.png";
+	img_btn_edicion.width="44";
+	img_btn_edicion.height="44";
+
+}
+else
+{alert("ipad");
+	var img_menu = document.getElementById('img_menu_ini');
+	img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+	
+	}*/
+		if(screen.width=="320" && screen.height=="480")
+	{
+		alert("iphne4");//menu
+		var img_menu = document.getElementById('img_menu_ini');
+		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+		
+		/*btn ediciones*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion');
+		img_btn_edicion.src = "img/iconos_app/menu.png";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
+		
+		/*ediciones interior*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion_int');
+		img_btn_edicion.src = "img/iconos_app/menu.png";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
+                  
+        var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+        img_btn_edicion1.src = "img/iconos_app/menu.png";
+        img_btn_edicion1.width="36";
+        img_btn_edicion1.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
+		
+		/*flecha_mas_seccion_img*/
+		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
+		flecha_mas_seccion.src="img/iconos_app/mas.png";
+		flecha_mas_seccion.width="36";
+		flecha_mas_seccion.height="36";
+		
+		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
+		flecha_mas_rostros.src="img/iconos_app/mas.png";
+		flecha_mas_rostros.width="36";
+		flecha_mas_rostros.height="36";
+		
+		/*flecha_in_trostros*/
+		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
+		flecha_in_trostros.src="img/iconos_app/flecha.png";
+		flecha_in_trostros.width="26";
+		flecha_in_trostros.height="26"
+		
+		/*flecha_in_seccion*/
+		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
+		flecha_in_seccion.src="img/iconos_app/flecha.png";
+		flecha_in_seccion.width="26";
+		flecha_in_seccion.height="26"
+		
+		/*secciones*/
+		$(".img_secciones_ipod").css("display","");
+		$(".img_secciones_iphone").css("display","none");
+		$(".img_secciones_ipad").css("display","none");
+		
+		/*secciones interiores*/
+		//muestras  img_int_rostros_ipod
+		$(".img_int_secciones_ipodIpad").css("display","");
+		$(".img_int_secciones_iphone").css("display","none");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","");
+		$(".img_int_rostrs_iphone").css("display","none");
+		
+		
+	}
+	else
+	{
+		if(screen.width=="320" && screen.height=="568")
+		{
+                 // alert("i5");
+			//menu
+		var img_menu = document.getElementById('img_menu_ini');
+		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+		
+		/*btn ediciones*/
+		var img_btn_edicion = document.getElementById('img_btn_edicion');
+		img_btn_edicion.src = "img/iconos_app/menu@2x.png";
+		img_btn_edicion.width="36";
+		img_btn_edicion.height="36";
+        
+        /*btn ediciones*/
+        var img_btn_edicion = document.getElementById('img_btn_edicion');
+        img_btn_edicion.src = "img/iconos_app/menu.png";
+        img_btn_edicion.width="36";
+        img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
+                  
+        /*ediciones interior*/
+        var img_btn_edicion = document.getElementById('img_btn_edicion_int');
+        img_btn_edicion.src = "img/iconos_app/menu.png";
+        img_btn_edicion.width="36";
+        img_btn_edicion.height="36";
+        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
+                  
+        var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+        img_btn_edicion1.src = "img/iconos_app/menu.png";
+        img_btn_edicion1.width="36";
+        img_btn_edicion1.height="36";
+        document.getElementById("img_btn_edicion_int1").style.margin="4px 0 0 0";
+		
+		/*secciones*/
+		$(".img_secciones_ipod").css("display","none");
+		$(".img_secciones_iphone").css("display","");
+		$(".img_secciones_ipad").css("display","none");
+		
+		
+		/*secciones interiores*/
+		$(".img_int_secciones_ipodIpad").css("display","none");
+		$(".img_int_secciones_iphone").css("display","");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","none");
+		$(".img_int_rostros_iphone").css("display","");
+		
+		/*flecha_mas_seccion_img*/
+		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
+		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
+		flecha_mas_seccion.width="36";
+		flecha_mas_seccion.height="36";
+		
+		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
+		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
+		flecha_mas_rostros.width="36";
+		flecha_mas_rostros.height="36";
+		
+		
+		/*flecha_in_trostros*/
+		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
+		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
+		flecha_in_trostros.width="26";
+		flecha_in_trostros.height="26"
+		
+		/*flecha_in_seccion*/
+		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
+		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
+		flecha_in_seccion.width="26";
+		flecha_in_seccion.height="26"
+		}
+		else 
+		{
+				//alert("ipad");	
+			var img_menu = document.getElementById('img_menu_ini');
+			img_menu.src="img/menu.jpg";
+			/*btn ediciones*/
+			var img_btn_edicion = document.getElementById('img_btn_edicion');
+			img_btn_edicion.src = "img/iconos_app/boton_ediciones.png";
+			img_btn_edicion.width="120";
+			img_btn_edicion.height="44";
+			
+            var img_btn_edicion_int = document.getElementById('img_btn_edicion_int');
+                  img_btn_edicion_int.src = "img/iconos_app/boton_ediciones.png";
+                  img_btn_edicion_int.width="120";
+                  img_btn_edicion_int.height="44";
+                  
+            var img_btn_edicion1 = document.getElementById('img_btn_edicion_int1');
+                  img_btn_edicion1.src = "img/iconos_app/boton_ediciones.png";
+                  img_btn_edicion1.width="120";
+                  img_btn_edicion1.height="44";
+                  
+                  
+                  
+                  
+                  
+                  
+			/*secciones*/
+			$(".img_secciones_ipod").css("display","none");
+			$(".img_secciones_iphone").css("display","none");
+			$(".img_secciones_ipad").css("display","");
+			
+			/*secciones interiores*/
+		$(".img_int_secciones_ipodIpad").css("display","");
+		$(".img_int_secciones_iphone").css("display","none");
+		
+		/*rostros interiores*/
+		$(".img_int_rostros_ipodIpad").css("display","");
+		$(".img_int_rostros_iphone").css("display","none");
+		
+		/*flecha_mas_seccion_img*/
+		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
+		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
+		flecha_mas_seccion.width="44";
+		flecha_mas_seccion.height="44";
+		
+		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
+		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
+		flecha_mas_rostros.width="44";
+		flecha_mas_rostros.height="44";
+		/*flecha_in_trostros*/
+		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
+		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
+		flecha_in_trostros.width="44";
+		flecha_in_trostros.height="44"
+			/*flecha_in_seccion*/
+		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
+		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
+		flecha_in_seccion.width="44";
+		flecha_in_seccion.height="44"
+			
+		}	
+	}
+
+
+});
+
+    
+    //funciones  que llaman a la BD
+    
+    function slide_principal(plaza)
+    {
+	//alert("hola2");
+        var plaza="puebla";
+        $.ajax({
+               type: "POST",
+               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#content_slide').html(message);
+               }
+               });
+        
+    }
+	
+	/*rostros del mes....*/
+	
+	function eventos_especiales(pagina)
+	{
+		//alert("eventos especiales:"+pagina);	
+		 /*var plaza="puebla";
+        $.ajax({
+               type: "POST",
+			   url: "php/evento_especial.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#cont_evento_especial').html(message);
+               }
+               });*/
+		window.location.href = pagina; 
+	}
+	
+	function secciones(pagina)
+	{//
+		var plaza="puebla";
+        $.ajax({
+               type: "POST",
+               url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/secciones.php",
+               data: "",
+               cache: false,
+               success: function(message)
+               {
+               $('#content_secciones').html(message);
+               }
+               });
+		window.location.href = pagina; 
+	}
+
+</script>
+<script>
+
+
+	function mostrar_ocultar(slide_sec, box)
+	{
+		var orientacion;	
+		if (window.matchMedia("(orientation: portrait)").matches) {
+		   //alert("portrait");
+		   orientacion = 0;
+		}
+		else
+		{orientacion = 1;}
+		if(orientacion ==1)
+		{
+			$('div[id^="box_sumario"]').slideToggle(800);
+				$('div[id^="slide_sec"]').slideToggle(800);
+		}
+		else
+		{//salert("portrait no  haces nada");
+		
+					$('div[id^="box_sumario"]').show();
+					$('div[id^="slide_sec"]').show();
+			
+		}
+		
+	}
+	
+    function video()
+    {
+        var video=document.getElementById("intro");
+        //video.autoplay=true;
+        video.play();
+        video.addEventListener('ended', function(){
+                               //alert("se termina");
+                               var pagina="#page1";
+                               window.location.href = pagina;
+                               });
+    }
+	
+	/*CAMBIO DE ICONOS A PARTIR DE LAS MEDIDAS DE LOS DISPOSITIVOS*/
+	
+	//alert("ANCHO:"+screen.height+"ALTO:"+screen.width);			
+/*	if(screen.width=="320")
+	{
+		alert("ipod");
+		var img_menu = document.getElementById('img_menu_inicial');
+		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
+	}
+	else
+	{
+		if(screen.width=="320" && screen.height=="568")
+		{
+			alert("iphone5");	
+		}
+		else 
+		{
+				alert("ipad");	
+				$("#img_menu_inicial").attr("src","img/menu.jpg");
+		}	
+	}*/
+	//alert("ancho:"+screen.width+"alto:"+screen.height)
+	
+</script>
+
+</head> 
+<body onload="video()"> 
+
+
+<!--pagina-->
+<!--<div data-role="page" id="page">
+	<div data-role="content" style="width:100%; height:100%;background:#fff;">
+        <video id="intro"  src="video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#fff;"></video>
+	</div>
+</div>-->
+<!-- fin  pagina-->
+
+    <!--pagina 1-->
+    
+    <div data-role="page" id="page1" data-transition="false">
+        <div data-role="content" style="width:100%; height:100%;background:#fff;">
+
+            <div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
+             <img src="" id="img_menu_ini">
+             </div>
+             <!--<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
+            </div>PUBLICIDAD-->
+             <div id="link_menu">
+             <a href="#page2" ><div id="events"></div></a>
+             <a href=""><div id="d_magazine"></div></a>
+             <a href=""><div id="reality"></div></a>
+             </div>
+        </div>
+    </div>
+    
+    
+    <!-- fin  pagina 1-->
+    
+
+<!--  pagina 1-->
+<!--menu-->
+<div id="panelSecciones"  class="panelSeccion"> 
+           <ul>
+             <li id="rubrica"><a href="#page2" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="35" width="35" />HOME</a></li>
+            <li id="separador"></li>
+            <li   id="rubrica"><a href="#page2" id="rubrica_name">Puebla</a></li>
+            <li id="separador"></li>
+            <li   id="rubrica"><a href="#page2" id="rubrica_name">Jalisco</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Veracruz</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Chiapas</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Hidalgo</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Tlaxcala</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Yucat&aacute;n</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Oaxaca</a></li>
+            <li id="separador_2"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Revista Digital</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Realidad Virtual</a></li>
+            <li id="separador"></li>
+            <li  id="rubrica"><a href="#page2" id="rubrica_name">Contacto</a></li>
+            </ul>
+        </div>
+        <!--menu-->
+<div data-role="page" id="page2" style="background:#000; margin:0;">
+	<!-- cabecera -->
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
+        <img src="" id="img_btn_edicion">
+        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
+         </a></div><!-- "-->
+        <div id="logo"> <a href="#page1" >
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    <!--  fin cabecera-->
+    
+    
+	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
+    
+    
+        
+        <div id="content_slide">
+            <div class="contenido_slide">
+                <div class = 'full-width-slider'>
+
+			<div class = 'slider'>
+				
+				<div class = 'item' id = 'item1'>
+                <div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/8.jpg" class="foto_evnt" /></div>
+                	
+                    
+                	<div id="slide_sec1" class="slide_sec" >
+                    <div class="gallery-holder" style="z-index:2000;">
+                        	<div class="gallery_slide" id="gallery_sec1" >
+                        		<div class="holder">
+                                	<div class="list">
+                                    <div id="Gallery1" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    
+                    <div id="box_sumario1" class="box_sumario"> 
+                    		<div class="titulo_evento">Titulo1</div>
+                            <div class="sumario_evento" id="su_evt">Sumario</div>
+                            <div class="edicion_revista">Edicion</div>
+                    </div>
+                    
+                    
+                </div>
+                
+				<div class = 'item' id = 'item1'>
+                	
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/10.jpg" /></div>
+                                        
+                    <div id="slide_sec1" class="slide_sec" >
+                    <div class="gallery-holder" style="z-index:2000;">
+                        	<div class="gallery_slide" id="gallery_sec2" >
+                        		<div class="holder">
+                                	<div class="list">
+                                    <div id="Gallery2" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <div id="box_sumario1" class="box_sumario"> 
+                    		<div class="titulo_evento">Titulo1</div>
+                            <div class="sumario_evento" id="su_evt">Sumario</div>
+                            <div class="edicion_revista">Edicion</div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class = 'item' id = 'item1'>
+                <div style="width:100%; height:100%; position:absolute; overflow:hidden">
+                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
+            </div> 	
+                </div>
+                
+                
+               <div class = 'item' id = 'item1'>
+                	
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/15.jpg" /></div>
+                    
+                    
+                    <div id="slide_sec1" class="slide_sec" >
+                    <div class="gallery-holder" style="z-index:2000;">
+                        	<div class="gallery_slide" id="gallery_sec3" >
+                        		<div class="holder">
+                                	<div class="list">
+                                    <div id="Gallery3" class="gallery">
+                                   <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div> 
+                    
+                    
+                    <div id="box_sumario1" class="box_sumario"> 
+                    		<div class="titulo_evento">Titulo1</div>
+                            <div class="sumario_evento" id="su_evt">Sumario</div>
+                            <div class="edicion_revista">Edicion</div>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+               <div class = 'item' id = 'item1'>
+                	
+                	<div id="cont_img" class="cont_img" onClick="mostrar_ocultar('slide_sec1','box_sumario1')"><img src="img/fotos/14.jpg" /></div>
+                    
+                    
+                   <div id="slide_sec1" class="slide_sec" >
+                    <div class="gallery-holder" style="z-index:2000;">
+                        	<div class="gallery_slide" id="gallery_sec4" >
+                        		<div class="holder">
+                                	<div class="list">
+                                    <div id="Gallery4" class="gallery">
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                   
+                    <div id="box_sumario1" class="box_sumario"> 
+                    		<div class="titulo_evento">Titulo1</div>
+                            <div class="sumario_evento" id="su_evt">Sumario</div>
+                            <div class="edicion_revista">Edicion</div>
+                    </div>
+                    
+                </div>
+                
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/conoce.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/conoce.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/conoce.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/bystyle.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/bystyle.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/bystyle.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/consientete.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/consientete.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/consientete.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div id="secciones" >
+                    	<div class="img_secciones_ipod"><a href="#page4"><img src="img/ipod/disfruta.jpg" /></a></div>
+                        <div class="img_secciones_iphone"><a href="#page4"><img src="img/iphone/disfruta.jpg" /></a></div>
+                        <div class="img_secciones_ipad"><a href="#page4"><img src="img/disfruta.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+                
+              <div class = "item" id = "item1">
+				<div id="cont_img" class="cont_img" ><a href="#" ><img src="img/fotos/5.jpg" onClick="javascript:eventos_especiales('#page3');" /></a></div>
+
+                   <div id="r_nom_persona" class="r_nom_persona" >
+                    		<DIV>NOMBRE DE LA PERSONA</DIV>
+                    </div>
+
+
+                    <div id="sum_rostros" class="sum_rostros"> 
+                    		<div class="titulo_evento">NOMBRE DE LA SECCION</div>
+                    </div>
+
+                </div>
+                
+			
+			</div>
+		
+		</div>
+		
+            </div>
+        </div>
+       
+  
+		
+	</div>
+    
+</div>
+<!-- fin pagina 2 -->
+
+
+
+<!--pagina 3  maneja rostros del mes y demas-->
+<div data-role="page" id="page3" style=" margin:0;">
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
+       <img src="" id="img_btn_edicion_int">
+         </a></div>
+         <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+         </div>
+        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" id="cont_evento_especial" >	
+   		
+       <div id="foto_rostros" class="foto_rostros">
+        	<div class = 'snap-slider'>
+		
+			<div class = 'slider'>
+			
+				<div class = 'item' id = 'item1'>
+                
+                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_rostros_img"></div>
+                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                    <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
+                </div>
+                <div class = 'item' id = ''>
+                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
+                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                </div>
+			</div>
+		
+			</div>	
+        </div>
+        <div id="descripcion_rostros" class="descripcion_rostros">
+        	<div id="r_descripcion" class="r_descripcion">
+            	<div id="r_name" class="r_name" >
+                	<span class="r_nombre"> ALEJANDRO</span><br>
+                    <span class="r_apellido" > OCHOA</span>
+                </div>
+                <div class="r_separador"></div>
+            	<div class="r_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+               
+                </div>
+            </div>
+        	<div id="r_flecha" class="r_flecha">
+            <a href="javascript:;" id="r_flecha1">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            </div>
+        </div>
+          
+     </div>
+	
+</div>
+<!-- fin  pagina 3-->
+
+<!-- pagina 4 secciones concientete vy style-->
+<div data-role="page" id="page4" style=" margin:0;">
+	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
+     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
+        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
+            <img src="" id="img_btn_edicion_int1">
+         </a></div>
+         <div id="fecha_int">
+         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_seccion"/></a>
+         	<!--<a href="#page1" id="btn_flecha"><img src="img/iconos_app/flecha@2x.png" width="44" height="44"/></a>-->
+         </div>
+        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
+        	<img src="img/logo.png" width="131" height="42">
+        </a></div>
+       
+    </div>
+    
+	<div data-role="content" id="content_secciones">	<!--style=" margin:0px auto; padding:0px;" id="contenido_general"-->
+   		<!-- div descripcion -->
+        <div id="foto_seccion" class="foto_seccion">
+        	<div class = 'snap-slider'>
+		
+			<div class = 'slider slider_seccion'>
+			
+				<div class = 'item' id = 'item1'>
+                
+                    <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
+                    <div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                        <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
+                </div>
+				<div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conoce.jpg" /></div>
+                </div>
+                <div class = 'item' id = 'item1'>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                    <div class="img_int_secciones_iphone"><img src="img/iphone/conciente.jpg" /></div>
+                </div>
+                <div class = 'item' id = ''>
+                	<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
+                   <div class="img_int_secciones_iphone"><img src="img/iphone/disfruta.jpg" /></div>
+                </div>
+			</div>
+		
+			</div>	
+        </div>
+        <div id="descripcion_seccion" class="descripcion_seccion" >
+        	<div id="s_descripcion" class="s_descripcion">
+            	<div id="s_name" class="s_name" >
+                	<span class="s_titulo"> HIDRATA</span><br>
+                    <span class="s_subtitulo" > TU PIEL</span>
+                </div>
+                <div class="s_separador"></div>
+            	<div class="s_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                   <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+               
+                </div>
+            </div>
+        	<div id="s_flecha" class="s_flecha">
+            <a href="javascript:;" id="s_flecha2">
+        <img src="img/iconos_app/indicador.png" />
+         </a>
+            </div>
+        </div>
+          
+     </div>
+	
+</div>
+<!-- fin pagina 4-->
+
+
+<!--  pagina  5 -->
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Página cuatro</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+ 
+
+</body>
+</html>

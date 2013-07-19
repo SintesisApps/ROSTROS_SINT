@@ -134,7 +134,7 @@
 			{
 				echo'
 				
-					<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'" onClick="javascript:eventos_especiales(\'#page3\');" /></a></div>
+					<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'" onClick="javascript:eventos_especiales(\'#page3\', \''.$id_evento.'\');" /></a></div>
 				 
 					 <div id="r_nom_persona" class="r_nom_persona" >
 					 '.utf8_encode($row_res_evento['titulo']).'
@@ -153,10 +153,6 @@
 				
 				echo'<div id="cont_img" class="cont_img" onClick="fotogaleria_muestra(\''.$id_evento.'\')"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
 			
-			
-			//miniaturas
-			$miniaturas="select * from imagenes_eventos where id_evento='".$id_evento."' order by id ASC limit 15 ";
-			$query_miniaura=mysql_query($miniaturas, $conexion);
 			
 			
 			

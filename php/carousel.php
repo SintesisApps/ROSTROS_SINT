@@ -112,7 +112,7 @@ echo'
                                     <div id="Gallery1" class="gallery">';
 									while($row_miniatura=mysql_fetch_array($query_miniatura))
 									{
-										echo'  <div class="item_s"><div class="box_s box1"><a href="'.$url.$row_miniatura['imagen'].'"><img src="'.$url.$row_miniatura['imagen'].'" width="210" height="159"/></a></div></div>';
+										echo'  <div class="item_s"><div class="box_s box1"><a href="'.$url.$row_miniatura['imagen'].'"><img src="'.$url.$row_miniatura['imagen'].'" style="width:100%; height:auro;"/></a></div></div>';
 										
 									}
 									/*

@@ -2,7 +2,7 @@
     /*Conexion a la BD*/
 	include("conex.php");
 //recibe el id del evento
-$plaza=$_POST['plaza'];
+
 $id_evento=$_POST['id_evento'];
 
 $evento="select * from eventos where id='".$id_evento."' ";
@@ -10,7 +10,7 @@ $query_evento=mysql_query($evento,$conexion );
 $row_evento=mysql_fetch_array($query_evento);
 
 
-switch ($plaza['id_plaza'])
+switch ($row_evento['id_plaza'])
 		{
 			case 1:
 				$plaza="Puebla";	
@@ -96,15 +96,15 @@ $(document).ready(function() {
 			$carrousel="select * from imagenes_eventos where id_evento='".$id_evento."' ";
 			$query_carrousel=mysql_query($carrousel, $conexion);
 			$item=1;
-			while($row_carrousel=mysql_fetch_array($carrousel))
+			while($row_carrousel=mysql_fetch_array($query_carrousel))
 			{
 				if ($item==1)
 				{
 					echo'
 					<div class = "item" id = "item1">
                     <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipod'].'" /></div>
-                        <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
+                    <div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen'].'" /></div>
+                        <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_iphone'].'" /></div>
                 </div>
 					';	
 				}
@@ -112,38 +112,13 @@ $(document).ready(function() {
 				{
 					echo'
 						<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
-                    <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_ipad'].'" /></div>
+                	<div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen'].'" /></div>
+                    <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_iphone'].'" /></div>
                 </div>
 					';
 				}
 			}
 			
-				/*<div class = "item" id = "item1">
-                    <div id="flecha_mas_rostros" ><img src="img/iconos_app/mas.png" width="26" height="26" id="flecha_mas_rostros_img"></div>
-                    <div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                        <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                </div>
-				
-				<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-                </div>
-				
-				<div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/conoce.jpg" /></div>
-                </div>
-				
-                <div class = "item" id = "item1">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                    <div class="img_int_rostros_iphone"><img src="img/iphone/consientete.jpg" /></div>
-                </div>
-				
-                <div class = "item" id = "">
-                	<div class="img_int_rostros_ipodIpad"><img src="img/prueba_sec1.jpg" /></div>
-                   <div class="img_int_rostros_iphone"><img src="img/iphone/disfruta.jpg" /></div>
-                </div>*/
 				
 			echo'</div>
 		
@@ -152,12 +127,16 @@ $(document).ready(function() {
         <div id="descripcion_rostros" class="descripcion_rostros">
         	<div id="r_descripcion" class="r_descripcion">
             	<div id="r_name" class="r_name" >
-                	<span class="r_nombre"> ALEJANDRO</span><br>
-                    <span class="r_apellido" > OCHOA</span>
+                	<span class="r_nombre">'.$row_evento['titulo'].'</span><br>
+                    <span class="r_apellido" >	</span>
                 </div>
                 <div class="r_separador"></div>
-            	<div class="r_texto">
-                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+            	<div class="r_texto"><span class="r_pregunta">
+				'.utf8_encode($row_evento['nota']).'</span>
+				
+				
+				
+                	<!--<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
@@ -173,7 +152,7 @@ $(document).ready(function() {
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                     <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>-->
                
                 </div>
             </div>

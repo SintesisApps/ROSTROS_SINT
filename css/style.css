@@ -57,9 +57,10 @@
 		width: 96.48%;
 		overflow: hidden;
 		height:167px;
-		margin-top:39px;
+		margin-top:0px;
 		padding-left:1.36%;
 		padding-right:1.76%;
+		background:#33FF99;
 	}
 
 	.gallery_slide div.holder {
