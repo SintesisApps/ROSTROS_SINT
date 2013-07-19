@@ -30,49 +30,7 @@
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
 	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
     
-  <!--  <script>
-    
-    (function(window, $, PhotoSwipe){
-     
-     $(document).ready(function(){
-                       
-                       var options = {};
-                       $("#Gallery1 a").photoSwipe(options);
-                       
-                       });
-     
-     $(document).ready(function(){
-                       
-                       var options = {};
-                       $("#Gallery2 a").photoSwipe(options);
-                       
-                       });
-     
-     
-     }(window, window.jQuery, window.Code.PhotoSwipe));
-    
-    </script>-->
-    
-    <!-- doc-->
-    <script>
-    $(document).ready(function() {
-                      
-                      
-                      
-                      
-                      $("div[id^=\"gallery_sec\"]").touchSlider({
-                                                                mode: "shift",
-                                                                offset: "auto"
-                                                                });
-                      
-                      
-                      
-                      
-                      
-                      
-                      });
-    </script>
-    <!-- fin doc -->
+  
     
  
     
@@ -179,12 +137,12 @@
 					<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'" onClick="javascript:eventos_especiales(\'#page3\');" /></a></div>
 				 
 					 <div id="r_nom_persona" class="r_nom_persona" >
-					 <DIV>'.utf8_encode($row_res_evento['titulo']).'</DIV>
+					 '.utf8_encode($row_res_evento['titulo']).'
 					 </div>
 				 
 				 
 					<div id="sum_rostros" class="sum_rostros">
-						<div class="titulo_evento">'.utf8_encode($nombre_evento).'</div>
+						<div class="titulo_evento_especial">'.utf8_encode($nombre_evento).'</div>
 					</div>
 				 
 				 </div>
@@ -193,57 +151,25 @@
 			{
 				
 				
-				echo'<div id="cont_img" class="cont_img" onClick="mostrar_ocultar();"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
+				echo'<div id="cont_img" class="cont_img" onClick="fotogaleria_muestra(\''.$id_evento.'\')"><img src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></div>';
 			
 			
 			//miniaturas
-			$miniaturas="select * from imagenes_eventos where id_evento='".$id_evento."' orden by id ASC limit 2 ";
+			$miniaturas="select * from imagenes_eventos where id_evento='".$id_evento."' order by id ASC limit 15 ";
 			$query_miniaura=mysql_query($miniaturas, $conexion);
 			
 			
 			
 			echo'<div id="slide_sec1" class="slide_sec" >
-				<div class="gallery-holder" style="z-index:2000;">
-					<div class="gallery_slide" id="gallery_sec'.$contador.'" >
-						<div class="holder">
-							<div class="list">
-								<div id="Gallery'.$contador.'" class="gallery">';
-								while($row_miniaturas=mysql_fetch_array($query_miniaura))
-								{
-									echo'<div class="item_s"><div class="box_s box1"><a href="'.$url.$row_miniaturas['imagen'].'"><img src="'.$url.$row_miniaturas['imagen'].'" width="210" height="159"/></a></div></div>';
-								}
-								echo'
-								<script>
-								
-								(function(window, $, PhotoSwipe){
-								 
-								 $(document).ready(function(){
-												   
-												   var options = {};
-												   $("#Gallery'.$contador.' a").photoSwipe(options);
-												   
-												   });
-								 
-								 
-								 
-								 }(window, window.jQuery, window.Code.PhotoSwipe));
-								
-								</script>
-								';
-								echo'
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				
+				<div class="sumario_evento" id="su_evt">'.utf8_encode($row_res_evento['sumario']).'</div>
 			</div>
-			
+				
 			
 			
 			<div id="box_sumario1" class="box_sumario">
 				<div class="titulo_evento" >'.utf8_encode($row_res_evento['titulo']).'</div>
-				<div class="sumario_evento" id="su_evt">'.utf8_encode($row_res_evento['sumario']).'</div>
+				
 				<div class="edicion_revista">'.utf8_encode($plaza).'</div>
 			</div>
         

@@ -26,16 +26,16 @@
 		<script src = "js/jquery.iosslider.js"></script>
 		<script src = "js/common.js"></script>
 <!-- slide sec -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
-<!-- galeria -->
+
 <link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
 <link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="galeria/klass.min.js"></script>
 	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
 	
-<!--Codigo js  -->
-<!--<script>
+
+<script>
 
 		(function(window, $, PhotoSwipe){
 			
@@ -46,12 +46,7 @@
 			
 			});
 			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#Gallery2 a").photoSwipe(options);
-			
-			});
+	
 			
 			
 		}(window, window.jQuery, window.Code.PhotoSwipe));
@@ -92,14 +87,14 @@ slide_home("no");
 			 if(event.orientation=="landscape")
 			 {
 				//alert("landscape");
-				$('div[id^="box_sumario"]').show();
-				$('div[id^="slide_sec"]').hide();
+				//$('div[id^="box_sumario"]').show();
+				//$('div[id^="slide_sec"]').hide();
 			}
 			else
 			{ //alert("portrait");
 				
-					$('div[id^="box_sumario"]').show();
-				$('div[id^="slide_sec"]').show();	
+					//$('div[id^="box_sumario"]').show();
+				//$('div[id^="slide_sec"]').show();	
 				
 			}
 		
@@ -216,14 +211,15 @@ slide_home("no");
 		{orientacion = 1;}
 		if(orientacion ==1)
 		{
-			$('div[id^="box_sumario"]').slideToggle(800);
-				$('div[id^="slide_sec"]').slideToggle(800);
+			//$('div[id^="box_sumario"]').slideToggle(800);
+				//$('div[id^="slide_sec"]').slideToggle(800);
 		}
 		else
 		{//salert("portrait no  haces nada");
 		
-					$('div[id^="box_sumario"]').show();
-					$('div[id^="slide_sec"]').show();
+					//$('div[id^="box_sumario"]').show();
+					//
+					//$('div[id^="slide_sec"]').show();
 			
 		}
 		
@@ -245,6 +241,49 @@ slide_home("no");
 	
 
 </script>
+<script type="text/javascript">
+
+			/*$(document).ready(function(){
+				$("div[id^=\"gallery_sec\"]").touchSlider({
+                                                                mode: "shift",
+                                                                offset: "auto"
+                                                                });
+                      
+				
+			});*/
+			
+			function fotogaleria_muestra(id_evento)
+	{
+		//alert("id_evento:"+id_evento);//contenido_galeria
+		
+		$.ajax({
+               type: "POST",
+			   url: "http://desarrollosintesis.com/ios/Rostros/php/carousel.php",
+               data: "id_evento="+id_evento,
+               cache: false,
+               success: function(message)
+               {
+				  document.getElementById("contenido_galeria").innerHTML="";
+               $('#contenido_galeria').html(message);
+			   $('#fotogaleria').show();
+               }
+               });
+		
+		// $('#fotogaleria').show();
+		
+		
+	}
+	function fotogaleria_oculta()
+	{
+		//document.getElementById("carusel").style.display="none";
+		
+		//document.getElementById("fotogaleria").style.display="";
+		//$('#fotogaleria').slideToggle(800);
+		$('#fotogaleria').hide();
+	}
+			
+			
+		</script>
 
 </head> 
 <body onload="video()"> 
@@ -326,7 +365,33 @@ slide_home("no");
     
 	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
     
-    
+    <div id="fotogaleria">
+    	<div id="fotogaleria_arriba" onClick="javascript:fotogaleria_oculta();"></div>
+        
+        
+        <div></div>
+        	<div class="gallery-holder" style="margin:0 auto;  margin-top:0px" id="contenido_galeria">
+                        	<div class="gallery_slide" id="gallery_sec1" >
+                        		<div class="holder">
+                                	<div class="list">
+                                    <div id="Gallery1" class="gallery">
+                                    
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <!--<div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
+                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>-->
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+        
+        <div id="fotogaleria_abajo"  onClick="javascript:fotogaleria_oculta();"></div>
+    </div>
         
         <div id="content_slide">
             <!--<div class="contenido_slide">
