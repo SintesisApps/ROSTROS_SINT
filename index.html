@@ -2,698 +2,92 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<title>Rostros</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
-<meta http-equiv="Pragma" CONTENT="no-cache">
-
-<link rel="stylesheet" href="css/css.css">
-<link rel="stylesheet" href="css/ios.css">
-<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/jquery.mobile-1.3.1.min.js"></script>
-<script src="phonegap.js" type="text/javascript"></script>
-<!--<script src="js/modernizr.js"></script>-->
-<!-- slide principal -->
-  <!-- CSS -->
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="css/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<!-- Esta referencia a phonegap.js permitirá disponer de sugerencias para el código, siempre y cuando el sitio actual se haya configurado como aplicación móvil. 
+	 Para configurar el sitio como aplicación móvil, vaya a Sitio -> Aplicaciones móviles -> Configurar framework de aplicación... -->
+     
+ 
+		<!-- CSS -->
+        <link rel = "stylesheet" href = "css/ios.css" />
 		<link rel = "stylesheet" href = "css/default.css" />
 		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
-		
-		<!-- JS -->
-		<!--<script src = "jquery-1.8.2.min.js"></script>-->
+		<!--<script src = "_lib/jquery-1.8.2.min.js"></script>-->
 		<script src = "js/jquery.easing-1.3.js"></script>
 		<script src = "js/jquery.iosslider.js"></script>
 		<script src = "js/common.js"></script>
-<!-- slide sec -->
-<!--	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script src="cordova.js" type="text/javascript"></script>
 
-<link href="galeria/styles_galeria.css" type="text/css" rel="stylesheet" />
-<link href="galeria/photoswipe.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="galeria/klass.min.js"></script>
-	<script type="text/javascript" src="galeria/code.photoswipe-3.0.4.min.js"></script>
-	
-
-<script>
-
-		(function(window, $, PhotoSwipe){
-			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#Gallery1 a").photoSwipe(options);
-			
-			});
-			
-	
-			
-			
-		}(window, window.jQuery, window.Code.PhotoSwipe));
-		
-</script>-->
-<script>
-$(document).ready(function() {
-
-slide_home("no");
-	//boton ediciones
-	$('#btn_edicion').click(function() {
-		$('#panelSecciones').slideToggle(800);
-		//alert("btn seccion");
-	});
-	$('#btn_edicion2').click(function() {
-		$('#panelSecciones').slideToggle(800);
-		//alert("btn seccion");
-	});
-	
-	$('#rubrica_name').click(function() {
-		$('#panelSecciones').slideToggle(800);
-	});
-	
-
-	
-	/*animacion  slide interior*/
-	$("#r_flecha1").click(function(){
-    $("#r_descripcion").animate({width:'toggle'});
-  });
-  
-  $("#s_flecha2").click(function(){
-    $("#s_descripcion").animate({width:'toggle'});
-  });
-  
-
-	
- $( window ).on( "orientationchange", function( event ) {
-			 if(event.orientation=="landscape")
-			 {
-				//alert("landscape");
-				//$('div[id^="box_sumario"]').show();
-				//$('div[id^="slide_sec"]').hide();
-			}
-			else
-			{ //alert("portrait");
-				
-					//$('div[id^="box_sumario"]').show();
-				//$('div[id^="slide_sec"]').show();	
-				
-			}
-		
-		});
-			$( window ).orientationchange();
-	
-
-
-});
-
-    
-    //funciones  que llaman a la BD
-    
-    function slide_home(pagina)
-    {
-        
-		
-        
-        $.ajax({
-               type: "POST",
-               url: "http://desarrollosintesis.com/ios/Rostros/php/slide_home.php",
-               data: "",
-               cache: false,
-               success: function(message)
-               {
-               
-               $('#content_slide').html(message);
-               
-               }
-               });
-			   if(pagina!="no")
-			   {
-				   
-				    window.location.href = pagina; 
-				  // location.href='index.php#page1';
-				  }
-        
-        
-    }
-    
-    
-    function slide_principal(plaza, pagina)
-    {
-		
-        ////url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
-        $.ajax({
-               type: "POST",
-           	  url: "http://desarrollosintesis.com/ios/Rostros/php/slide_principal.php",
-               data: "plaza="+plaza,
-				cache: false,
-               success: function(message)
-               { 
-               $('#content_slide').html(message);
-			
-               }
-               });
-			  
-			   if(pagina!="")
-			   {
-			   window.location.href = pagina; 
-				   }
-       
-    }
-	
-	/*rostros del mes....*/
-	
-	function eventos_especiales(pagina, id_evento)
-	{
-		//alert("id:"+id_evento)
-        $.ajax({
-               //url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
-               type: "POST",
-			   url: "http://desarrollosintesis.com/ios/Rostros/php/evento_especial.php",
-               data: "id_evento="+id_evento,
-               cache: false,
-               success: function(message)
-               {
-               $('#cont_evento_especial').html(message);
-               }
-               });
-		window.location.href = pagina; 
-	}
-	
-	function fn_secciones(pagina, tipo, id_seccion)
-	{
-		//alert(id_seccion);
-        $.ajax({
-               type: "POST",
-			   url: "http://desarrollosintesis.com/ios/Rostros/php/secciones.php",
-               data: "tipo="+tipo+"&id_seccion="+id_seccion,
-               cache: false,
-               success: function(message)
-               {
-               $('#content_secciones').html(message);
-               }
-               });
-		window.location.href = pagina; 
-	
-	}
-
-</script>
-<script>
-
-
-	function mostrar_ocultar(slide_sec, box)
-	{
-		var orientacion;	
-		if (window.matchMedia("(orientation: portrait)").matches) {
-		   //alert("portrait");
-		   orientacion = 0;
-		}
-		else
-		{orientacion = 1;}
-		if(orientacion ==1)
-		{
-			//$('div[id^="box_sumario"]').slideToggle(800);
-				//$('div[id^="slide_sec"]').slideToggle(800);
-		}
-		else
-		{//salert("portrait no  haces nada");
-		
-					//$('div[id^="box_sumario"]').show();
-					//
-					//$('div[id^="slide_sec"]').show();
-			
-		}
-		
-	}
-	
-    function video()
-    {
-        var video=document.getElementById("intro");
-     
-
-        video.play();
-        video.addEventListener('ended', function(){
-                               //alert("se termina");
-                               var pagina="#page1";
-                               window.location.href = pagina;
-                               });
-    }
-	
-	
-
-</script>
-<script type="text/javascript">
-
-			/*$(document).ready(function(){
-				$("div[id^=\"gallery_sec\"]").touchSlider({
-                                                                mode: "shift",
-                                                                offset: "auto"
-                                                                });
-                      
-				
-			});*/
-			
-			function fotogaleria_muestra(id_evento)
-	{
-		//alert("id_evento:"+id_evento);//contenido_galeria
-		
-		$.ajax({
-               type: "POST",
-			   url: "http://desarrollosintesis.com/ios/Rostros/php/carousel.php",
-               data: "id_evento="+id_evento,
-               cache: false,
-               success: function(message)
-               {
-				  document.getElementById("contenido_galeria").innerHTML="";
-               $('#contenido_galeria').html(message);
-			   $('#fotogaleria').show();
-               }
-               });
-		
-		// $('#fotogaleria').show();
-		
-		
-	}
-	function fotogaleria_oculta()
-	{
-		//document.getElementById("carusel").style.display="none";
-		
-		//document.getElementById("fotogaleria").style.display="";
-		//$('#fotogaleria').slideToggle(800);
-		$('#fotogaleria').hide();
-	}
-	
-	function ver_video(pagina, url_video)
-	{
-	
-	var video='<video  id="" controls src="video/\''+url_video+'\'" type="video/mp4" style="width:100%; height:100%;background:#000;" ></video>';
-	
-	
-	document.getElementById("video_publi").innerHTML='<video  id="" controls src="http://rostrospuebla.com.mx/redisenoV2/images/video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#000;" ></video>';
-	
-	
-	 window.location.href = pagina; 
-	}
-			
-			
-		</script>
 
 </head> 
-<body onload="video()"> 
+<body> 
+<!--<ul style="position:absolute; z-index:9999;">
+            	<li style="color:#fff">item1</li>
+                <li style="color:#fff">item2</li>
+                <li style="color:#fff">item3</li>
+                
+            
+            </ul>-->
+<div data-role="page" id="page" class="pagina">
 
-
-<!--pagina-->
-<div data-role="page" id="page">
-	<div data-role="content" style="width:100%; height:100%;background:#000;">
-        <video  id="intro"  src="video/intro-ios.mp4" type="video/mp4" style="width:100%; height:100%;background:#000;"></video>
-	</div>
-</div>
-<!-- fin  pagina-->
-
-    <!--pagina 1-->
-    
-    <div data-role="page" id="page1" data-transition="false">
-        <div data-role="content" style="width:100%; height:100%;background:#fff;">
-
-            <div align="center" id="menu_inicial" style="width:100%; height:100%; position:absolute; overflow:hidden ">
-             <img src="" id="img_menu_ini">
-             </div>
-             <!--<div style="width:100%; height:100%; position:absolute; overflow:hidden">
-                <div style="width:100%; height:100%; position:absolute; overflow:scroll;" ><img src="img/01.jpg"/></div>
-            </div>PUBLICIDAD-->
-             <div id="link_menu">
-             <a href="#page2" ><div id="events"></div></a>
-             <a href="https://itunes.apple.com/us/app/revistadigital/id674245096?l=es&ls=1&mt=8" target="new"><div id="d_magazine"></div></a>
-             <a href=""><div id="reality"></div></a>
-             </div>
-        </div>
-    </div>
-    
-    
-    <!-- fin  pagina 1-->
-    
-
-<!--  pagina 1-->
-<!--menu-->
-<div id="panelSecciones"  class="panelSeccion"> 
-           <ul>
-             <li id="rubrica"><a href="#" onClick="javascript:slide_home('#page1');" id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="26" width="26" />HOME</a></li>
-            <li id="separador"></li>
-            <li   id="rubrica" style="line-height:45px; "><a href="#" onClick="javascript:slide_principal('puebla','#page2');" id="rubrica_name">Puebla</a></li>
-            <li id="separador"></li>
-            <li   id="rubrica"><a href="#" onClick="javascript:slide_principal('jalisco','#page2');" id="rubrica_name">Jalisco</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('veracruz','#page2');" id="rubrica_name">Veracruz</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('chiapas','#page2');" id="rubrica_name">Chiapas</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('hidalgo','#page2');" id="rubrica_name">Hidalgo</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('tlaxcala','#page2');" id="rubrica_name">Tlaxcala</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('yucatan','#page2');" id="rubrica_name">Yucat&aacute;n</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="#" onClick="javascript:slide_principal('oaxaca','#page2');" id="rubrica_name">Oaxaca</a></li>
-            <li id="separador_2"></li>
-            <li  id="rubrica"><a href="https://itunes.apple.com/us/app/revistadigital/id674245096?l=es&ls=1&mt=8" id="rubrica_name">Revista Digital</a></li>
-            <li id="separador"></li>
-            <li  id="rubrica"><a href="mailto:admin-web@sintesisdigital.com.mx" id="rubrica_name">Contacto</a></li>
-            </ul>
-        </div>
-        <!--menu-->
-<div data-role="page" id="page2" style="background:#000; margin:0;">
-	<!-- cabecera -->
-	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu"> <a href="javascript:;" id="btn_edicion">
-        <img src="" id="img_btn_edicion">
-        <!--<img src="img/iconos_app/boton_ediciones.png" width="120" height="44"/>-->
-         </a></div><!-- "-->
-        <div id="logo"> <a href="#page1" >
-        	<img src="img/logo.png" width="131" height="42">
-        </a></div>
-       
-    </div>
-    <!--  fin cabecera-->
-    
-    
-	<div data-role="content" style=" margin:0px auto; padding:0px;" id="contenido_general">	
-    
-    <div id="fotogaleria">
-    	<div id="fotogaleria_arriba" onClick="javascript:fotogaleria_oculta();"></div>
-        
-        
-        <div></div>
-        	<div class="gallery-holder" style="margin:0 auto;  margin-top:0px" id="contenido_galeria">
-                        	<div class="gallery_slide" id="gallery_sec1" >
-                        		<div class="holder">
-                                	<div class="list">
-                                    <div id="Gallery1" class="gallery">
-                                    
-                                    <div class="item_s"><div class="box_s box1"><a href="img/fotos/13.jpg"><img src="img/fotos/13.jpg" width="210" height="159"/></a></div></div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-        
-        <div id="fotogaleria_abajo"  onClick="javascript:fotogaleria_oculta();"></div>
-    </div>
-        
-        <div id="content_slide">
-           
-        </div>
-       
-  
-		
+	<div data-role="header" data-position="fixed" class="cabecera_prin">
+		<h1>Página uno</h1>
 	</div>
     
-</div>
-<!-- fin pagina 2 -->
-
-
-
-<!--pagina 3  maneja rostros del mes y demas-->
-<div data-role="page" id="page3" style=" margin:0;">
-	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-       <img src="" id="img_btn_edicion_int">
-         </a></div>
-         <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
-         </div>
-        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
-        	<img src="img/logo.png" width="131" height="42">
-        </a></div>
-       
-    </div>
-    
-	<div data-role="content" id="cont_evento_especial" >	
-   		
-       
-          
-     </div>
-	
-</div>
-<!-- fin  pagina 3-->
-
-
-<!-- pagina 4 secciones concientete vy style-->
-<div data-role="page" id="page4" style=" margin:0;">
-	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-       
-            <img src="" id="img_btn_edicion_int1">
-         </a></div>
-         <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_seccion"/></a>
-         	
-         </div>
-        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
-        	<img src="img/logo.png" width="131" height="42">
-        </a></div>
-       
-    </div>
-    
-	<div data-role="content" id="content_secciones">	
-        
-          
-     </div>
-	
-</div>
-<!-- fin pagina 4-->
-
-<!--  pagina  5 -->
-
-<div data-role="page" id="page5" style=" margin:0;">
-	<div data-theme="a" data-role="header" data-position="fixed"  id="cebecera_prin" style=" margin:0; padding:0;">
-     	<div id="cab_menu_int"> <a href="javascript:;" id="btn_edicion2">
-       
-            <img src="" id="img_btn_edicion_int1">
-         </a></div>
-         <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_seccion"/></a>
-         	
-         </div>
-        <div id="logo_int"> <a href="#page1" onClick="$('#panelSecciones').css('margin-top','-300px');">
-        	<img src="img/logo.png" width="131" height="42">
-        </a></div>
-       
-    </div>
-    
-	
-		<div data-role="content" style="width:100%; height:99%;background:#000;" id="video_publi">
+	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;">	
+		<div id="contenido_slide" class="contenido_slide">
         	
-             
-		</div>          
-     
+        	<div class = 'responsive-container'>
+                <div class = 'infinite-slider'>
+                    <div class = 'slider'>
+                        <div class = 'item' id = 'item1'></div>
+                        <div class = 'item' id = 'item2'></div>
+                        <div class = 'item' id = 'item3'></div>
+                    </div>
+                    </div>
+                </div>
+            </div>			
+	</div>
 	
 </div>
-<!--  pagina  5 -->
 
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Página dos</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
 
-	<script>
-			if(screen.width=="320" && screen.height=="480")
-	{
-		//alert("iphne4");//menu
-		var img_menu = document.getElementById("img_menu_ini");
-		img_menu.src="img/iphone_ipod/menu_ipod.jpg";
-		
-		
-		var img_btn_edicion = document.getElementById("img_btn_edicion");
-		img_btn_edicion.src = "img/iconos_app/menu.png";
-		img_btn_edicion.width="36";
-		img_btn_edicion.height="36";
-        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
-		
-		
-		var img_btn_edicion = document.getElementById("img_btn_edicion_int");
-		img_btn_edicion.src = "img/iconos_app/menu.png";
-		img_btn_edicion.width="36";
-		img_btn_edicion.height="36";
-        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
-                  
-        var img_btn_edicion1 = document.getElementById("img_btn_edicion_int1");
-        img_btn_edicion1.src = "img/iconos_app/menu.png";
-        img_btn_edicion1.width="36";
-        img_btn_edicion1.height="36";
-        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
-		
-		
-		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
-		flecha_mas_seccion.src="img/iconos_app/mas.png";
-		flecha_mas_seccion.width="36";
-		flecha_mas_seccion.height="36";
-		
-		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
-		flecha_mas_rostros.src="img/iconos_app/mas.png";
-		flecha_mas_rostros.width="36";
-		flecha_mas_rostros.height="36";
-		
-		
-		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
-		flecha_in_trostros.src="img/iconos_app/flecha.png";
-		flecha_in_trostros.width="26";
-		flecha_in_trostros.height="26"
-		
-		
-		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
-		flecha_in_seccion.src="img/iconos_app/flecha.png";
-		flecha_in_seccion.width="26";
-		flecha_in_seccion.height="26"
-		
-		
-		$(".img_secciones_ipod").css("display","");
-		$(".img_secciones_iphone").css("display","none");
-		$(".img_secciones_ipad").css("display","none");
-		
-		
-		//muestras  img_int_rostros_ipod
-		$(".img_int_secciones_ipodIpad").css("display","");
-		$(".img_int_secciones_iphone").css("display","none");
-		
-		
-		$(".img_int_rostros_ipodIpad").css("display","");
-		$(".img_int_rostrs_iphone").css("display","none");
-		
-		
-	}
-	else
-	{
-		if(screen.width=="320" && screen.height=="568")
-		{
-                 // alert("i5");
-			//menu
-		var img_menu = document.getElementById("img_menu_ini");
-		img_menu.src="img/iphone_ipod/menu_iphone.jpg";
-		
-		
-		var img_btn_edicion = document.getElementById("img_btn_edicion");
-		img_btn_edicion.src = "img/iconos_app/menu@2x.png";
-		img_btn_edicion.width="36";
-		img_btn_edicion.height="36";
-        
-        
-        var img_btn_edicion = document.getElementById("img_btn_edicion");
-        img_btn_edicion.src = "img/iconos_app/menu.png";
-        img_btn_edicion.width="36";
-        img_btn_edicion.height="36";
-        document.getElementById("img_btn_edicion").style.margin="4px 0 0 0";
-                  
-       
-        var img_btn_edicion = document.getElementById("img_btn_edicion_int");
-        img_btn_edicion.src = "img/iconos_app/menu.png";
-        img_btn_edicion.width="36";
-        img_btn_edicion.height="36";
-        document.getElementById("img_btn_edicion_int").style.margin="4px 0 0 0";
-                  
-        var img_btn_edicion1 = document.getElementById("img_btn_edicion_int1");
-        img_btn_edicion1.src = "img/iconos_app/menu.png";
-        img_btn_edicion1.width="36";
-        img_btn_edicion1.height="36";
-        document.getElementById("img_btn_edicion_int1").style.margin="4px 0 0 0";
-		
-		
-		$(".img_secciones_ipod").css("display","none");
-		$(".img_secciones_iphone").css("display","");
-		$(".img_secciones_ipad").css("display","none");
-		
-		
-		
-		$(".img_int_secciones_ipodIpad").css("display","none");
-		$(".img_int_secciones_iphone").css("display","");
-		
-		
-		$(".img_int_rostros_ipodIpad").css("display","none");
-		$(".img_int_rostros_iphone").css("display","");
-		
-		
-		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
-		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
-		flecha_mas_seccion.width="36";
-		flecha_mas_seccion.height="36";
-		
-		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
-		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
-		flecha_mas_rostros.width="36";
-		flecha_mas_rostros.height="36";
-		
-		
-		
-		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
-		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
-		flecha_in_trostros.width="26";
-		flecha_in_trostros.height="26"
-		
-		
-		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
-		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
-		flecha_in_seccion.width="26";
-		flecha_in_seccion.height="26"
-		}
-		else 
-		{
-				//alert("ipad");	
-			var img_menu = document.getElementById("img_menu_ini");
-			img_menu.src="img/menu.jpg";
-			
-			var img_btn_edicion = document.getElementById("img_btn_edicion");
-			img_btn_edicion.src = "img/iconos_app/boton_ediciones.png";
-			img_btn_edicion.width="120";
-			img_btn_edicion.height="44";
-			
-            var img_btn_edicion_int = document.getElementById("img_btn_edicion_int");
-                  img_btn_edicion_int.src = "img/iconos_app/boton_ediciones.png";
-                  img_btn_edicion_int.width="120";
-                  img_btn_edicion_int.height="44";
-                  
-            var img_btn_edicion1 = document.getElementById("img_btn_edicion_int1");
-                  img_btn_edicion1.src = "img/iconos_app/boton_ediciones.png";
-                  img_btn_edicion1.width="120";
-                  img_btn_edicion1.height="44";
-                  
-                  
-                  
-                  
-                  
-                  
-			
-			$(".img_secciones_ipod").css("display","none");
-			$(".img_secciones_iphone").css("display","none");
-			$(".img_secciones_ipad").css("display","");
-			
-			
-		$(".img_int_secciones_ipodIpad").css("display","");
-		$(".img_int_secciones_iphone").css("display","none");
-		
-		
-		$(".img_int_rostros_ipodIpad").css("display","");
-		$(".img_int_rostros_iphone").css("display","none");
-		
-		
-		var flecha_mas_seccion=document.getElementById("flecha_mas_seccion_img");
-		flecha_mas_seccion.src="img/iconos_app/mas@2x.png";
-		flecha_mas_seccion.width="44";
-		flecha_mas_seccion.height="44";
-		
-		var flecha_mas_rostros=document.getElementById("flecha_mas_rostros_img");
-		flecha_mas_rostros.src="img/iconos_app/mas@2x.png";
-		flecha_mas_rostros.width="44";
-		flecha_mas_rostros.height="44";
-		
-		var flecha_in_trostros=document.getElementById("flecha_int_rostros");
-		flecha_in_trostros.src="img/iconos_app/flecha@2x.png";
-		flecha_in_trostros.width="36";
-		flecha_in_trostros.height="36"
-		
-		var flecha_in_seccion=document.getElementById("flecha_int_seccion");
-		flecha_in_seccion.src="img/iconos_app/flecha@2x.png";
-		flecha_in_seccion.width="36";
-		flecha_in_seccion.height="36"
-			
-		}	
-	}
-		
-		</script>
- 
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Página tres</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Página cuatro</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
 
 </body>
 </html>

@@ -2,7 +2,6 @@ $(document).ready(function() {
 	
 	$('.debug #touch').html('isTouch: <strong>' + ('ontouchstart' in window) + '</strong>');
 	$('.debug #orientation').html('orientationChange: <strong>' + ('onorientationchange' in window) + '</strong>');
-	$('.debug #css3dTransform').html('css3dTransform: <strong>' + hasCss3dTransform() + '</strong>');
 	
 	$('.default-slider').iosSlider({
 		desktopClickDrag: true,
@@ -64,55 +63,6 @@ $(document).ready(function() {
 		$(this).bind('click', function() {
 			$('.autoslide-slider2').iosSlider('goToSlide', i + 1);
 		});
-	});
-	
-	$('.autoslide-slider4').iosSlider({
-		desktopClickDrag: true,
-		snapToChildren: true,
-		infiniteSlider: true,
-		autoSlide: false,
-		autoSlideTimer: 2000,
-		startAtSlide: '2',
-		scrollbar: true,
-		navNextSelector: $('.autoslide-slider4 .next'),
-		navPrevSelector: $('.autoslide-slider4 .prev')
-	});
-	
-	$('.autoslide-slider4-container .goToBlock .go').eq(0).bind('click', function() {
-
-		$('.autoslide-slider4').iosSlider('autoSlidePlay');
-	
-	});
-
-	$('.autoslide-slider4-container .goToBlock .go').eq(1).bind('click', function() {
-
-		$('.autoslide-slider4').iosSlider('autoSlidePause');
-	
-	});
-	
-	$('.autoslide-slider5').iosSlider({
-		desktopClickDrag: true,
-		snapToChildren: true,
-		infiniteSlider: true,
-		autoSlide: true,
-		autoSlideTimer: 2000,
-		startAtSlide: '2',
-		scrollbar: true,
-		navNextSelector: $('.autoslide-slider4 .next'),
-		navPrevSelector: $('.autoslide-slider4 .prev'),
-		autoSlideToggleSelector: $('.autoslide-slider5-container .goToBlock .go:eq(2)')
-	});
-	
-	$('.autoslide-slider5-container .goToBlock .go').eq(0).bind('click', function() {
-
-		$('.autoslide-slider5').iosSlider('autoSlidePlay');
-	
-	});
-
-	$('.autoslide-slider5-container .goToBlock .go').eq(1).bind('click', function() {
-
-		$('.autoslide-slider5').iosSlider('autoSlidePause');
-	
 	});
 	
 	$('.variable-width-slider').iosSlider({
@@ -443,24 +393,4 @@ function callbackSliderComplete(args) {
 		console.log(args);
 	} catch(err) {}
 	
-}
-
-function hasCss3dTransform() {
-
-	var has3D = false;
-			
-	var testElement = $('<div />').css({
-		'webkitTransform': 'matrix(1,1,1,1,1,1)',
-		'MozTransform': 'matrix(1,1,1,1,1,1)',
-		'transform': 'matrix(1,1,1,1,1,1)'
-	});
-	
-	if(testElement.attr('style') == '') {
-		has3D = false;
-	} else if(testElement.attr('style') != undefined) {
-		has3D = true;
-	}
-	
-	return has3D;
-
 }
