@@ -146,6 +146,23 @@
 	width: 768px;
 	height: 980px;
 	}
+	
+	.infinite-slider {
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	height: 980px;
+	}
+	
+	.infinite-slider .slider {
+	width: 768px;
+	height: 980px;
+	}
+	
+	.infinite-slider .slider .item {
+	width: 768px;
+	height: 980px;
+	}
 }
 
 /*iPad Landscape*/
@@ -155,12 +172,46 @@
 	width: 1024px;
 	height: 724px;
 	}
+	
+	.infinite-slider {
+	position: relative;
+	overflow: hidden;
+	width: 1024px;
+	height: 724px;
+	}
+	
+	.infinite-slider .slider {
+	width: 1024px;
+	height: 724px;
+	}
+	
+	.infinite-slider .slider .item {
+	width: 1024px;
+	height: 724px;
+	}
 }
 
 /*iPod iPhone4*/
 @media screen and (min-width: 0px) and (max-width: 320px) 
 {
 	.responsive-container {
+	width: 320px;
+	height: 436px;
+	}
+	
+	.infinite-slider {
+	position: relative;
+	overflow: hidden;
+	width: 320px;
+	height: 436px;
+	}
+	
+	.infinite-slider .slider {
+	width: 320px;
+	height: 436px;
+	}
+	
+	.infinite-slider .slider .item {
 	width: 320px;
 	height: 436px;
 	}
@@ -174,44 +225,32 @@
 	width: 320px;
 	height: 524px;
 	}
-}
-
-
-.infinite-slider {
+	
+	.infinite-slider {
 	position: relative;
 	overflow: hidden;
-	width: 1200px;
-	height: 300px;
+	width: 320px;
+	height: 524px;
+	}
+	
+	.infinite-slider .slider {
+	width: 320px;
+	height: 524px;
+	}
+	
+	.infinite-slider .slider .item {
+	width: 320px;
+	height: 524px;
+	}
 }
 
-.infinite-slider .slider {
-	height: 100%;
-}
 
-.infinite-slider .slider .item {
-	width: 900px;
-	height: 100%;
-}
+
 
 .infinite-slider .slider #item1 {
-	background: #666;
+	background: #000;
 }
 
-.infinite-slider .slider #item2 {
-	background: #999;
-}
-
-.infinite-slider .slider #item3 {
-	background: #aaa;
-}
-
-.infinite-slider .slider #item4 {
-	background: #ddd;
-}
-
-.infinite-slider .slider #item5 {
-	background: #777;
-}
 
 /* responsive */
 .responsive-slider {
