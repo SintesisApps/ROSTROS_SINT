@@ -159,6 +159,22 @@
 		}(window, window.Code.PhotoSwipe));
 		
 	</script>
+    <script>
+	function video()
+    {
+        var video=document.getElementById("intro");
+     
+
+        video.play();
+        video.addEventListener('ended', function(){
+                               //alert("se termina");
+                               var pagina="#page1";
+                               window.location.href = pagina;
+                               });
+    }
+	
+	
+	</script>
 <!--Codigo js  -->
 </head> 
 <body>
