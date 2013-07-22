@@ -1,0 +1,390 @@
+@font-face {
+    font-family: 'millerdisplaylight';
+    src: url('../font/MillerDisplay/millerdisplaylight.eot');
+    src: url('../font/MillerDisplay/millerdisplaylight.eot?#iefix') format('embedded-opentype'),
+         url('../font/MillerDisplay/millerdisplaylight.woff') format('woff'),
+         url('../font/MillerDisplay/millerdisplaylight.ttf') format('truetype'),
+         url('../font/MillerDisplay/millerdisplaylight.svg#millerdisplaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.pagina
+{
+	background:#000000;
+}
+#panelSecciones{
+	position:absolute; 
+	z-index:9999;
+	width:120px;
+	height:auto;
+	text-align:center;
+	margin-top:44px;
+	padding:0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: rgba(0,0, 0, 0.8);
+	display:none;
+	
+}
+#rubrica
+{
+	height:45px;
+	width:100%;
+	color:#878787;
+	font-size:18px;
+    z-index:9999;
+}
+#separador
+{
+	height:1px;
+	background:#878787;
+	width:100%	;
+}
+#separador_2
+{
+	width:100%	;
+	height:13px;
+	background:url(../img/iconos_app/separador.png);
+}
+ul, ul li
+{list-style:none;
+text-decoration:none;
+/*background:#333;*/
+margin:0;
+top:0;
+padding:0;
+}
+a {
+	text-decoration:none;
+	color:#878787;}
+
+
+/*Ipad portrait*/
+@media screen and (min-width: 321px) and (max-width: 768px) 
+{
+	
+	
+	.cabecera_prin
+	{
+		height:45px;
+		width:768px;
+		background:#000;
+		margin:0px;
+		border:0px;
+		padding:0;
+	}
+	.contenido_cabecera
+	{
+		width:768px;
+		height:44px;
+		background:#000;
+	}
+	.cab_menu
+	{
+		width:120px;
+		height:44px;
+		background:#000;
+		z-index:10;
+		float:left;
+	}
+	.logo_r
+	{
+		width:648px;
+		height:44px;
+		background:#000;
+		z-index:10;
+		float:left;
+	}
+	.logo_r img
+	{
+		margin-left:190.5px;}
+	
+	.linea_cabecera
+	{
+		width:768px;
+		height:1px;
+		background:#878787;
+		float:left;
+	}
+	
+	
+	#contenido_slide, .lista_slider
+	{
+		width:768px;
+		height:979px;
+		background:#000;
+	}
+	
+	 .cont_img 
+	 {
+		 margin: 0 auto;
+		 width:768px;
+		 height:512px;
+		 display:block;
+		 overflow:hidden;
+		 margin-top:210px;
+	}
+	.cont_img  img
+	{
+		width:100%;
+		height:auto;
+		background:#000000;
+	}
+	
+
+	
+	.slide_sec
+	{
+		width:768px; 
+		height:258px; background:url(../img/patrones/slide.png) repeat;
+		background:#000;
+		margin-top:0px;
+		z-index:9999; 
+		position:relative;
+		float:left;
+		
+		/*background:#000;*/
+	}
+	#imagenes_lista
+	{
+		width:768px; 
+		height:258px;
+		overflow:hidden;
+	}
+	#imagenes_lista img
+	{
+		width:150px;
+		height:auto;
+		padding:10px;
+		float:left;
+	}
+	
+	
+	
+	.box_sumario
+	{
+		width:100%; 
+		height:209px;
+		background-color: rgba(0,0, 0, 0.7);
+		margin-top:-722px; 
+		z-index:2000; 
+		position:relative;
+	}
+	.titulo_evento
+{ 
+	color:#FFF;
+	width:48.7%;
+	height:150px;
+	display:block;
+	font-family:millerdisplaylight;
+	text-transform:uppercase;
+	font-size:28px;
+	padding-left:12px;
+	
+	word-wrap: break-word;
+	padding-top:40px;
+}
+.sumario_evento
+{
+	color:#FFF;
+	width:48%;
+	height:150px;
+	display:block;
+	margin-left:50.5%;
+	position:absolute;
+	margin-top:-150px;
+	font-size:22px;
+	padding-left:12px;
+	word-wrap: break-word;
+	padding-top:0px;
+	font-family:millerdisplaylight;
+}
+
+.edicion_revista
+{
+	color:#FFF;
+	width:100%;
+	height:45px;
+	font-size:16px;
+	font-family:  Helvetica;
+}
+}
+
+
+/*iPad Landscape*/
+@media screen and (min-width: 769px) and (max-width: 1024px)
+{
+	.cabecera_prin
+	{
+		height:45px;
+		width:1024px;
+		background:#000;
+		margin:0px;
+		border:0px;
+		padding:0;
+	}
+	.contenido_cabecera
+	{
+		width:1024px;
+		height:44px;
+		background:#000;
+	}
+	.cab_menu
+	{
+		width:120px;
+		height:44px;
+		background:#000;
+		z-index:10;
+		float:left;
+	}
+	.logo_r
+	{
+		width:904px;
+		height:44px;
+		background:#000;
+		z-index:10;
+		float:left;
+	}
+	.logo_r img
+	{
+		margin-left:326.5px;}
+	
+	.linea_cabecera
+	{
+		width:1024px;
+		height:1px;
+		background:#878787;
+		float:left;
+	}
+	#content_slide, .lista_slider
+	{
+		margin: 0px auto;
+		padding:0px;
+		width:1024px;
+		height:723px;
+		background:#000;
+	}
+	 .cont_img
+	 {margin: 0 auto;
+		width:1024px;
+		height:723px;
+		background:#000;
+		overflow:hidden;
+	}
+	.cont_img img
+	{
+		width:105%;
+		height:auto;
+	}
+	
+	
+	.slide_sec
+	{
+		width:1024px; 
+		height:258px; 
+		background:url(../img/patrones/slide.png) repeat;
+		 margin-top:-292px;
+		 z-index:9999; 
+		 position:relative;
+		 float:left;
+		 display:none;
+	}
+	.box_sumario
+	{
+		width:100%; 
+		height:209px;
+		background-color: rgba(0,0, 0, 0.7);
+		margin-top:-250px; 
+		z-index:2000; 
+		position:relative;
+	}
+	/*texto del box*/
+	.titulo_evento
+{ 
+	width:48%;
+	height:150px;
+	float:left;
+	font-family:millerdisplaylight;
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:28px;
+	padding-left:12px;
+	word-wrap: break-word;
+	padding-top:40px;
+	
+}
+.sumario_evento
+{
+	width:48%;
+	height:150px;
+	float:left;
+	font-size:22px;
+	color:#FFF;
+	padding-left:12px;
+	word-wrap: break-word;
+	padding-top:40px;
+	font-family:millerdisplaylight;
+}
+.edicion_revista
+{
+	width:100%;
+	height:50px;
+	float:left;
+	font-size:16px;
+	color:#FFF;
+	font-family:  Helvetica;
+	padding-left:12px;
+	margin-top:-20px;
+}
+
+	
+}
+
+
+/*iPod iPhone4*/
+@media screen and (min-width: 0px) and (max-width: 320px) 
+{
+	.cabecera_prin
+	{
+		height:43px;
+		width:320px;
+		background:#000;
+		margin:0px;
+		border:0px;
+		padding:0;
+		border-bottom:1px solid #666;
+	}
+	#contenido_slide
+	{
+		width:320px;
+		height:436px;
+		background:#000;
+	}
+	
+	
+}
+
+
+/*iPhone 5*/
+@media screen and (min-height: 481px) and (max-height: 568px) 
+{
+	.cabecera_prin
+	{
+		height:43px;
+		width:320px;
+		background:#000;
+		margin:0px;
+		border:0px;
+		padding:0;
+		border-bottom:1px solid #666;
+	}
+	#contenido_slide
+	{
+		width:320px;
+		height:524px;
+		background:#000;
+	}
+}
