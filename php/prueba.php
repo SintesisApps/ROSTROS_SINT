@@ -13,7 +13,6 @@ echo'
   <section class="slider">
                 <div class="flexslider">
                   <ul class="slides">';
-				  
 				  while($row_evento = mysql_fetch_assoc($query_evento))
 				  {
 					  switch ($row_evento['id_plaza'])
