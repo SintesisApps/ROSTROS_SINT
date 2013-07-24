@@ -10,7 +10,7 @@ $tipo=$_POST['tipo'];
 
 						$seccion="select * from app_secciones where id='".$id_seccion."'";
 						$query_seccion=mysql_query($seccion, $conexion);
-						$row_seccion=mysql_fetch_array($query_seccion);
+						$row_seccion=mysql_fetch_assoc($query_seccion);
 						//$id_seccion=$row_seccion['id'];
 						$titulo=$row_seccion['titulo'];
 						$nota=$row_seccion['nota'];
@@ -18,10 +18,7 @@ $tipo=$_POST['tipo'];
 						$tipo_seccion=$row_seccion['id_tipos_secciones'];
 						
 						
-
-
-
-switch ($id_plaza)
+						switch ($id_plaza)
 		{
 			case 1:
 				$plaza="Puebla";	
@@ -67,29 +64,12 @@ switch ($id_plaza)
 
 
 echo'
-<div id="foto_seccion" class="foto_seccion">
+
+ <div id="foto_seccion" class="foto_seccion">
         <div id="carousel" class="flexslider">
           <ul class="slides">
-          <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>';
-		  $carrousel="select * from imagenes_app_secciones where id_app_secciones='".$id_seccion."' ";
-			$query_carrousel=mysql_query($carrousel, $conexion);
-			$item=1;
-			$texto="";
-			while($row_carrousel=mysql_fetch_array($query_carrousel))
-			{
-				if ($item==1)
-				{
-					echo'
-					<li>
-  	    	   		 <div class="img_int_rostros_ipodIpad"><img src="'.$url.$row_carrousel['imagen'].'" /></div>
-                        <div class="img_int_rostros_iphone"><img src="'.$url.$row_carrousel['imagen_iphone'].'" /></div>
-  	    		</li>
-					
-					';	
-					$texto=$texto.$row_carrousel['imagen_iphone'];
-				}
-			}
-           		/* <li>
+          <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
+           		 <li>
   	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
                 	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
   	    		</li>
@@ -104,32 +84,21 @@ echo'
                 <li>
   	    	   		<div class="img_int_secciones_ipodIpad"><img src="img/prueba_sec.jpg" /></div>
                 	<div class="img_int_secciones_iphone"><img src="img/iphone/bystyle.jpg" /></div>
-  	    		</li>*/
+  	    		</li>
   	    	
-         echo' </ul>
+          </ul>
         </div>
         </div>
         
         <div id="descripcion_seccion" class="descripcion_seccion" style="position:fixed">
         	<div id="s_descripcion" class="s_descripcion">
             	<div id="s_name" class="s_name" >
-                	<span class="s_titulo"></span><br>
-                    <span class="s_subtitulo" >'.utf8_encode($titulo).'</span>
+                	<span class="s_titulo"> HIDRATA'.$id_seccion.'</span><br>
+                    <span class="s_subtitulo" > TU PIEL'.$tipo.'</span>
                 </div>
                 <div class="s_separador"></div>
-            	<div class="s_texto">';
-				$nota="select * from imagenes_app_secciones where id_app_secciones='".$id_seccion."' ";
-			$query_nota=mysql_query($nota, $conexion);
-			while($row_nota=mysql_fetch_array($query_nota))
-			{
-				echo'
-				<span class="r_pregunta" style=" text-transform:capitalize">'.utf8_encode($row_nota['titulo']).':</span><br>
-                    <span class="r_respuesta"  style=" text-transform:uppercase">'.utf8_encode($row_nota['pie']).'</span><br><br>
-				';
-				
-			}
-			echo'
-                	<!--<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
+            	<div class="s_texto">
+                	<span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                    <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
@@ -145,7 +114,7 @@ echo'
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br><span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
                     <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                     <span class="r_pregunta"> texto texto texto texto  texto texto:</span><br>
-                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>-->
+                    <span class="r_respuesta">texto texto texto texto  texto textotexto texto texto texto  texto texto</span><br><br>
                
                 </div>
             </div>
@@ -155,10 +124,9 @@ echo'
          </a>
             </div>
         </div>
-		
-		
-		
-		<script>
+          
+     </div>
+	 <script>
 		  
 		   $("#carousel").flexslider({
         animation: "slide",
@@ -170,6 +138,6 @@ echo'
         asNavFor: "#slider"
       });
 		  </script>
-
 ';
+
 ?>

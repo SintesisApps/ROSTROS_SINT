@@ -101,6 +101,14 @@ $contador=1;//contador para las galerias
 
 
 echo'
+<script type="text/javascript">
+(function(window, $, PhotoSwipe){
+				
+				var options = {};
+				$(".gallery a").photoSwipe(options);
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+</script>
  <section class="slider">
                 <div class="flexslider">
                   <ul class="slides">';
@@ -148,7 +156,7 @@ echo'
 								{
 									 echo' <li class="lista_slider">
 					  
-								  <div id="cont_img" class="cont_img"   onClick="mostrar_ocultar(\''.$id_evento.'\')">
+								  <div id="cont_img" class="cont_img"   onClick="javascript:eventos_especiales( \''.$id_evento.'\');">
 										<img  src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" />
 				
 										</div>
@@ -209,234 +217,97 @@ echo'
 								}
 							
 							
-							/*echo'
-						<li class="lista_slider">
-                        	<div id="cont_img" class="cont_img"  onClick="mostrar_ocultar()">
-                            <img src="img/fotos/2.jpg" class="foto_evnt" />
-                            	
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                           		 <div id="Gallery" class="gallery" style="z-index:999999999">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                        
-                        </li>
-                        
-						';*/
-							
 						}
 				
+				
+				/*Publi*/
+							else
+						{
+							if($row_tablas["referencia"]=='2')//PUBLICIDAD
+							{
+								//buscamos la pibli  
+								$pub="select * from app_publicidad where id='".$row_tablas['id']."' ";
+								$query_pub=mysql_query($pub, $conexion);
+								while($row_pub=mysql_fetch_assoc($query_pub))
+								{
+									if($row_pub['posicion']==1)//video
+									{
+										//page5 --> reproductor de video 
+										echo'
+											<li class="lista_slider">
+												<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+													<div style="width:100%; height:100%; position:absolute; overflow:scroll;background:#000" >
+														<a href="#" onclick="javascript:ver_video(\'#page5\', \''.$url_video_publi.$row_pub['url'].'\')"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
+													</div>
+												</div> 	
+											</li>		
+										';	
+									}
+									else
+									{
+										if($row_pub['url']=="NULL")
+										{
+											echo'
+											<li class="lista_slider">
+												<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+													<div style="width:100%; height:100%; position:absolute; overflow:scroll;" >
+														<a href="#"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
+													</div>
+												</div> 	
+											</li>		
+										';		
+										}
+										else
+										{
+											echo'
+											<li class="lista_slider">
+												<div style="width:100%; height:100%; position:absolute; overflow:hidden">
+													<div style="width:100%; height:100%; position:absolute; overflow:scroll;" >
+														<a href="'.$row_pub['url'].'" target="_new"><img src="'.$ur_img_publi.$row_pub['imagen_ios'].'"/></a>
+													</div>
+												</div> 	
+											</li>		
+										';	
+										}
+										
+										
+									}
+									
+								}
+								
+							}
+							else   //secciones
+							{
+								/**/
+								$seccion="select * from app_secciones";
+								$query_seccion=mysql_query($seccion, $conexion);
+								$row_seccion=mysql_fetch_assoc($query_seccion);
+								$id_seccion=$row_seccion['id'];
+								$tipo_seccion=$row_seccion['id_tipos_secciones'];
+								
+								if($tipo_seccion=="3")//bystyle
+								{
+									
+									echo'
+								<li class="lista_slider">
+									<div id="secciones" >
+										 
+										<div class="img_secciones_ipod"><a href="#"><img src="img/ipod/bystyle.jpg" onClick="javascript:fn_secciones( \''.$id_seccion.'\', \''.$tipo_seccion.'\');"/></a></div>
+										<div class="img_secciones_iphone"><a href="#"><img src="img/iphone/bystyle.jpg" onClick="javascript:fn_secciones('.$id_seccion.'\', \''.$tipo_seccion.'\');" /></a></div>
+										<div class="img_secciones_ipad"><a href="#"><img src="img/bystyle.jpg" onClick="javascript:fn_secciones( \''.$id_seccion.'\' ,\''.$tipo_seccion.'\');" /></a></div>
+									</div>
+						   
+								</li
+								>';	
+								}
+									
+							}
+						
+						}
 			
-						/*echo'
-						<li class="lista_slider">
-                        	<div id="cont_img" class="cont_img"  onClick="mostrar_ocultar()">
-                            <img src="img/fotos/2.jpg" class="foto_evnt" />
-                            	
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                           		 <div id="Gallery" class="gallery" style="z-index:999999999">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                        
-                        </li>
-                        
-						';*/
 					}
 				  
-				  /*
-                        <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img"  onClick="mostrar_ocultar()">
-                            <img src="img/fotos/2.jpg" class="foto_evnt" />
-                            	
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                           		 <div id="Gallery" class="gallery" style="z-index:999999999">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                        
-                        </li>
-                        
-                        
-                         <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img" onClick="">
-                            	<img src="img/fotos/1.jpg" class="foto_evnt" />
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                            	<div id="Gallery" class="gallery">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Nombre del evento</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                         </li>
-                        <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img" onClick="">
-                            	<img src="img/fotos/5.jpg" class="foto_evnt" />
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                            	<div id="Gallery" class="gallery">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                            
-                         </li>
-                         
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/conoce.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/conoce.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
-                            </div>
-                          </li>
-                          
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/bystyle.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/bystyle.jpg"  /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/bystyle.jpg"/></a></div>
-                            </div>
-                          </li>
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/consientete.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/consientete.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
-                            </div>
-                          </li>
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/disfruta.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/disfruta.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/disfruta.jpg"/></a></div>
-                            </div>
-                          </li>
-                          
-                          <li class="lista_slider">
-                          	<div id="cont_img" class="cont_img" ><a href="#page2" ><img src="img/fotos/5.jpg" onClick="" /></a></div>
-
-                           <div id="r_nom_persona" class="r_nom_persona" >
-                                    <DIV id="n_sec">NOMBRE DE LA PERSONA</DIV>
-                            </div>
-        
-        
-                            <div id="sum_rostros" class="sum_rostros"> 
-                                    <div class="titulo_evento_especial">NOMBRE DE LA SECCION</div>
-                            </div>
-
-                </div>
-                          
-                          </li>*/
+				  
                        
                   echo'</ul>
                 </div>

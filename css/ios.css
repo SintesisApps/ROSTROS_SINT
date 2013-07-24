@@ -22,7 +22,7 @@
 	width:120px;
 	height:auto;
 	text-align:center;
-	margin-top:0px;
+	margin-top:44px;
 	padding:0;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -85,6 +85,10 @@ a {
 /*Ipad portrait*/
 @media screen and (min-width: 321px) and (max-width: 768px) 
 {
+	#cont_evento_especial,#content_secciones
+	{
+		margin-top:45px;
+	}
 	#realidad
 	{
 		width:768px;
@@ -308,7 +312,7 @@ a {
 	.img_galeria img
 	{
 		width:100%;
-		height:159px;
+		height:auto;
 		overflow:hidden;
 		
 	}
@@ -713,6 +717,13 @@ margin-top:482px;}
 /*iPad Landscape*/
 @media screen and (min-width: 769px) and (max-width: 1024px)
 {
+	
+	
+	
+	#cont_evento_especial
+	{
+		margin-top:0px;
+	}
 	#realidad
 	{
 		width:1024px;
@@ -1208,6 +1219,12 @@ margin-top:354px;}
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px) { 
+#contenedor_foto_gal
+	{width:500px; height:500px;}
+	#foto_carrousel_img
+	{width:1008px; heigh:159px; margin-top:50px;}
+	#foto_carrousel_img img
+	{width:100%; height:50px;}
 /*#menu_inicial
 	{
 		width:320px;

@@ -28,43 +28,7 @@
     <link rel="stylesheet" href="css/ios.css">
     <script type="text/javascript">
    
-	 
-	/* (function(window, $, PhotoSwipe){
-			
-			$(document).ready(function(){
-				
-				
-				$('#btn_edicion').click(function() {
-		$('#panelSecciones').slideToggle(800);
-		//alert("btn seccion");
-	});
-				
-				var options = {};
-				$(".gallery a").photoSwipe(options);
-				
-				$.ajax({
-				   type: "POST",
-				   url: "http://desarrollosintesis.com/ios/Rostros/php/home.php",
-				   data: "",
-				   cache: false,
-				   success: function(message)
-				   {
-				   //$('#contenido_slide').html(message);
-				   
-					}
-    		 	});
-				
-				//boton ediciones  
 	
-	
-		
-		
-			
-			
-			});
-			
-			
-		}(window, window.jQuery, window.Code.PhotoSwipe));*/
 		
 		
 		$(document).ready(function(){
@@ -235,7 +199,7 @@
 		display:none;
 		width:1024px; 
 		height:768px;
-		background:rgba(0,0,0,0.7);
+		
 		position:absolute; 
 		z-index:99999999; 
 		margin-top:-44px;	
@@ -313,8 +277,53 @@
 function  redireccion(pagina)
 {
 	
-	window.location.href = pagina; 
+	//window.location.href = pagina; 
 	$('#contendor_menu_inicial').hide();
+	if(pagina=="#page")
+	{
+	$('#page').show();
+	$('#page2').hide();
+	$('#page3').hide();
+	$('#page4').hide();
+	$('#page5').hide();	
+	}
+	if(pagina=="#page2")
+	{
+	$('#page').hide();
+	$('#page2').show();
+	$('#page3').hide();
+	$('#page4').hide();
+	$('#page5').hide();	
+	}
+	
+	if(pagina=="#page3")
+	{
+	$('#page').hide();
+	$('#page2').hide();
+	$('#page3').show();
+	$('#page4').hide();
+	$('#page5').hide();	
+	}
+	if(pagina=="#page4")
+	{
+	$('#page').hide();
+	$('#page2').hide();
+	$('#page3').hide();
+	$('#page4').show();
+	$('#page5').hide();	
+	}
+	
+	if(pagina=="#page5")
+	{
+	$('#page').hide();
+	$('#page2').hide();
+	$('#page3').hide();
+	$('#page4').hide();
+	$('#page5').show();
+	}
+	
+	
+	
 }
 
 </script><!-- <div id="events"  onClick="$('#contendor_menu_inicial').hide();"></div>-->
@@ -324,47 +333,13 @@ function  redireccion(pagina)
              <img src="" id="img_menu_ini">
              </div>
              <div id="link_menu">
-             <div id="events"  onClick="redireccion('#page');"></div>
+             <div id="events"  onClick="redireccion('#page'), slide_home();"></div>
              <a href="http://www.gogle.com" target="new"><div id="d_magazine"></div></a>
              <div id="reality" onClick="redireccion('#page5');"></div>
              </div>
         </div>
         
-<div data-role="page" id="page" class="pagina">
-
-<!-- galeria d eimagenes -->
-
-<div id="fotogaleria" style="display:none">
-galeria  jsdljldjlshdlshfksjhksfhshj
-</div>
-
-
-<!-- cabecera -->
-	<div data-role="header" data-position="fixed" class="cabecera_prin" style="border:none;">
-		<div class="contenido_cabecera">
-        	<div class="cab_menu">
-            	<a href="javascript:;" id="btn_edicion">
-                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
-                <img src="" id="img_btn_edicion">
-                </a>
-                <!-- -->
-            </div>
-            <div class="logo_r">
-            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();" ></a>
-            </div>
-        </div>
-        <div class="linea_cabecera"></div>
-	</div>
-    <!--  fin cabecera-->
-
-	
-      
-    
-<!--<a href="#page1" id="ImgHome" onClick="$('#ImgHome').hide();" style="display:none"><img src="img/menu.jpg" width="100%" height="100%" style="position:absolute; top:0; left:0; z-index:10000;" id="menu_home"></a>-->
-
-	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;">	
-    
-    <!--menu-->
+         <!--menu-->
 <div id="panelSecciones" >
 	<ul >
          <li id="rubrica"><a href="#" onClick="fn_home();"id="rubrica_name"><img src="img/iconos_app/home@2x.png" height="26" width="26" />HOME</a></li>
@@ -389,166 +364,52 @@ galeria  jsdljldjlshdlshfksjhksfhshj
     </ul>
 </div>         <!--menu-->
         
+        
+        
+<div data-role="page" id="page" class="pagina">
+
+
+<!-- galeria d eimagenes -->
+
+<div id="fotogaleria" style="display:none">
+	<div style="width:1024px; height:460px;background:rgba(0,0,0,0.7);"></div>
+    <div style="width:1024px; height:258px; background:url(img/patrones/slide.png);" id="galeria_fotos"></div>
+    <div style="width:1024px; height:50px;background:rgba(0,0,0,0.7);"></div>
+    
+</div>
+
+<!-- cabecera -->
+	<div data-role="header" data-position="fixed" class="cabecera_prin" style="border:none;">
+		<div class="contenido_cabecera">
+        	<div class="cab_menu">
+            	<a href="javascript:;" id="btn_edicion">
+                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
+                <img src="" id="img_btn_edicion">
+                </a>
+                <!-- -->
+            </div>
+            <div class="logo_r">
+            	<a href="#page"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();" ></a>
+            </div>
+        </div>
+        <div class="linea_cabecera"></div>
+	</div>
+    <!--  fin cabecera-->
+
+	
+      
+    
+<!--<a href="#page1" id="ImgHome" onClick="$('#ImgHome').hide();" style="display:none"><img src="img/menu.jpg" width="100%" height="100%" style="position:absolute; top:0; left:0; z-index:10000;" id="menu_home"></a>-->
+
+	<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;">	
+    
+   
     
     
-		<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;position:fixed" >	
+		<div data-role="content" style="width:100%; height:100%;background:#000; margin:0;" >	
 		<div id="contenido_slide" class="contenido_slide">
         	<!--  inicio slide -->
-         <!--    <section class="slider">
-                <div class="flexslider">
-                  <ul class="slides">
-                        <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img"  onClick="mostrar_ocultar()">
-                            <img src="img/fotos/2.jpg" class="foto_evnt" />
-                            	
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                           		 <div id="Gallery" class="gallery" style="z-index:999999999">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                        
-                        </li>
-                        
-                        
-                         <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img" onClick="">
-                            	<img src="img/fotos/1.jpg" class="foto_evnt" />
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                            	<div id="Gallery" class="gallery">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Nombre del evento</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                         </li>
-                        <li class="lista_slider">
-                        	<div id="cont_img" class="cont_img" onClick="">
-                            	<img src="img/fotos/5.jpg" class="foto_evnt" />
-                            </div>
-                	
-                    
-                            <div id="slide_sec1" class="slide_sec" >
-                            	<div id="Gallery" class="gallery">
-                                 	<div id="galeria_contenido">
-                                    	<div class="img_galeria"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/5.jpg"><img src="img/fotos/5.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/6.jpg"><img src="img/fotos/6.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/7.jpg"><img src="img/fotos/7.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/8.jpg"><img src="img/fotos/8.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/9.jpg"><img src="img/fotos/9.jpg" /></a></div>
-                                        <div class="img_galeria"> <a href="img/fotos/10.jpg"><img src="img/fotos/10.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/11.jpg"><img src="img/fotos/11.jpg" /></a></div>
-                                        <div class="img_galeria"><a href="img/fotos/12.jpg"><img src="img/fotos/12.jpg" /></a></div>
-                                    </div>
-       					 		 </div>
-                            </div>
-                            
-                            <div id="box_sumario1" class="box_sumario"> 
-                                    <div class="titulo_evento"><span class="span_tit">Titulo1</span></div>
-                                    <div class="sumario_evento" id="su_evt"><span class="span_tit">Sumario</span></div>
-                                    <div class="edicion_revista">Edicion</div>
-                            </div>
-                            
-                            
-                         </li>
-                         
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/conoce.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/conoce.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/conoce.jpg" /></a></div>
-                            </div>
-                          </li>
-                          
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/bystyle.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/bystyle.jpg"  /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/bystyle.jpg"/></a></div>
-                            </div>
-                          </li>
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/consientete.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/consientete.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/consientete.jpg" /></a></div>
-                            </div>
-                          </li>
-                          <li class="lista_slider">
-                          	<div id="secciones" >
-                                <div class="img_secciones_ipod"><a href="#page3"><img src="img/ipod/disfruta.jpg" /></a></div>
-                                <div class="img_secciones_iphone"><a href="#page3"><img src="img/iphone/disfruta.jpg" /></a></div>
-                                <div class="img_secciones_ipad"><a href="#page3"><img src="img/disfruta.jpg"/></a></div>
-                            </div>
-                          </li>
-                          
-                          <li class="lista_slider">
-                          	<div id="cont_img" class="cont_img" ><a href="#page2" ><img src="img/fotos/5.jpg" onClick="" /></a></div>
-
-                           <div id="r_nom_persona" class="r_nom_persona" >
-                                    <DIV id="n_sec">NOMBRE DE LA PERSONA</DIV>
-                            </div>
-        
-        
-                            <div id="sum_rostros" class="sum_rostros"> 
-                                    <div class="titulo_evento_especial">NOMBRE DE LA SECCION</div>
-                            </div>
-
-                </div>
-                          
-                          </li>
-                       
-                  </ul>
-                </div>
-              </section>
-            -->
+         
             
             <!-- fin slide -->
         	
@@ -862,9 +723,18 @@ galeria  jsdljldjlshdlshfksjhksfhshj
 <script>
 function fn_menu()
 {
-	alert("menu");
+
 	$('#panelSecciones').slideToggle(800);
 
+}
+function regresar()
+{
+	//alert("regresar");
+	$('#page').show();
+	$('#page2').hide();
+	$('#page3').hide();
+	$('#page4').hide();
+	$('#page5').hide();	
 }
 
 </script>
@@ -878,17 +748,19 @@ function fn_menu()
                 <!-- -->
             </div>
              <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+        <img src="img/iconos_app/flecha.png"  id="flecha_int_rostros" onClick="regresar();"/>
          </div>
             <div class="logo_r_int">
-            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
+            	<a href="#"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
             </div>
         </div>
         <div class="linea_cabecera"></div>
 	</div>
 	
-    <div data-role="content" id="cont_evento_especial" >	
-   		
+    <div data-role="content" id="cont_evento_especial">	
+   	
+    <!--
+    	
        <div id="foto_rostros" class="foto_rostros">
        <div id="carousel2" class="flexslider">
           <ul class="slides">
@@ -946,6 +818,7 @@ function fn_menu()
             </div>
         </div>
           
+     -->
      </div>
     
 </div>
@@ -956,23 +829,24 @@ function fn_menu()
 		<div class="contenido_cabecera_int">
         	<div class="cab_menu_int" onClick="fn_menu();">
             	<a href="javascript:;" id="btn_edicion3">
-                <!--<img src="img/iconos_app/boton_ediciones.png" border="0"/>-->
                 <img src="" id="img_btn_edicion3" >
                 </a>
                 <!-- -->
             </div>
-             <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+              <div id="fecha_int">
+        <img src="img/iconos_app/flecha.png"  id="flecha_int_rostros" onClick="regresar();"/>
          </div>
             <div class="logo_r_int">
-            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
+            	<a href="#"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
             </div>
         </div>
         <div class="linea_cabecera"></div>
 	</div>
 	
-	<div data-role="content" id="content_secciones">	
-        <div id="foto_seccion" class="foto_seccion">
+	<div data-role="content" id="content_secciones">
+    
+    
+      <!--  <div id="foto_seccion" class="foto_seccion">
         <div id="carousel" class="flexslider">
           <ul class="slides">
           <div id="flecha_mas_seccion" ><img src="img/iconos_app/mas.png" width="30" height="30" id="flecha_mas_seccion_img"></div>
@@ -1032,8 +906,9 @@ function fn_menu()
             </div>
         </div>
           
-     </div>
+     </div>-->
 	
+
 </div>
 
 
@@ -1051,11 +926,11 @@ function fn_menu()
                 </a>
                 <!-- -->
             </div>
-             <div id="fecha_int">
-         <a data-rel="back" data-direction="reverse" ><img src="img/iconos_app/flecha.png"  id="flecha_int_rostros"/></a>
+              <div id="fecha_int">
+        <img src="img/iconos_app/flecha.png"  id="flecha_int_rostros" onClick="regresar();"/>
          </div>
             <div class="logo_r_int">
-            	<a href="#page1"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
+            	<a href="#"  data-ajax="false" ><img src="img/logo.png" width="131" height="42" id="img_logo" onClick="fn_home();"></a>
             </div>
         </div>
         <div class="linea_cabecera"></div>
@@ -1094,11 +969,16 @@ function fn_menu()
 
 
 <script type="text/javascript">
-	slide_home();
+	//slide_home();
 function slide_home()
     {
+		document.getElementById("page").style.display="none";
+		document.getElementById("page2").style.display="none";
+		document.getElementById("page3").style.display="none";
+		document.getElementById("page4").style.display="none";
+		document.getElementById("page5").style.display="none";
         
-		
+		document.getElementById("contenido_slide").innerHTML="";
         
         $.ajax({
                type: "POST",
@@ -1113,6 +993,7 @@ function slide_home()
                }
                });
 			   $('#panelSecciones').hide();
+			    $('#page').show();
 			   
     }	
 	
@@ -1120,6 +1001,8 @@ function slide_home()
     {
 		//alert("principal");
         ////url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/slide_principal.php",
+		document.getElementById("page").style.display="none";
+		document.getElementById("contenido_slide").innerHTML="";
         $.ajax({
                type: "POST",
            	  url: "http://desarrollosintesis.com/ios/Rostros/php/principal.php",
@@ -1133,13 +1016,22 @@ function slide_home()
                });
 			   $('#panelSecciones').slideToggle(800);
 			  
-			   
+			   $('#page').show();
+			$('#page2').hide();
+			$('#page3').hide();
+			$('#page4').hide();
+			$('#page5').hide();
        
     }
 	
 	
 	function fn_home()
 	{
+		$('#page').hide();
+			$('#page2').hide();
+			$('#page3').hide();
+			$('#page4').hide();
+			$('#page5').hide();
 		 $.ajax({
                type: "POST",
                url: "http://desarrollosintesis.com/ios/Rostros/php/home.php",
@@ -1156,21 +1048,67 @@ function slide_home()
 			   
 			$('#contendor_menu_inicial').show();   
 			$('#panelSecciones').hide();
+			
+			
+			
 			   
 	}
+	
+	
+	function eventos_especiales( id_evento)
+	{
+		 $.ajax({
+               type: "POST",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/especial.php",
+               data: "id_evento="+id_evento,
+               cache: false,
+               success: function(message)
+               {
+               
+               $('#cont_evento_especial').html(message);
+               
+               }
+               });
+			
+			$('#page2').show();
+			$('#page').hide();
+			$('#page3').hide();
+			$('#page4').hide();
+			$('#page5').hide();
+	}
+	
+	
+		function fn_secciones( id_seccion, tipo)
+	{
+		alert("secciones");
 		
-     /* $(".flexslider").flexslider({
-        animation: "slide",
-        start: function(slider){
-          $("body").removeClass("loading");
-        }
-      });*/
+		 $.ajax({
+               type: "POST",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/seccion.php",
+               data: "id_seccion="+id_seccion+"&tipo="+tipo,
+               cache: false,
+               success: function(message)
+               {
+               
+               $('#content_secciones').html(message);
+               
+               }
+               });
+			
+			$('#page2').hide();
+			$('#page').hide();
+			$('#page3').show();
+			$('#page4').hide();
+			$('#page5').hide();
+	}
+		
+    
 	  
 	  $(window).load(function(){
 		
       
 	  
-	   $('#carousel').flexslider({
+	  /* $('#carousel').flexslider({
         animation: "slide",
         controlNav: false,
         animationLoop: false,
@@ -1178,9 +1116,9 @@ function slide_home()
         itemWidth: 210,
         itemMargin: 5,
         asNavFor: '#slider'
-      });
+      });*/
 	  
-	  $('#carousel2').flexslider({
+	 /* $('#carousel2').flexslider({
         animation: "slide",
         controlNav: false,
         animationLoop: false,
@@ -1188,30 +1126,15 @@ function slide_home()
         itemWidth: 210,
         itemMargin: 5,
         asNavFor: '#slider'
-      });
+      });*/
 	  
 	  
     });
 	  
 	  
-	 function eventos_especiales(pagina,  id_evento)
-	{alert("especial3");
-		  $.ajax({
-               //url: "http://192.168.1.115/app_rostros/ROSTROS_SINT/php/evento_especial.php",
-               type: "POST",
-			   url: "http://desarrollosintesis.com/ios/Rostros/php/especial.php",
-               data: "id_evento="+id_evento,
-               cache: false,
-               success: function(message)
-               {
-               $("#cont_evento_especial").html(message);
-               }
-               });
-		window.location.href = pagina; 
-       
-	}
+
 	
-	function mostrar_ocultar()
+	function mostrar_ocultar(id_evento)
 	{
 		//alert("mostrar");
 		var orientacion;	
@@ -1227,12 +1150,30 @@ function slide_home()
 		
 		if(orientacion ==1)
 		{//lanscape mostramos  fotogaleria
+		
+		//galeria_fotos
+		
+		 $.ajax({
+               type: "POST",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/pr_seccion.php",
+                data: "id_evento="+id_evento,
+               cache: false,
+               success: function(message)
+               {
+               
+               $('#galeria_fotos').html(message);
+               
+               }
+               });
+		
 			$('#fotogaleria').show();
+			$('.box_sumario').hide();
 		}
 		else
 		{
 			//ocultamos  galeria 
 		$('#fotogaleria').hide();
+		$('.box_sumario').show();
 		}
 		
 	}
@@ -1243,10 +1184,12 @@ function slide_home()
 			 if(event.orientation=="landscape")
 			 {
 				$('#fotogaleria').hide();
+				$('.box_sumario').show();
 			}
 			else
 			{
 				$('#fotogaleria').hide();
+				$('.box_sumario').show();
 			}
 		
 		});

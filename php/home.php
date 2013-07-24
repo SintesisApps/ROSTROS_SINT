@@ -9,7 +9,28 @@
 	//$row_evento=mysql_fetch_array($query_evento);
 	$cadena="mensaje";
 	
+	/*
+	(function(window, $, PhotoSwipe){
+				
+				var options = {};
+				$(".gallery a").photoSwipe(options);
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+	*/
+	/*
+	(function(window, PhotoSwipe){ var options = { preventHide: false }, instance = PhotoSwipe.attach( window.document.querySelectorAll("#Gallery a"), options ); instance.show(0); }(window, window.Code.PhotoSwipe)); 
+	*/
 echo'
+<script type="text/javascript">
+(function(window, $, PhotoSwipe){
+				
+				var options = {};
+				$(".gallery a").photoSwipe(options);
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+</script>
+
+
   <section class="slider">
                 <div class="flexslider">
                   <ul class="slides">';
@@ -96,8 +117,8 @@ echo'
 			{//<div id="cont_img" class="cont_img" ><a href="#" ><img src="'.$url.$row_res_evento['imagen_principal'].'"  onClick="javascript:eventos_especiales(\'#page2\', \''.$id_evento.'\');"  /></a></div>
 					  echo' <li class="lista_slider">
 					  
-					  <div id="cont_img" class="cont_img"   onClick="mostrar_ocultar(\''.$id_evento.'\')">
-                            <img  src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" />
+					  <div id="cont_img" class="cont_img"   >
+                            <a href="#" onClick="javascript:eventos_especiales( \''.$id_evento.'\');"><img  src="'.$url.$row_res_evento['imagen_principal'].'" class="foto_evnt" /></a>
     
                             </div>
 							
