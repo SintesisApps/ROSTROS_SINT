@@ -166,7 +166,7 @@ echo'
                             <div id="box_sumario1" class="box_sumario"> 
                                     <div class="titulo_evento"><span class="span_tit">'.utf8_encode($row_res_evento['titulo']).'</span></div>
                                     <div class="sumario_evento" id="su_evt"><span class="span_tit">'.utf8_encode($row_res_evento['sumario']).'</span></div>
-                                    <div class="edicion_revista">Edicion '.utf8_encode($plaza).'</div>
+                                    <div class="edicion_revista">Edici&oacute;n '.utf8_encode($plaza).'</div>
                             </div>
                             
                         

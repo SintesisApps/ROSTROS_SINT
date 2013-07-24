@@ -120,7 +120,9 @@
 	}
 	function fotogaleria_oculta()
 	{
+		
 		$('#fotogaleria').hide();
+		$('.box_sumario').show();
 	}
 	
 	
@@ -199,7 +201,7 @@
 		display:none;
 		width:1024px; 
 		height:768px;
-		
+		background: rgba(0, 0, 0, 0.7);
 		position:absolute; 
 		z-index:99999999; 
 		margin-top:-44px;	
@@ -376,9 +378,9 @@ function  redireccion(pagina)
 <!-- galeria d eimagenes -->
 
 <div id="fotogaleria" style="display:none">
-	<div style="width:1024px; height:460px;background:rgba(0,0,0,0.7);"></div>
+	<!--<div style="width:1024px; height:460px;background:rgba(0,0,0,0.7);" onClick="fotogaleria_oculta()"></div>
     <div style="width:1024px; height:258px; background:url(img/patrones/slide.png);" id="galeria_fotos"></div>
-    <div style="width:1024px; height:50px;background:rgba(0,0,0,0.7);"></div>
+    <div style="width:1024px; height:50px;background:rgba(0,0,0,0.7);" onClick="fotogaleria_oculta()"></div>-->
     
 </div>
 
@@ -1159,13 +1161,13 @@ function slide_home()
 		
 		 $.ajax({
                type: "POST",
-               url: "http://desarrollosintesis.com/ios/Rostros/php/pr_seccion.php",
+               url: "http://desarrollosintesis.com/ios/Rostros/php/scroll.php",
                 data: "id_evento="+id_evento,
                cache: false,
                success: function(message)
                {
                
-               $('#galeria_fotos').html(message);
+               $('#fotogaleria').html(message);
                
                }
                });

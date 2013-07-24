@@ -60,17 +60,7 @@ $miniatura="select * from imagenes_eventos where id_evento='".$id_evento."' ";
 $query_miniatura=mysql_query($miniatura,$conexion);
 
 
-echo'<div  id="contenedor_foto_gal">
-<div id="Gallery" class="gallery1" style="z-index:999999999; ">
-                                 	<div id="foto_carrousel_img" >
-                                    	<div style="width:234px;height:159; float:left;"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg"/></a></div>
-                                        <div style="width:234px;height:159; float:left;"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
-                                        <div style="width:234px;height:159; float:left;"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
-                                        <div style="width:234px;height:159; float:left;"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg"/></a></div>
-                                    </div>
- </div>
- </div>
- 
+echo'
  <script type="text/javascript">
 (function(window, $, PhotoSwipe){
 				
@@ -79,27 +69,44 @@ echo'<div  id="contenedor_foto_gal">
 			
 		}(window, window.jQuery, window.Code.PhotoSwipe));
 </script>
+
+ <div style="width:500px; height:100px; overflow:scroll">
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+iwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjdiwdwgjgdjd
+
+</div>
+
 ';
-
-
 /*
-<script>
+<div  id="contenedor_foto_gal" style="width:1000px; height:159px;  margin-top:45px; position:absolute;overflow:hidden; padding-left:10px;">
+	<div  style="width:50000px; height:159px;  position:absolute; padding-left:10px; -webkit-overflow-scrolling: touch; overflow-x: scroll" >
+	
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;" height="159"/></a>
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;"  height="159"/></a>
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;"  height="159"/></a>
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;"   height="159"/></a>
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;"  height="159"/></a>
+	<a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg" style="width:234px;height:159; float:left; paddin-left:8px;"  height="159"/></a>
 
-		(function(window, $, PhotoSwipe){
-			
-			$(document).ready(function(){
-				
-				var options = {};
-				$("#Gallery1 a").photoSwipe(options);
-			
-			});
-			
-		
-			
-			
-		}(window, window.jQuery, window.Code.PhotoSwipe));
-		
-</script>*/
+ 	</div>
+</div>
+
+
+
+<div id="Gallery" class="gallery1" style="z-index:999999999; ">
+                                 	<div id="foto_carrousel_img" >
+                                    	<div style="width:234px;height:159; float:left;"> <a href="img/fotos/1.jpg"><img src="img/fotos/1.jpg"/></a></div>
+                                        <div style="width:234px;height:159; float:left;"><a href="img/fotos/2.jpg"><img src="img/fotos/2.jpg" /></a></div>
+                                        <div style="width:234px;height:159; float:left;"><a href="img/fotos/3.jpg"><img src="img/fotos/3.jpg" /></a></div>
+                                        <div style="width:234px;height:159; float:left;"> <a href="img/fotos/4.jpg"><img src="img/fotos/4.jpg"/></a></div>
+                                    </div>*/
+
 
 
 
