@@ -1219,12 +1219,13 @@ margin-top:354px;}
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px) { 
-#contenedor_foto_gal
+/*#contenedor_foto_gal
 	{width:500px; height:500px;}
 	#foto_carrousel_img
 	{width:1008px; heigh:159px; margin-top:50px;}
 	#foto_carrousel_img img
-	{width:100%; height:50px;}
+	{width:100%; height:50px;}*/
+	
 /*#menu_inicial
 	{
 		width:320px;
@@ -1254,28 +1255,82 @@ margin-top:354px;}
 	margin-top:220px;
 	background:#FFFFFF
 }*/
-#events
+#panelSecciones{
+	width:74px;
+	height:355px;
+	text-align:center;
+	margin-top:44px;
+	padding:0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position:absolute;
+	z-index:9999;
+	display:none;
+	background-color: rgba(0,0, 0, 0.8);
+   
+	
+}
+#rubrica
+{
+	height:28px;
+	width:100%;
+	color:#878787;
+	font-size:12px;
+}
+#separador
+{
+	height:1px;
+	background:#878787;
+	width:100%	;
+}
+#separador_2
+{
+	width:100%	;
+	height:13px;
+	background:url(../img/iconos_app/separador.png);
+}
+
+#rubrica_name
+{
+	height:28px;
+	width:100%;
+	color:#878787;
+	font-size:12px;
+    z-index:99999999999999999;
+	line-height:30px;
+	font-family:Helvetica;
+	font-weight:normal;
+}
+
+
+
+#cont_evento_especial,#content_secciones
+	{
+		margin-top:45px;
+	}
+	#events
 {
 	width:25%;
-	height:89%;
+	margin-left:15%;
+	height:87%;
 	float:left;
 	z-index:3;
 }
 
 #d_magazine
 {
-	width:46%;
+	width:30%;
 	height:64%;
-	margin-top:18.7%;
+	margin-top:15.1%;
 	z-index:3;
 	float:left;
 }
 
 #reality
 {
-	width:29%;
+	width:15%;
 	height:40%;
-	margin-top:32%;
+	margin-top:20%;
 	z-index:3;
 	float:left;
 }
@@ -1705,7 +1760,11 @@ margin-top:210px;}
 	width:100%;
 	height:auto;
 }
-
+.slides li
+{
+	width:320px;
+	height:435px;
+}
 .img_int_secciones_ipodIpad, .img_int_secciones_iphone
 {
 	width:320px;
@@ -1713,12 +1772,12 @@ margin-top:210px;}
 
 
 
-/*.img_int_secciones_ipodIpad img
+.img_int_secciones_ipodIpad img
 {margin:0 auto;
 	width:100%;
 	height:auto;
 	
-}*/
+}
 /*scroll descripcion*/
 /*slide interior*/
 
@@ -1741,9 +1800,8 @@ margin-top:210px;}
 	
 	/*flecha mas*/
 #flecha_mas_seccion, #flecha_mas_rostros
-#flecha_mas_seccion, #flecha_mas_rostros
 {
-	z-index:9999; position:absolute; margin-left:80%; margin-top:98%;		
+	z-index:9999; position:absolute; margin-left:80%; margin-top:90%;		
 }
 #flecha_mas_seccion img,  #flecha_mas_rostros img
 {
